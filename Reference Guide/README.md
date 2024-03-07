@@ -1,4 +1,4 @@
-# Functional Annotation Contextual Data Reference Guide
+# Mutation Functional Annotation Curation Template Reference Guide
 
 The contents of this directory include field and term reference guides to accompany the template-based implementation of the Functional Annotation contextual data specification. Reference guides provide ontology IDs, definitions, and specific curation guidance.
 
