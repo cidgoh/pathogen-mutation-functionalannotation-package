@@ -4,7 +4,7 @@ The contents of this directory include field and term reference guides to accomp
 
 ## Version Information
 
-The following version information regarding field/piclkist term values are available within the reference guide file(s):
+The following version information regarding field/picklist term values are available within the reference guide file(s):
 
 - **Deprecated Label** // Recorded to facilitate manual or software normalization to the appropriate label.
 - **Deprecated ID** // Recorded to facilitate manual or software normalization to the appropriate ontology identifier (ID).
