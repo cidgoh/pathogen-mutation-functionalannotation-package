@@ -69,11 +69,11 @@ Descriptions of changes are provided in [release notes](https://github.com/cidgo
 - [Online version]()
 
 ## Contacts
-For more information and/or assistance, contact <INSERT CONTACT NAME> at <INSERT CONTACT EMAIL> or submit a repository [issue request](<INSERT REPOSITORY ISSUES URL>).
+For more information and/or assistance, contact Madeline Iseminger at miseming at sfu dot ca or submit a repository [issue request](https://github.com/cidgoh/pathogen-mutation-functionalannotation-package/issues).
 
 ## License
 
-_Pending / To Be Determined_
+[MIT License](https://github.com/cidgoh/pathogen-mutation-functionalannotation-package/blob/main/LICENSE)
 
 ## Acknowledgements
 
