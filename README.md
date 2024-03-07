@@ -41,7 +41,7 @@ Descriptions of changes are provided in [release notes](https://github.com/cidgo
 
 ### Package Contents
 
-#### Data Collection Template
+#### Data Collection Template - TBA
 - [Pathogen Genomics Package (**<INSERT SPEC TEMPLATE NAME>**)](https://github.com/cidgoh/pathogen-genomics-package/releases)
   - Template schema files can be found as `.yaml`/`.json`/`.tsv` under [pathogen-genomics-package/templates/](https://github.com/cidgoh/pathogen-genomics-package/tree/main/templates)**<INSERT SPEC TEMPLATE FOLDER NAME>**
 - [DataHarmonizer App](https://github.com/cidgoh/DataHarmonizer)
