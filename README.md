@@ -1,4 +1,4 @@
-# The <insert name> Contextual Data Specification
+# The Mutation Functional Annotation Contextual Data Specification
 
   - [About](#about)
   - [What are ontologies and how do they improve data quality?](#what-are-ontologies-and-how-do-they-improve-data-quality)
@@ -25,9 +25,9 @@ Labs collect, encode and store information in different ways. They use different
 
 Ontologies are collections of controlled vocabulary that are arranged in a hierarchy, where all the terms are linked using logical relationships. Ontologies are open source and meant to represent “universal truth” as much as possible (so not tied to one organization’s vocabulary of use case). Ontologies encode synonyms, which enables mapping between the specific languages used by different organizations, and every term in the ontology is assigned a globally unique and persistent identifier. Using ontology terms to standardize GRDI-AMR contextual data not only helps make data more interoperable by using a common language, it also helps to make contextual data [FAIR](https://www.go-fair.org/fair-principles/) (Findable, Accessible, Interoperable, Reusable).
 
-## The <insert name> Contextual Data Specification Package
+## The Mutation Functional Annotation Contextual Data Specification Package
 
-This specification is implemented via <spreadsheet-based data collection instrument, a DataHarmonizer validation template, other...>, accompanying **Field** and **Term reference guides** (which provide definitions and additional specific guidance) and a curation **Standard Operating Procedure (SOP)**. New terms and/or term changes can be requested using issue request forms, with additional guidance on how to do so outline in the New Term Request (NTR) SOP. This resources are available in the files of this repository and listed below under **Package Contents**.
+This specification will be implemented via a DataHarmonizer validation template, accompanying **Field** and **Term reference guides** (which provide definitions and additional specific guidance) and a curation **Standard Operating Procedure (SOP)**. New terms and/or term changes can be requested using issue request forms, with additional guidance on how to do so outline in the New Term Request (NTR) SOP. This resources are available in the files of this repository and listed below under **Package Contents**.
 
 ### Version Control
 
@@ -56,15 +56,15 @@ Descriptions of changes are provided in [release notes](https://github.com/cidgo
   - [Term Reference Guide]()
 - [Online version]()
 
-#### Curation SOP
+#### Curation SOP - TBA
 - [PDF version]()
 - [Online version]()
 
-#### DataHarmonizer Instructions and SOP
+#### DataHarmonizer Instructions and SOP - TBA
 - [PDF version]()
 - [Online version]()
 
-#### New Term Request (NTR) SOP
+#### New Term Request (NTR) SOP - TBA
 - [PDF version]()
 - [Online version]()
 
