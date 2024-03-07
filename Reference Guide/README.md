@@ -22,6 +22,6 @@ Microsoft Excel Open XML Format Spreadsheet file, opening in other applications 
 
 - `FunctionalAnnotation_Master-Reference_Term-Reference-Guide_v#.#.pdf` a PDF printout of the "Term Reference Guide" tab within the Master reference .xlsx file.
 
-## Google Docs Version
+## Google Docs Reference Guide (for development)
 
 An online version can be found at https://docs.google.com/spreadsheets/d/16RBFfz-GTK6cN5rxQA-Z9H-OKEcRqTkOWuJb5AOz1Eg/edit?usp=sharing.
