@@ -16,7 +16,7 @@
 
 ## About
 
-The Mutation Functional Annotation Data Specification captures information about viral mutations and their correlated functional impacts as described in the literature. This spec is based on the data in [Pokay](https://github.com/nodrogluap/pokay/tree/master), a manually curated repository of SARS-CoV-2 and MPOX mutation impacts. This specification will allow researchers to validate their own mutation functional annotation data format in order to overlay their own data on the Virus-MVP(https://virusmvp.org/) heatmap, and also provide a way for curators to easily contribute new functional annotations to Pokay.
+The Mutation Functional Annotation Data Specification captures information about viral mutations and their correlated functional impacts as described in the literature. This spec is based on the data in [Pokay](https://github.com/nodrogluap/pokay/tree/master), a manually curated repository of SARS-CoV-2 and MPOX mutation impacts. This specification will allow researchers to validate their own mutation functional annotation data format in order to overlay their own data on the [Virus-MVP](https://virusmvp.org/) heatmap, and also provide a way for curators to easily contribute new functional annotations to Pokay.
 
 <Blurb>
 <SETUP: you'll need to manual create "term request" and "field request" labels in order for the issue forms to apply them when generated. You'll also want to go through documentation and replace all the <INSERT values with appropriate information.>
