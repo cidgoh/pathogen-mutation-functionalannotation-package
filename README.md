@@ -84,6 +84,6 @@ For more information and/or assistance, contact Madeline Iseminger at miseming a
 
 ## Acknowledgements
 
-Brought to you by The [Centre for Infectious disease Genomics and One Health](https://cidgoh.ca/)<and INSERT COLLABORATOR NAMES>
+Brought to you by The [Centre for Infectious disease Genomics and One Health](https://cidgoh.ca/).
 
 ![LogoCIDGOH2](https://github.com/cidgoh/specification-repo-template/assets/48695054/87fa713d-8fd7-453d-8542-fc413069e842)
