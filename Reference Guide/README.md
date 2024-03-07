@@ -1,6 +1,6 @@
-# <INSERT NAME> Contextual Data Reference Guide
+# Functional Annotation Contextual Data Reference Guide
 
-The contents of this directory include field and term reference guides to accompany the template-based implementation of the <INSERT NAME> contextual data specification. Reference guides provide ontology IDs, definitions, and specific curation guidance.
+The contents of this directory include field and term reference guides to accompany the template-based implementation of the Functional Annotation contextual data specification. Reference guides provide ontology IDs, definitions, and specific curation guidance.
 
 ## Version Information
 
@@ -15,9 +15,9 @@ The following version information regarding field/piclkist term values are avail
 
 ## Files
 
-- `<INSERT NAME>_Master-Reference-Guide_v#.#.xlsx` 
+- `FunctionalAnnotation_Master-Reference-Guide_v#.#.xlsx` 
 Microsoft Excel Open XML Format Spreadsheet file, opening in other applications only risks the loss of superficial formatting (shaded cells, bold text, etc.).
 
-- `<INSERT NAME>_Master-Reference_Field-Reference-Guide_v#.#.pdf` a PDF printout of the "Field Reference Guide" tab within the Master reference .xlsx file.
+- `FunctionalAnnotation_Master-Reference_Field-Reference-Guide_v#.#.pdf` a PDF printout of the "Field Reference Guide" tab within the Master reference .xlsx file.
 
-- `<INSERT NAME>_Master-Reference_Term-Reference-Guide_v#.#.pdf` a PDF printout of the "Term Reference Guide" tab within the Master reference .xlsx file.
+- `FunctionalAnnotation_Master-Reference_Term-Reference-Guide_v#.#.pdf` a PDF printout of the "Term Reference Guide" tab within the Master reference .xlsx file.
