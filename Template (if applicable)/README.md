@@ -1,6 +1,6 @@
 # <INSERT NAME> Data Collection Template
 
-The contents of this directory include the spreadsheet-based implementation (i.e. metadata template) of the AMR-GRDI standard.
+The contents of this directory include the DataHarmonizer spreadsheet-based implementation of the VIRUS-MVP functional annotation standard.
 
 ## Files
 
