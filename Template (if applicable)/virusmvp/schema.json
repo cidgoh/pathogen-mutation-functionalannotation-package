@@ -1,0 +1,1471 @@
+{
+  "name": "VIRUSMVP_SARS-CoV-2",
+  "description": "",
+  "id": "https://example.com/VIRUSMVP",
+  "version": "0.0.0",
+  "prefixes": {
+    "linkml": {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    "GENEPIO": {
+      "prefix_prefix": "GENEPIO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/GENEPIO_"
+    },
+    "OBI": {
+      "prefix_prefix": "OBI",
+      "prefix_reference": "http://purl.obolibrary.org/obo/OBI_"
+    },
+    "OGG": {
+      "prefix_prefix": "OGG",
+      "prefix_reference": "http://purl.obolibrary.org/obo/OGG_"
+    },
+    "PR": {
+      "prefix_prefix": "PR",
+      "prefix_reference": "http://purl.obolibrary.org/obo/PR_"
+    },
+    "NCBITaxon": {
+      "prefix_prefix": "NCBITaxon",
+      "prefix_reference": "http://purl.obolibrary.org/obo/NCBITaxon_"
+    },
+    "dcterms": {
+      "prefix_prefix": "dcterms",
+      "prefix_reference": "http://purl.org/dc/terms/"
+    },
+    "xsd": {
+      "prefix_prefix": "xsd",
+      "prefix_reference": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "shex": {
+      "prefix_prefix": "shex",
+      "prefix_reference": "http://www.w3.org/ns/shex#"
+    },
+    "schema": {
+      "prefix_prefix": "schema",
+      "prefix_reference": "http://schema.org/"
+    }
+  },
+  "default_prefix": "https://example.com/VIRUSMVP/",
+  "types": {
+    "WhitespaceMinimizedString": {
+      "name": "WhitespaceMinimizedString",
+      "description": "A string that has all whitespace trimmed off of beginning and end, and all internal whitespace segments reduced to single spaces. Whitespace includes #x9 (tab), #xA (linefeed), and #xD (carriage return).",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "typeof": "string",
+      "base": "str",
+      "uri": "xsd:token"
+    },
+    "Provenance": {
+      "name": "Provenance",
+      "description": "A field containing a DataHarmonizer versioning marker. It is issued by DataHarmonizer when validation is applied to a given row of data.",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "typeof": "string",
+      "base": "str",
+      "uri": "xsd:token"
+    },
+    "string": {
+      "name": "string",
+      "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "xsd:string"
+    },
+    "integer": {
+      "name": "integer",
+      "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "xsd:integer"
+    },
+    "boolean": {
+      "name": "boolean",
+      "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "xsd:boolean",
+      "repr": "bool"
+    },
+    "float": {
+      "name": "float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "xsd:float"
+    },
+    "double": {
+      "name": "double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "xsd:double"
+    },
+    "decimal": {
+      "name": "decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "xsd:decimal"
+    },
+    "time": {
+      "name": "time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "xsd:time",
+      "repr": "str"
+    },
+    "date": {
+      "name": "date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "xsd:date",
+      "repr": "str"
+    },
+    "datetime": {
+      "name": "datetime",
+      "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "xsd:dateTime",
+      "repr": "str"
+    },
+    "date_or_datetime": {
+      "name": "date_or_datetime",
+      "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "str",
+      "uri": "linkml:DateOrDatetime",
+      "repr": "str"
+    },
+    "uriorcurie": {
+      "name": "uriorcurie",
+      "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "URIorCURIE",
+      "uri": "xsd:anyURI",
+      "repr": "str"
+    },
+    "curie": {
+      "name": "curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "Curie",
+      "uri": "xsd:string",
+      "repr": "str"
+    },
+    "uri": {
+      "name": "uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "xsd:anyURI",
+      "repr": "str"
+    },
+    "ncname": {
+      "name": "ncname",
+      "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "NCName",
+      "uri": "xsd:string",
+      "repr": "str"
+    },
+    "objectidentifier": {
+      "name": "objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
+      "comments": [
+        "Used for inheritance and type checking"
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "ElementIdentifier",
+      "uri": "shex:iri",
+      "repr": "str"
+    },
+    "nodeidentifier": {
+      "name": "nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "NodeIdentifier",
+      "uri": "shex:nonLiteral",
+      "repr": "str"
+    },
+    "jsonpointer": {
+      "name": "jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "str",
+      "uri": "xsd:string",
+      "repr": "str"
+    },
+    "jsonpath": {
+      "name": "jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "str",
+      "uri": "xsd:string",
+      "repr": "str"
+    },
+    "sparqlpath": {
+      "name": "sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "base": "str",
+      "uri": "xsd:string",
+      "repr": "str"
+    }
+  },
+  "enums": {
+    "organism menu": {
+      "name": "organism menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "Severe acute respiratory syndrome coronavirus 2": {
+          "text": "Severe acute respiratory syndrome coronavirus 2",
+          "meaning": "NCBITaxon:2697049"
+        }
+      }
+    },
+    "reference accession menu": {
+      "name": "reference accession menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "NC_045512.2": {
+          "text": "NC_045512.2"
+        }
+      }
+    },
+    "reference database menu": {
+      "name": "reference database menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "RefSeq": {
+          "text": "RefSeq"
+        }
+      }
+    },
+    "gene name menu": {
+      "name": "gene name menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "E gene of severe acute respiratory syndrome coronavirus 2": {
+          "text": "E gene of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740570"
+        },
+        "M gene of severe acute respiratory syndrome coronavirus 2": {
+          "text": "M gene of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740571"
+        },
+        "N gene of severe acute respiratory syndrome coronavirus 2": {
+          "text": "N gene of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740575"
+        },
+        "ORF10 of severe acute respiratory syndrome coronavirus 2": {
+          "text": "ORF10 of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740578"
+        },
+        "ORF1ab of severe acute respiratory syndrome coronavirus 2": {
+          "text": "ORF1ab of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740579"
+        },
+        "ORF3a of severe acute respiratory syndrome coronavirus 2": {
+          "text": "ORF3a of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740569"
+        },
+        "ORF6 of severe acute respiratory syndrome coronavirus 2": {
+          "text": "ORF6 of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740572"
+        },
+        "ORF7a of severe acute respiratory syndrome coronavirus 2": {
+          "text": "ORF7a of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740573"
+        },
+        "ORF7b of severe acute respiratory syndrome coronavirus 2": {
+          "text": "ORF7b of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740574"
+        },
+        "ORF8 of severe acute respiratory syndrome coronavirus 2": {
+          "text": "ORF8 of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740577"
+        },
+        "S gene of severe acute respiratory syndrome coronavirus 2": {
+          "text": "S gene of severe acute respiratory syndrome coronavirus 2",
+          "meaning": "OGG:3043740568"
+        }
+      }
+    },
+    "protein name menu": {
+      "name": "protein name menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "envelope small membrane protein (SARS-CoV-2)": {
+          "text": "envelope small membrane protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTC4"
+        },
+        "membrane protein (SARS-CoV-2)": {
+          "text": "membrane protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTC5"
+        },
+        "nucleoprotein (SARS-CoV-2)": {
+          "text": "nucleoprotein (SARS-CoV-2)",
+          "meaning": "PR:P0DTC9"
+        },
+        "ORF3a protein (SARS-CoV-2)": {
+          "text": "ORF3a protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTC3"
+        },
+        "ORF3c protein (SARS-CoV-2)": {
+          "text": "ORF3c protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTG1"
+        },
+        "ORF6 protein (SARS-CoV-2)": {
+          "text": "ORF6 protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTC6"
+        },
+        "ORF7a protein (SARS-CoV-2)": {
+          "text": "ORF7a protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTC7"
+        },
+        "ORF7b protein (SARS-CoV-2)": {
+          "text": "ORF7b protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTD8"
+        },
+        "ORF8 protein (SARS-CoV-2)": {
+          "text": "ORF8 protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTC8"
+        },
+        "ORF9b protein (SARS-CoV-2)": {
+          "text": "ORF9b protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTD2"
+        },
+        "putative ORF10 protein (SARS-CoV-2)": {
+          "text": "putative ORF10 protein (SARS-CoV-2)",
+          "meaning": "PR:A0A663DJA2"
+        },
+        "putative ORF3b protein (SARS-CoV-2)": {
+          "text": "putative ORF3b protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTF1"
+        },
+        "putative ORF3d protein (SARS-CoV-2)": {
+          "text": "putative ORF3d protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTG0"
+        },
+        "putative ORF9c protein (SARS-CoV-2)": {
+          "text": "putative ORF9c protein (SARS-CoV-2)",
+          "meaning": "PR:P0DTD3"
+        },
+        "rep gene translation product (SARS-CoV-2)": {
+          "text": "rep gene translation product (SARS-CoV-2)",
+          "description": "A protein that is a translation product of the ORF1ab gene in SARS-CoV-2.",
+          "meaning": "PR:000050263"
+        },
+        "spike glycoprotein (SARS-CoV-2)": {
+          "text": "spike glycoprotein (SARS-CoV-2)",
+          "description": "A protein that is a translation product of the S gene in SARS-CoV-2.",
+          "meaning": "PR:P0DTC2"
+        }
+      }
+    },
+    "peer review status menu": {
+      "name": "peer review status menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "peer reviewed": {
+          "text": "peer reviewed"
+        },
+        "not peer reviewed": {
+          "text": "not peer reviewed"
+        }
+      }
+    },
+    "functional effect category menu": {
+      "name": "functional effect category menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "ACE2 host variant dependency": {
+          "text": "ACE2 host variant dependency"
+        },
+        "ACE2 receptor binding affinity": {
+          "text": "ACE2 receptor binding affinity"
+        },
+        "aerosolization": {
+          "text": "aerosolization"
+        },
+        "anthropozoonotic events": {
+          "text": "anthropozoonotic events"
+        },
+        "antibody epitope effects": {
+          "text": "antibody epitope effects"
+        },
+        "antigenic test failure": {
+          "text": "antigenic test failure"
+        },
+        "branch specific selection pressure": {
+          "text": "branch specific selection pressure"
+        },
+        "caveolin binding": {
+          "text": "caveolin binding"
+        },
+        "clinical indicators": {
+          "text": "clinical indicators"
+        },
+        "convalescent plasma binding": {
+          "text": "convalescent plasma binding"
+        },
+        "convalescent plasma escape": {
+          "text": "convalescent plasma escape"
+        },
+        "dimerization": {
+          "text": "dimerization"
+        },
+        "environmental condition stability": {
+          "text": "environmental condition stability"
+        },
+        "frequency based fitness": {
+          "text": "frequency based fitness"
+        },
+        "gene expression increase": {
+          "text": "gene expression increase"
+        },
+        "homoplasy": {
+          "text": "homoplasy"
+        },
+        "humoral response durability": {
+          "text": "humoral response durability"
+        },
+        "IFN activity": {
+          "text": "IFN activity"
+        },
+        "immunosuppression variant emergence": {
+          "text": "immunosuppression variant emergence"
+        },
+        "monoclonal antibody serial passage escape": {
+          "text": "monoclonal antibody serial passage escape"
+        },
+        "neutralizing plaque serial passage escape": {
+          "text": "neutralizing plaque serial passage escape"
+        },
+        "outcome hazard ratio": {
+          "text": "outcome hazard ratio"
+        },
+        "pharmaceutical effectiveness": {
+          "text": "pharmaceutical effectiveness"
+        },
+        "posttranslational modifications": {
+          "text": "posttranslational modifications"
+        },
+        "protein cleavage": {
+          "text": "protein cleavage"
+        },
+        "reinfection": {
+          "text": "reinfection"
+        },
+        "RNA binding": {
+          "text": "RNA binding"
+        },
+        "stress granule inhibition": {
+          "text": "stress granule inhibition"
+        },
+        "subgenomic RNA expression": {
+          "text": "subgenomic RNA expression"
+        },
+        "symptom prevalence": {
+          "text": "symptom prevalence"
+        },
+        "syncytium formation": {
+          "text": "syncytium formation"
+        },
+        "T cell evasion": {
+          "text": "T cell evasion"
+        },
+        "tissue specific neutralization": {
+          "text": "tissue specific neutralization"
+        },
+        "tissue specific replication effects": {
+          "text": "tissue specific replication effects"
+        },
+        "trafficking": {
+          "text": "trafficking"
+        },
+        "transmissibility": {
+          "text": "transmissibility"
+        },
+        "vaccine efficacy": {
+          "text": "vaccine efficacy"
+        },
+        "vaccinee plasma binding": {
+          "text": "vaccinee plasma binding"
+        },
+        "vaccine neutralization efficacy": {
+          "text": "vaccine neutralization efficacy"
+        },
+        "vaccine specific variants": {
+          "text": "vaccine specific variants"
+        },
+        "variant linear antibody epitope effects": {
+          "text": "variant linear antibody epitope effects"
+        },
+        "viral load": {
+          "text": "viral load"
+        },
+        "virion structure": {
+          "text": "virion structure"
+        }
+      }
+    }
+  },
+  "slots": {
+    "organism": {
+      "name": "organism",
+      "description": "The virus being analyzed.",
+      "title": "organism",
+      "examples": [
+        {
+          "value": "Severe acute respiratory syndrome coronavirus 2"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "OBI:0100026",
+      "range": "organism menu",
+      "required": true
+    },
+    "reference accession": {
+      "name": "reference accession",
+      "description": "An identifier that specifies an individual sequence record in a public sequence repository.",
+      "title": "reference accession",
+      "comments": [
+        "Use the versioned accession number here."
+      ],
+      "examples": [
+        {
+          "value": "NC_045512.2"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "OBI:0002885",
+      "range": "reference accession menu",
+      "required": true
+    },
+    "reference database name": {
+      "name": "reference database name",
+      "description": "An identifier of a biological or bioinformatics database.",
+      "title": "reference database name",
+      "comments": [
+        "The name of the reference database may need to be entered manually if not automatically recorded as a parameter within the tool."
+      ],
+      "examples": [
+        {
+          "value": "RefSeq"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "OBI:0002883",
+      "range": "reference database menu",
+      "required": true
+    },
+    "nucleotide position": {
+      "name": "nucleotide position",
+      "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
+      "title": "nucleotide position",
+      "examples": [
+        {
+          "value": "351"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0101033",
+      "range": "integer",
+      "required": true
+    },
+    "original mutation description": {
+      "name": "original mutation description",
+      "description": "A sequence datum which describes a mutation, written in the user's own notation.",
+      "title": "original mutation description",
+      "examples": [
+        {
+          "value": "D614G, 12-bp deletion in E at nucleotide position 54647, D to G substitution at amino acid 614"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0101033",
+      "range": "string",
+      "required": true
+    },
+    "nucleotide mutation": {
+      "name": "nucleotide mutation",
+      "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
+      "title": "nucleotide mutation",
+      "comments": [
+        "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here."
+      ],
+      "examples": [
+        {
+          "value": "NC_045512.2:c.1850_1851insGT"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0100402",
+      "range": "WhitespaceMinimizedString",
+      "recommended": true
+    },
+    "amino acid mutation": {
+      "name": "amino acid mutation",
+      "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
+      "title": "amino acid mutation",
+      "comments": [
+        "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. For multiple amino acids that are correlated with a functional impact as a group, input a comma-separated list of mutations. It does not need to be known whether all mutations in the group are individually correlated with the functional impact."
+      ],
+      "examples": [
+        {
+          "value": "YP_009724390.1:p.Cys3563Ser, YP_009724390.1:p.Asp614Gly"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0100406",
+      "range": "WhitespaceMinimizedString",
+      "required": true
+    },
+    "amino acid mutation alias": {
+      "name": "amino acid mutation alias",
+      "description": "For SARS-CoV-2. The alias is an amino acid name indexed from the start of each nsp in Orf1ab, as opposed to from the start of the gene as is the default.",
+      "title": "amino acid mutation alias",
+      "comments": [
+        "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids."
+      ],
+      "examples": [
+        {
+          "value": "YP_009724390.1:p.Cys300Ser"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0100406",
+      "range": "WhitespaceMinimizedString"
+    },
+    "gene name": {
+      "name": "gene name",
+      "description": "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol.",
+      "title": "gene name",
+      "comments": [
+        "The long name for the gene/protein. Gene names or gene product names are acceptable.  SARS-CoV-2 gene names are from GENEPIO."
+      ],
+      "examples": [
+        {
+          "value": "Spike gene (SARS-CoV-2)"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "OBI:0002878",
+      "range": "gene name menu",
+      "required": true
+    },
+    "gene symbol": {
+      "name": "gene symbol",
+      "description": "The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name.",
+      "title": "gene symbol",
+      "comments": [
+        "Acceptable values may represent gene symbols or gene product symbols."
+      ],
+      "examples": [
+        {
+          "value": "S gene"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "OBI:0002877",
+      "range": "string",
+      "required": true
+    },
+    "protein name": {
+      "name": "protein name",
+      "description": "The name of a protein, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a protein symbol. It (typically) may be used to identify similar proteins in different species and to derive a protein symbol.",
+      "title": "protein name",
+      "comments": [
+        "Protein name taken from the Protein Ontology."
+      ],
+      "examples": [
+        {
+          "value": "Spike protein"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:TBA_1",
+      "range": "protein name menu",
+      "required": true
+    },
+    "protein symbol": {
+      "name": "protein symbol",
+      "description": "The short name of a protein; a single word that does not contain white space characters. It is typically derived from the protein name.",
+      "title": "protein symbol",
+      "examples": [
+        {
+          "value": "S protein"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:TBA_2",
+      "range": "string",
+      "required": true
+    },
+    "assay": {
+      "name": "assay",
+      "description": "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it.",
+      "title": "assay",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "OBI:0000070",
+      "range": "string"
+    },
+    "mutation functional effect category": {
+      "name": "mutation functional effect category",
+      "description": "The functional category of the mutation impact.",
+      "title": "mutation functional effect category",
+      "examples": [
+        {
+          "value": "dimerization"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:TBA_3",
+      "range": "functional effect category menu",
+      "required": true
+    },
+    "mutation functional effect description": {
+      "name": "mutation functional effect description",
+      "description": "A proposition which is a freetext description of the functional effect of a mutation.",
+      "title": "mutation functional effect description",
+      "examples": [
+        {
+          "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0101036",
+      "range": "string",
+      "required": true
+    },
+    "author": {
+      "name": "author",
+      "description": "The last name of the first author of the paper or other resource containing the evidence for the mutation impact.",
+      "title": "author",
+      "comments": [
+        "The surname of the publication's first author."
+      ],
+      "examples": [
+        {
+          "value": "Davis"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "dcterms:creator",
+      "range": "string",
+      "required": true
+    },
+    "publication year": {
+      "name": "publication year",
+      "description": "The publication year of the evidence source.",
+      "title": "publication year",
+      "examples": [
+        {
+          "value": "2021"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "dcterms:date",
+      "range": "integer",
+      "required": true
+    },
+    "URL": {
+      "name": "URL",
+      "description": "A link to the literature evidence source.",
+      "title": "URL",
+      "comments": [
+        "If the evidence is found in supplemental material, still link to the paper itself."
+      ],
+      "examples": [
+        {
+          "value": "https://www.biorxiv.org/content/10.1101/2021.01.22.427749v1"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "dcterms:source",
+      "range": "string",
+      "required": true
+    },
+    "DOI": {
+      "name": "DOI",
+      "description": "The DOI of the literature evidence source.",
+      "title": "DOI",
+      "examples": [
+        {
+          "value": "10.1101/2021.01.22.427749"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "dbXref",
+      "range": "string",
+      "recommended": true
+    },
+    "PMID": {
+      "name": "PMID",
+      "description": "The PMID of the literature evidence source.",
+      "title": "PMID",
+      "examples": [
+        {
+          "value": "34755213"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "dbXref",
+      "range": "string",
+      "recommended": true
+    },
+    "peer review status": {
+      "name": "peer review status",
+      "description": "Review stage for the literature evidence document.",
+      "title": "peer review status",
+      "examples": [
+        {
+          "value": "peer reviewed"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:TBA_4",
+      "range": "peer review status menu",
+      "required": true
+    },
+    "curator": {
+      "name": "curator",
+      "description": "The ORCID of the curator who created the annotation record.",
+      "title": "curator",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "dcterms:contributor",
+      "range": "string",
+      "required": true
+    },
+    "mutation functional annotation resource": {
+      "name": "mutation functional annotation resource",
+      "description": "The resource containing the functional annotation for the mutation.",
+      "title": "mutation functional annotation resource",
+      "examples": [
+        {
+          "value": "Pokay, SARS-CoV-2 Harvest Variants"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "dcterms:seeAlso",
+      "range": "string"
+    }
+  },
+  "classes": {
+    "dh_interface": {
+      "name": "dh_interface",
+      "description": "A DataHarmonizer interface",
+      "from_schema": "https://example.com/VIRUSMVP"
+    },
+    "VIRUSMVP_SARS-CoV-2": {
+      "name": "VIRUSMVP_SARS-CoV-2",
+      "description": "Specification for VIRUSMVP mutation functional impact data gathering",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "is_a": "dh_interface",
+      "slot_usage": {
+        "organism": {
+          "name": "organism",
+          "rank": 1,
+          "slot_group": "Reference genome information"
+        },
+        "reference accession": {
+          "name": "reference accession",
+          "rank": 2,
+          "slot_group": "Reference genome information"
+        },
+        "reference database name": {
+          "name": "reference database name",
+          "rank": 3,
+          "slot_group": "Reference genome information"
+        },
+        "nucleotide position": {
+          "name": "nucleotide position",
+          "rank": 4,
+          "slot_group": "Mutation position information"
+        },
+        "original mutation description": {
+          "name": "original mutation description",
+          "rank": 5,
+          "slot_group": "Mutation position information"
+        },
+        "nucleotide mutation": {
+          "name": "nucleotide mutation",
+          "rank": 6,
+          "slot_group": "Mutation position information"
+        },
+        "amino acid mutation": {
+          "name": "amino acid mutation",
+          "rank": 7,
+          "slot_group": "Mutation position information"
+        },
+        "amino acid mutation alias": {
+          "name": "amino acid mutation alias",
+          "rank": 8,
+          "slot_group": "Mutation position information"
+        },
+        "gene name": {
+          "name": "gene name",
+          "rank": 9,
+          "slot_group": "Mutation position information"
+        },
+        "gene symbol": {
+          "name": "gene symbol",
+          "rank": 10,
+          "slot_group": "Mutation position information"
+        },
+        "protein name": {
+          "name": "protein name",
+          "rank": 11,
+          "slot_group": "Mutation position information"
+        },
+        "protein symbol": {
+          "name": "protein symbol",
+          "rank": 12,
+          "slot_group": "Mutation position information"
+        },
+        "assay": {
+          "name": "assay",
+          "rank": 13,
+          "slot_group": "Functional effect information"
+        },
+        "mutation functional effect category": {
+          "name": "mutation functional effect category",
+          "rank": 14,
+          "slot_group": "Functional effect information"
+        },
+        "mutation functional effect description": {
+          "name": "mutation functional effect description",
+          "rank": 15,
+          "slot_group": "Functional effect information"
+        },
+        "author": {
+          "name": "author",
+          "rank": 16,
+          "slot_group": "Literature evidence citation"
+        },
+        "publication year": {
+          "name": "publication year",
+          "rank": 17,
+          "slot_group": "Literature evidence citation"
+        },
+        "URL": {
+          "name": "URL",
+          "rank": 18,
+          "slot_group": "Literature evidence citation"
+        },
+        "DOI": {
+          "name": "DOI",
+          "rank": 19,
+          "slot_group": "Literature evidence citation"
+        },
+        "PMID": {
+          "name": "PMID",
+          "rank": 20,
+          "slot_group": "Literature evidence citation"
+        },
+        "peer review status": {
+          "name": "peer review status",
+          "rank": 21,
+          "slot_group": "Literature evidence citation"
+        },
+        "curator": {
+          "name": "curator",
+          "rank": 22,
+          "slot_group": "Provenance"
+        },
+        "mutation functional annotation resource": {
+          "name": "mutation functional annotation resource",
+          "rank": 23,
+          "slot_group": "Provenance"
+        }
+      },
+      "attributes": {
+        "organism": {
+          "name": "organism",
+          "description": "The virus being analyzed.",
+          "title": "organism",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 1,
+          "slot_uri": "OBI:0100026",
+          "alias": "organism",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Reference genome information",
+          "range": "organism menu",
+          "required": true
+        },
+        "reference accession": {
+          "name": "reference accession",
+          "description": "An identifier that specifies an individual sequence record in a public sequence repository.",
+          "title": "reference accession",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 2,
+          "slot_uri": "OBI:0002885",
+          "alias": "reference_accession",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Reference genome information",
+          "range": "reference accession menu",
+          "required": true
+        },
+        "reference database name": {
+          "name": "reference database name",
+          "description": "An identifier of a biological or bioinformatics database.",
+          "title": "reference database name",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 3,
+          "slot_uri": "OBI:0002883",
+          "alias": "reference_database_name",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Reference genome information",
+          "range": "reference database menu",
+          "required": true
+        },
+        "nucleotide position": {
+          "name": "nucleotide position",
+          "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
+          "title": "nucleotide position",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 4,
+          "slot_uri": "GENEPIO:0101033",
+          "alias": "nucleotide_position",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "integer",
+          "required": true
+        },
+        "original mutation description": {
+          "name": "original mutation description",
+          "description": "A sequence datum which describes a mutation, written in the user's own notation.",
+          "title": "original mutation description",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 5,
+          "slot_uri": "GENEPIO:0101033",
+          "alias": "original_mutation_description",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "string",
+          "required": true
+        },
+        "nucleotide mutation": {
+          "name": "nucleotide mutation",
+          "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
+          "title": "nucleotide mutation",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 6,
+          "slot_uri": "GENEPIO:0100402",
+          "alias": "nucleotide_mutation",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "WhitespaceMinimizedString",
+          "recommended": true
+        },
+        "amino acid mutation": {
+          "name": "amino acid mutation",
+          "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
+          "title": "amino acid mutation",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 7,
+          "slot_uri": "GENEPIO:0100406",
+          "alias": "amino_acid_mutation",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "WhitespaceMinimizedString",
+          "required": true
+        },
+        "amino acid mutation alias": {
+          "name": "amino acid mutation alias",
+          "description": "For SARS-CoV-2. The alias is an amino acid name indexed from the start of each nsp in Orf1ab, as opposed to from the start of the gene as is the default.",
+          "title": "amino acid mutation alias",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 8,
+          "slot_uri": "GENEPIO:0100406",
+          "alias": "amino_acid_mutation_alias",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "WhitespaceMinimizedString"
+        },
+        "gene name": {
+          "name": "gene name",
+          "description": "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol.",
+          "title": "gene name",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 9,
+          "slot_uri": "OBI:0002878",
+          "alias": "gene_name",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "gene name menu",
+          "required": true
+        },
+        "gene symbol": {
+          "name": "gene symbol",
+          "description": "The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name.",
+          "title": "gene symbol",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 10,
+          "slot_uri": "OBI:0002877",
+          "alias": "gene_symbol",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "string",
+          "required": true
+        },
+        "protein name": {
+          "name": "protein name",
+          "description": "The name of a protein, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a protein symbol. It (typically) may be used to identify similar proteins in different species and to derive a protein symbol.",
+          "title": "protein name",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 11,
+          "slot_uri": "GENEPIO:TBA_1",
+          "alias": "protein_name",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "protein name menu",
+          "required": true
+        },
+        "protein symbol": {
+          "name": "protein symbol",
+          "description": "The short name of a protein; a single word that does not contain white space characters. It is typically derived from the protein name.",
+          "title": "protein symbol",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 12,
+          "slot_uri": "GENEPIO:TBA_2",
+          "alias": "protein_symbol",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Mutation position information",
+          "range": "string",
+          "required": true
+        },
+        "assay": {
+          "name": "assay",
+          "description": "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it.",
+          "title": "assay",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 13,
+          "slot_uri": "OBI:0000070",
+          "alias": "assay",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Functional effect information",
+          "range": "string"
+        },
+        "mutation functional effect category": {
+          "name": "mutation functional effect category",
+          "description": "The functional category of the mutation impact.",
+          "title": "mutation functional effect category",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 14,
+          "slot_uri": "GENEPIO:TBA_3",
+          "alias": "mutation_functional_effect_category",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Functional effect information",
+          "range": "functional effect category menu",
+          "required": true
+        },
+        "mutation functional effect description": {
+          "name": "mutation functional effect description",
+          "description": "A proposition which is a freetext description of the functional effect of a mutation.",
+          "title": "mutation functional effect description",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 15,
+          "slot_uri": "GENEPIO:0101036",
+          "alias": "mutation_functional_effect_description",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Functional effect information",
+          "range": "string",
+          "required": true
+        },
+        "author": {
+          "name": "author",
+          "description": "The last name of the first author of the paper or other resource containing the evidence for the mutation impact.",
+          "title": "author",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 16,
+          "slot_uri": "dcterms:creator",
+          "alias": "author",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Literature evidence citation",
+          "range": "string",
+          "required": true
+        },
+        "publication year": {
+          "name": "publication year",
+          "description": "The publication year of the evidence source.",
+          "title": "publication year",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 17,
+          "slot_uri": "dcterms:date",
+          "alias": "publication_year",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Literature evidence citation",
+          "range": "integer",
+          "required": true
+        },
+        "URL": {
+          "name": "URL",
+          "description": "A link to the literature evidence source.",
+          "title": "URL",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 18,
+          "slot_uri": "dcterms:source",
+          "alias": "URL",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Literature evidence citation",
+          "range": "string",
+          "required": true
+        },
+        "DOI": {
+          "name": "DOI",
+          "description": "The DOI of the literature evidence source.",
+          "title": "DOI",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 19,
+          "slot_uri": "dbXref",
+          "alias": "DOI",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Literature evidence citation",
+          "range": "string",
+          "recommended": true
+        },
+        "PMID": {
+          "name": "PMID",
+          "description": "The PMID of the literature evidence source.",
+          "title": "PMID",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 20,
+          "slot_uri": "dbXref",
+          "alias": "PMID",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Literature evidence citation",
+          "range": "string",
+          "recommended": true
+        },
+        "peer review status": {
+          "name": "peer review status",
+          "description": "Review stage for the literature evidence document.",
+          "title": "peer review status",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 21,
+          "slot_uri": "GENEPIO:TBA_4",
+          "alias": "peer_review_status",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Literature evidence citation",
+          "range": "peer review status menu",
+          "required": true
+        },
+        "curator": {
+          "name": "curator",
+          "description": "The ORCID of the curator who created the annotation record.",
+          "title": "curator",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 22,
+          "slot_uri": "dcterms:contributor",
+          "alias": "curator",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Provenance",
+          "range": "string",
+          "required": true
+        },
+        "mutation functional annotation resource": {
+          "name": "mutation functional annotation resource",
+          "description": "The resource containing the functional annotation for the mutation.",
+          "title": "mutation functional annotation resource",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 23,
+          "slot_uri": "dcterms:seeAlso",
+          "alias": "mutation_functional_annotation_resource",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "Provenance",
+          "range": "string"
+        }
+      }
+    }
+  },
+  "source_file": "schema.yaml",
+  "settings": {
+    "Title_Case": {
+      "setting_key": "Title_Case",
+      "setting_value": "(((?<=\\b)[^a-z\\W]\\w*?|[\\W])+)"
+    },
+    "UPPER_CASE": {
+      "setting_key": "UPPER_CASE",
+      "setting_value": "[A-Z\\W\\d_]*"
+    },
+    "lower_case": {
+      "setting_key": "lower_case",
+      "setting_value": "[a-z\\W\\d_]*"
+    }
+  },
+  "@type": "SchemaDefinition"
+}

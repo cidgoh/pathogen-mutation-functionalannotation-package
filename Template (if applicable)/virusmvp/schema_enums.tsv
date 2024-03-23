@@ -1,0 +1,83 @@
+title	meaning	menu_1	menu_2	menu_3	menu_4	menu_5	description	EXPORT_GISAID	EXPORT_CNPHI	EXPORT_NML_LIMS	EXPORT_BIOSAMPLE	EXPORT_VirusSeq_Portal
+												
+organism menu	NCBITaxon:2697049	Severe acute respiratory syndrome coronavirus 2										
+												
+reference accession menu		NC_045512.2										
+												
+reference database menu		RefSeq										
+												
+gene name menu	OGG:3043740570	E gene of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740571	M gene of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740575	N gene of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740578	ORF10 of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740579	ORF1ab of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740569	ORF3a of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740572	ORF6 of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740573	ORF7a of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740574	ORF7b of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740577	ORF8 of severe acute respiratory syndrome coronavirus 2										
+	OGG:3043740568	S gene of severe acute respiratory syndrome coronavirus 2										
+												
+protein name menu	PR:P0DTC4	envelope small membrane protein (SARS-CoV-2)										
+	PR:P0DTC5	membrane protein (SARS-CoV-2)										
+	PR:P0DTC9	nucleoprotein (SARS-CoV-2)										
+	PR:P0DTC3	ORF3a protein (SARS-CoV-2)										
+	PR:P0DTG1	ORF3c protein (SARS-CoV-2)										
+	PR:P0DTC6	ORF6 protein (SARS-CoV-2)										
+	PR:P0DTC7	ORF7a protein (SARS-CoV-2)										
+	PR:P0DTD8	ORF7b protein (SARS-CoV-2)										
+	PR:P0DTC8	ORF8 protein (SARS-CoV-2)										
+	PR:P0DTD2	ORF9b protein (SARS-CoV-2)										
+	PR:A0A663DJA2	putative ORF10 protein (SARS-CoV-2)										
+	PR:P0DTF1	putative ORF3b protein (SARS-CoV-2)										
+	PR:P0DTG0	putative ORF3d protein (SARS-CoV-2)										
+	PR:P0DTD3	putative ORF9c protein (SARS-CoV-2)										
+	PR:000050263	rep gene translation product (SARS-CoV-2)					A protein that is a translation product of the ORF1ab gene in SARS-CoV-2.					
+	PR:P0DTC2	spike glycoprotein (SARS-CoV-2)					A protein that is a translation product of the S gene in SARS-CoV-2.					
+												
+peer review status menu		peer reviewed										
+		not peer reviewed										
+												
+functional effect category menu		ACE2 host variant dependency										
+		ACE2 receptor binding affinity										
+		aerosolization										
+		anthropozoonotic events										
+		antibody epitope effects										
+		antigenic test failure										
+		branch specific selection pressure										
+		caveolin binding										
+		clinical indicators										
+		convalescent plasma binding										
+		convalescent plasma escape										
+		dimerization										
+		environmental condition stability										
+		frequency based fitness										
+		gene expression increase										
+		homoplasy										
+		humoral response durability										
+		IFN activity										
+		immunosuppression variant emergence										
+		monoclonal antibody serial passage escape										
+		neutralizing plaque serial passage escape										
+		outcome hazard ratio										
+		pharmaceutical effectiveness										
+		posttranslational modifications										
+		protein cleavage										
+		reinfection										
+		RNA binding										
+		stress granule inhibition										
+		subgenomic RNA expression										
+		symptom prevalence										
+		syncytium formation										
+		T cell evasion										
+		tissue specific neutralization										
+		tissue specific replication effects										
+		trafficking										
+		transmissibility										
+		vaccine efficacy										
+		vaccinee plasma binding										
+		vaccine neutralization efficacy										
+		vaccine specific variants										
+		variant linear antibody epitope effects										
+		viral load										
+		virion structure										

@@ -1,0 +1,582 @@
+id: https://example.com/VIRUSMVP
+name: VIRUSMVP_SARS-CoV-2
+description: ''
+version: 0.0.0
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  GENEPIO: http://purl.obolibrary.org/obo/GENEPIO_
+  OBI: http://purl.obolibrary.org/obo/OBI_
+  OGG: http://purl.obolibrary.org/obo/OGG_
+  PR: http://purl.obolibrary.org/obo/PR_
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  dcterms: http://purl.org/dc/terms/
+classes:
+  dh_interface:
+    name: dh_interface
+    description: A DataHarmonizer interface
+    from_schema: https://example.com/GRDI
+  VIRUSMVP_SARS-CoV-2:
+    name: VIRUSMVP_SARS-CoV-2
+    description: Specification for VIRUSMVP mutation functional impact data gathering
+    is_a: dh_interface
+    slots:
+    - organism
+    - reference accession
+    - reference database name
+    - nucleotide position
+    - original mutation description
+    - nucleotide mutation
+    - amino acid mutation
+    - amino acid mutation alias
+    - gene name
+    - gene symbol
+    - protein name
+    - protein symbol
+    - assay
+    - mutation functional effect category
+    - mutation functional effect description
+    - author
+    - publication year
+    - URL
+    - DOI
+    - PMID
+    - peer review status
+    - curator
+    - mutation functional annotation resource
+    slot_usage:
+      organism:
+        rank: 1
+        slot_group: Reference genome information
+      reference accession:
+        rank: 2
+        slot_group: Reference genome information
+      reference database name:
+        rank: 3
+        slot_group: Reference genome information
+      nucleotide position:
+        rank: 4
+        slot_group: Mutation position information
+      original mutation description:
+        rank: 5
+        slot_group: Mutation position information
+      nucleotide mutation:
+        rank: 6
+        slot_group: Mutation position information
+      amino acid mutation:
+        rank: 7
+        slot_group: Mutation position information
+      amino acid mutation alias:
+        rank: 8
+        slot_group: Mutation position information
+      gene name:
+        rank: 9
+        slot_group: Mutation position information
+      gene symbol:
+        rank: 10
+        slot_group: Mutation position information
+      protein name:
+        rank: 11
+        slot_group: Mutation position information
+      protein symbol:
+        rank: 12
+        slot_group: Mutation position information
+      assay:
+        rank: 13
+        slot_group: Functional effect information
+      mutation functional effect category:
+        rank: 14
+        slot_group: Functional effect information
+      mutation functional effect description:
+        rank: 15
+        slot_group: Functional effect information
+      author:
+        rank: 16
+        slot_group: Literature evidence citation
+      publication year:
+        rank: 17
+        slot_group: Literature evidence citation
+      URL:
+        rank: 18
+        slot_group: Literature evidence citation
+      DOI:
+        rank: 19
+        slot_group: Literature evidence citation
+      PMID:
+        rank: 20
+        slot_group: Literature evidence citation
+      peer review status:
+        rank: 21
+        slot_group: Literature evidence citation
+      curator:
+        rank: 22
+        slot_group: Provenance
+      mutation functional annotation resource:
+        rank: 23
+        slot_group: Provenance
+slots:
+  organism:
+    name: organism
+    title: organism
+    description: The virus being analyzed.
+    examples:
+    - value: Severe acute respiratory syndrome coronavirus 2
+    slot_uri: OBI:0100026
+    range: organism menu
+    required: true
+  reference accession:
+    name: reference accession
+    title: reference accession
+    description: An identifier that specifies an individual sequence record in a public
+      sequence repository.
+    comments: Use the versioned accession number here.
+    examples:
+    - value: NC_045512.2
+    slot_uri: OBI:0002885
+    range: reference accession menu
+    required: true
+  reference database name:
+    name: reference database name
+    title: reference database name
+    description: An identifier of a biological or bioinformatics database.
+    comments: The name of the reference database may need to be entered manually if
+      not automatically recorded as a parameter within the tool.
+    examples:
+    - value: RefSeq
+    slot_uri: OBI:0002883
+    range: reference database menu
+    required: true
+  nucleotide position:
+    name: nucleotide position
+    title: nucleotide position
+    description: A sequence datum which is the 1-based start position of a sequence
+      feature for a given nucleotide sequence.
+    examples:
+    - value: '351'
+    slot_uri: GENEPIO:0101033
+    range: integer
+    required: true
+  original mutation description:
+    name: original mutation description
+    title: original mutation description
+    description: A sequence datum which describes a mutation, written in the user's
+      own notation.
+    examples:
+    - value: D614G, 12-bp deletion in E at nucleotide position 54647, D to G substitution
+        at amino acid 614
+    slot_uri: GENEPIO:0101033
+    range: string
+    required: true
+  nucleotide mutation:
+    name: nucleotide mutation
+    title: nucleotide mutation
+    description: A sequence datum which describes a nucleotide sequence change as
+      compared to a reference sequence, represented by a specified notation system.
+    comments: Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations
+      should be included here.
+    examples:
+    - value: NC_045512.2:c.1850_1851insGT
+    slot_uri: GENEPIO:0100402
+    range: WhitespaceMinimizedString
+    recommended: true
+  amino acid mutation:
+    name: amino acid mutation
+    title: amino acid mutation
+    description: A sequence datum which describes an amino acid sequence change as
+      compared to a reference sequence, represented by a specified notation system.
+    comments: Use HGVS syntax; p. (protein) mutations should be included here; use
+      3 letter code preferred for amino acids. For multiple amino acids that are correlated
+      with a functional impact as a group, input a comma-separated list of mutations.
+      It does not need to be known whether all mutations in the group are individually
+      correlated with the functional impact.
+    examples:
+    - value: YP_009724390.1:p.Cys3563Ser, YP_009724390.1:p.Asp614Gly
+    slot_uri: GENEPIO:0100406
+    range: WhitespaceMinimizedString
+    required: true
+  amino acid mutation alias:
+    name: amino acid mutation alias
+    title: amino acid mutation alias
+    description: For SARS-CoV-2. The alias is an amino acid name indexed from the
+      start of each nsp in Orf1ab, as opposed to from the start of the gene as is
+      the default.
+    comments: Use HGVS syntax; p. (protein) mutations should be included here; use
+      3 letter code preferred for amino acids.
+    examples:
+    - value: YP_009724390.1:p.Cys300Ser
+    slot_uri: GENEPIO:0100406
+    range: WhitespaceMinimizedString
+  gene name:
+    name: gene name
+    title: gene name
+    description: The name of a gene, (typically) assigned by a person and/or according
+      to a naming scheme. It may contain white space characters and is typically more
+      intuitive and readable than a gene symbol. It (typically) may be used to identify
+      similar genes in different species and to derive a gene symbol.
+    comments: The long name for the gene/protein. Gene names or gene product names
+      are acceptable.  SARS-CoV-2 gene names are from GENEPIO.
+    examples:
+    - value: Spike gene (SARS-CoV-2)
+    slot_uri: OBI:0002878
+    range: gene name menu
+    required: true
+  gene symbol:
+    name: gene symbol
+    title: gene symbol
+    description: The short name of a gene; a single word that does not contain white
+      space characters. It is typically derived from the gene name.
+    comments: Acceptable values may represent gene symbols or gene product symbols.
+    examples:
+    - value: S gene
+    slot_uri: OBI:0002877
+    range: string
+    required: true
+  protein name:
+    name: protein name
+    title: protein name
+    description: The name of a protein, (typically) assigned by a person and/or according
+      to a naming scheme. It may contain white space characters and is typically more
+      intuitive and readable than a protein symbol. It (typically) may be used to
+      identify similar proteins in different species and to derive a protein symbol.
+    comments: Protein name taken from the Protein Ontology.
+    examples:
+    - value: Spike protein
+    slot_uri: GENEPIO:TBA_1
+    range: protein name menu
+    required: true
+  protein symbol:
+    name: protein symbol
+    title: protein symbol
+    description: The short name of a protein; a single word that does not contain
+      white space characters. It is typically derived from the protein name.
+    examples:
+    - value: S protein
+    slot_uri: GENEPIO:TBA_2
+    range: string
+    required: true
+  assay:
+    name: assay
+    title: assay
+    description: A planned process that has the objective to produce information about
+      a material entity (the evaluant) by examining it.
+    slot_uri: OBI:0000070
+    range: string
+  mutation functional effect category:
+    name: mutation functional effect category
+    title: mutation functional effect category
+    description: The functional category of the mutation impact.
+    examples:
+    - value: dimerization
+    slot_uri: GENEPIO:TBA_3
+    range: functional effect category menu
+    required: true
+  mutation functional effect description:
+    name: mutation functional effect description
+    title: mutation functional effect description
+    description: A proposition which is a freetext description of the functional effect
+      of a mutation.
+    examples:
+    - value: This mutation demonstrates that glutathionylation (in vivo oxidative
+        post-translational modification of cysteine) of Mpro/NSP5 residue C300 is
+        responsible for controlling the dimerization of the protein, where the monomer's
+        protease activity is hampered by the collapsing  of the active site pocket.
+    slot_uri: GENEPIO:0101036
+    range: string
+    required: true
+  author:
+    name: author
+    title: author
+    description: The last name of the first author of the paper or other resource
+      containing the evidence for the mutation impact.
+    comments: The surname of the publication's first author.
+    examples:
+    - value: Davis
+    slot_uri: dcterms:creator
+    range: string
+    required: true
+  publication year:
+    name: publication year
+    title: publication year
+    description: The publication year of the evidence source.
+    examples:
+    - value: '2021'
+    slot_uri: dcterms:date
+    range: integer
+    required: true
+  URL:
+    name: URL
+    title: URL
+    description: A link to the literature evidence source.
+    comments: If the evidence is found in supplemental material, still link to the
+      paper itself.
+    examples:
+    - value: https://www.biorxiv.org/content/10.1101/2021.01.22.427749v1
+    slot_uri: dcterms:source
+    range: string
+    required: true
+  DOI:
+    name: DOI
+    title: DOI
+    description: The DOI of the literature evidence source.
+    examples:
+    - value: 10.1101/2021.01.22.427749
+    slot_uri: dbXref
+    range: string
+    recommended: true
+  PMID:
+    name: PMID
+    title: PMID
+    description: The PMID of the literature evidence source.
+    examples:
+    - value: '34755213'
+    slot_uri: dbXref
+    range: string
+    recommended: true
+  peer review status:
+    name: peer review status
+    title: peer review status
+    description: Review stage for the literature evidence document.
+    examples:
+    - value: peer reviewed
+    slot_uri: GENEPIO:TBA_4
+    range: peer review status menu
+    required: true
+  curator:
+    name: curator
+    title: curator
+    description: The ORCID of the curator who created the annotation record.
+    slot_uri: dcterms:contributor
+    range: string
+    required: true
+  mutation functional annotation resource:
+    name: mutation functional annotation resource
+    title: mutation functional annotation resource
+    description: The resource containing the functional annotation for the mutation.
+    examples:
+    - value: Pokay, SARS-CoV-2 Harvest Variants
+    slot_uri: dcterms:seeAlso
+    range: string
+enums:
+  organism menu:
+    name: organism menu
+    permissible_values:
+      Severe acute respiratory syndrome coronavirus 2:
+        text: Severe acute respiratory syndrome coronavirus 2
+        meaning: NCBITaxon:2697049
+  reference accession menu:
+    name: reference accession menu
+    permissible_values:
+      NC_045512.2:
+        text: NC_045512.2
+  reference database menu:
+    name: reference database menu
+    permissible_values:
+      RefSeq:
+        text: RefSeq
+  gene name menu:
+    name: gene name menu
+    permissible_values:
+      E gene of severe acute respiratory syndrome coronavirus 2:
+        text: E gene of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740570
+      M gene of severe acute respiratory syndrome coronavirus 2:
+        text: M gene of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740571
+      N gene of severe acute respiratory syndrome coronavirus 2:
+        text: N gene of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740575
+      ORF10 of severe acute respiratory syndrome coronavirus 2:
+        text: ORF10 of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740578
+      ORF1ab of severe acute respiratory syndrome coronavirus 2:
+        text: ORF1ab of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740579
+      ORF3a of severe acute respiratory syndrome coronavirus 2:
+        text: ORF3a of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740569
+      ORF6 of severe acute respiratory syndrome coronavirus 2:
+        text: ORF6 of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740572
+      ORF7a of severe acute respiratory syndrome coronavirus 2:
+        text: ORF7a of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740573
+      ORF7b of severe acute respiratory syndrome coronavirus 2:
+        text: ORF7b of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740574
+      ORF8 of severe acute respiratory syndrome coronavirus 2:
+        text: ORF8 of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740577
+      S gene of severe acute respiratory syndrome coronavirus 2:
+        text: S gene of severe acute respiratory syndrome coronavirus 2
+        meaning: OGG:3043740568
+  protein name menu:
+    name: protein name menu
+    permissible_values:
+      envelope small membrane protein (SARS-CoV-2):
+        text: envelope small membrane protein (SARS-CoV-2)
+        meaning: PR:P0DTC4
+      membrane protein (SARS-CoV-2):
+        text: membrane protein (SARS-CoV-2)
+        meaning: PR:P0DTC5
+      nucleoprotein (SARS-CoV-2):
+        text: nucleoprotein (SARS-CoV-2)
+        meaning: PR:P0DTC9
+      ORF3a protein (SARS-CoV-2):
+        text: ORF3a protein (SARS-CoV-2)
+        meaning: PR:P0DTC3
+      ORF3c protein (SARS-CoV-2):
+        text: ORF3c protein (SARS-CoV-2)
+        meaning: PR:P0DTG1
+      ORF6 protein (SARS-CoV-2):
+        text: ORF6 protein (SARS-CoV-2)
+        meaning: PR:P0DTC6
+      ORF7a protein (SARS-CoV-2):
+        text: ORF7a protein (SARS-CoV-2)
+        meaning: PR:P0DTC7
+      ORF7b protein (SARS-CoV-2):
+        text: ORF7b protein (SARS-CoV-2)
+        meaning: PR:P0DTD8
+      ORF8 protein (SARS-CoV-2):
+        text: ORF8 protein (SARS-CoV-2)
+        meaning: PR:P0DTC8
+      ORF9b protein (SARS-CoV-2):
+        text: ORF9b protein (SARS-CoV-2)
+        meaning: PR:P0DTD2
+      putative ORF10 protein (SARS-CoV-2):
+        text: putative ORF10 protein (SARS-CoV-2)
+        meaning: PR:A0A663DJA2
+      putative ORF3b protein (SARS-CoV-2):
+        text: putative ORF3b protein (SARS-CoV-2)
+        meaning: PR:P0DTF1
+      putative ORF3d protein (SARS-CoV-2):
+        text: putative ORF3d protein (SARS-CoV-2)
+        meaning: PR:P0DTG0
+      putative ORF9c protein (SARS-CoV-2):
+        text: putative ORF9c protein (SARS-CoV-2)
+        meaning: PR:P0DTD3
+      rep gene translation product (SARS-CoV-2):
+        text: rep gene translation product (SARS-CoV-2)
+        description: A protein that is a translation product of the ORF1ab gene in
+          SARS-CoV-2.
+        meaning: PR:000050263
+      spike glycoprotein (SARS-CoV-2):
+        text: spike glycoprotein (SARS-CoV-2)
+        description: A protein that is a translation product of the S gene in SARS-CoV-2.
+        meaning: PR:P0DTC2
+  peer review status menu:
+    name: peer review status menu
+    permissible_values:
+      peer reviewed:
+        text: peer reviewed
+      not peer reviewed:
+        text: not peer reviewed
+  functional effect category menu:
+    name: functional effect category menu
+    permissible_values:
+      ACE2 host variant dependency:
+        text: ACE2 host variant dependency
+      ACE2 receptor binding affinity:
+        text: ACE2 receptor binding affinity
+      aerosolization:
+        text: aerosolization
+      anthropozoonotic events:
+        text: anthropozoonotic events
+      antibody epitope effects:
+        text: antibody epitope effects
+      antigenic test failure:
+        text: antigenic test failure
+      branch specific selection pressure:
+        text: branch specific selection pressure
+      caveolin binding:
+        text: caveolin binding
+      clinical indicators:
+        text: clinical indicators
+      convalescent plasma binding:
+        text: convalescent plasma binding
+      convalescent plasma escape:
+        text: convalescent plasma escape
+      dimerization:
+        text: dimerization
+      environmental condition stability:
+        text: environmental condition stability
+      frequency based fitness:
+        text: frequency based fitness
+      gene expression increase:
+        text: gene expression increase
+      homoplasy:
+        text: homoplasy
+      humoral response durability:
+        text: humoral response durability
+      IFN activity:
+        text: IFN activity
+      immunosuppression variant emergence:
+        text: immunosuppression variant emergence
+      monoclonal antibody serial passage escape:
+        text: monoclonal antibody serial passage escape
+      neutralizing plaque serial passage escape:
+        text: neutralizing plaque serial passage escape
+      outcome hazard ratio:
+        text: outcome hazard ratio
+      pharmaceutical effectiveness:
+        text: pharmaceutical effectiveness
+      posttranslational modifications:
+        text: posttranslational modifications
+      protein cleavage:
+        text: protein cleavage
+      reinfection:
+        text: reinfection
+      RNA binding:
+        text: RNA binding
+      stress granule inhibition:
+        text: stress granule inhibition
+      subgenomic RNA expression:
+        text: subgenomic RNA expression
+      symptom prevalence:
+        text: symptom prevalence
+      syncytium formation:
+        text: syncytium formation
+      T cell evasion:
+        text: T cell evasion
+      tissue specific neutralization:
+        text: tissue specific neutralization
+      tissue specific replication effects:
+        text: tissue specific replication effects
+      trafficking:
+        text: trafficking
+      transmissibility:
+        text: transmissibility
+      vaccine efficacy:
+        text: vaccine efficacy
+      vaccinee plasma binding:
+        text: vaccinee plasma binding
+      vaccine neutralization efficacy:
+        text: vaccine neutralization efficacy
+      vaccine specific variants:
+        text: vaccine specific variants
+      variant linear antibody epitope effects:
+        text: variant linear antibody epitope effects
+      viral load:
+        text: viral load
+      virion structure:
+        text: virion structure
+types:
+  WhitespaceMinimizedString:
+    name: WhitespaceMinimizedString
+    typeof: string
+    description: 'A string that has all whitespace trimmed off of beginning and end,
+      and all internal whitespace segments reduced to single spaces. Whitespace includes
+      #x9 (tab), #xA (linefeed), and #xD (carriage return).'
+    base: str
+    uri: xsd:token
+  Provenance:
+    name: Provenance
+    typeof: string
+    description: A field containing a DataHarmonizer versioning marker. It is issued
+      by DataHarmonizer when validation is applied to a given row of data.
+    base: str
+    uri: xsd:token
+settings:
+  Title_Case: (((?<=\b)[^a-z\W]\w*?|[\W])+)
+  UPPER_CASE: '[A-Z\W\d_]*'
+  lower_case: '[a-z\W\d_]*'
