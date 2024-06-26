@@ -1,26 +1,28 @@
 id: https://example.com/VIRUSMVP
 name: VIRUSMVP_SARS-CoV-2
-description: ''
-version: 0.0.0
+description: ""
+version: 1.0.0
+in_language: 
+- 'en'
 imports:
-- linkml:types
+- 'linkml:types'
 prefixes:
   linkml: https://w3id.org/linkml/
-  GENEPIO: http://purl.obolibrary.org/obo/GENEPIO_
-  OBI: http://purl.obolibrary.org/obo/OBI_
-  OGG: http://purl.obolibrary.org/obo/OGG_
-  PR: http://purl.obolibrary.org/obo/PR_
-  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   dcterms: http://purl.org/dc/terms/
+  GENEPIO: http://purl.obolibrary.org/obo/GENEPIO_
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  OBI: http://purl.obolibrary.org/obo/OBI_
+  SIO: http://semanticscience.org/resource/SIO_
+
 classes:
   dh_interface:
     name: dh_interface
-    description: A DataHarmonizer interface
-    from_schema: https://example.com/GRDI
-  VIRUSMVP_SARS-CoV-2:
-    name: VIRUSMVP_SARS-CoV-2
-    description: Specification for VIRUSMVP mutation functional impact data gathering
+    description: 'A DataHarmonizer interface'
+  'VIRUSMVP_SARS-CoV-2':
+    name: 'VIRUSMVP_SARS-CoV-2'
+    description: Specification for VIRUS-MVP SARS-CoV-2 mutation functional impact data gathering
     is_a: dh_interface
+    see_also: templates/virusmvp/SOP.pdf
 slots: {}
 enums: {}
 types:
@@ -37,6 +39,6 @@ types:
     base: str
     uri: xsd:token
 settings:
-  Title_Case: (((?<=\b)[^a-z\W]\w*?|[\W])+)
-  UPPER_CASE: '[A-Z\W\d_]*'
-  lower_case: '[a-z\W\d_]*'
+  Title_Case: "(((?<=\\b)[^a-z\\W]\\w*?|[\\W])+)"
+  UPPER_CASE: "[A-Z\\W\\d_]*"
+  lower_case: "[a-z\\W\\d_]*"

@@ -6,78 +6,54 @@ reference accession menu		NC_045512.2
 												
 reference database menu		RefSeq										
 												
-gene name menu	OGG:3043740570	E gene of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740571	M gene of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740575	N gene of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740578	ORF10 of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740579	ORF1ab of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740569	ORF3a of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740572	ORF6 of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740573	ORF7a of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740574	ORF7b of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740577	ORF8 of severe acute respiratory syndrome coronavirus 2										
-	OGG:3043740568	S gene of severe acute respiratory syndrome coronavirus 2										
+gene name menu	GENEPIO:0101134	open reading frame 1ab polyprotein gene (SARS-CoV-2)										
+	GENEPIO:0101138	open reading frame 1a polyprotein gene (SARS-CoV-2)										
+	GENEPIO:0101142	surface glycoprotein gene (SARS-CoV-2)										
+	GENEPIO:0101146	open reading frame 3a gene (SARS-CoV-2)										
+	GENEPIO:0101150	envelope gene (SARS-CoV-2)										
+	GENEPIO:0101154	membrane glycoprotein gene (SARS-CoV-2)										
+	GENEPIO:0101158	open reading frame 6 gene (SARS-CoV-2)										
+	GENEPIO:0101162	open reading frame 7a gene (SARS-CoV-2)										
+	GENEPIO:0101166	open reading frame 7b gene (SARS-CoV-2)										
+	GENEPIO:0101170	open reading frame 8 gene (SARS-CoV-2)										
+	GENEPIO:0101174	nucleocapsid phosphoprotein gene (SARS-CoV-2)										
+	GENEPIO:0101178	open reading frame 10 gene (SARS-CoV-2)										
 												
-protein name menu	PR:P0DTC4	envelope small membrane protein (SARS-CoV-2)										
-	PR:P0DTC5	membrane protein (SARS-CoV-2)										
-	PR:P0DTC9	nucleoprotein (SARS-CoV-2)										
-	PR:P0DTC3	ORF3a protein (SARS-CoV-2)										
-	PR:P0DTG1	ORF3c protein (SARS-CoV-2)										
-	PR:P0DTC6	ORF6 protein (SARS-CoV-2)										
-	PR:P0DTC7	ORF7a protein (SARS-CoV-2)										
-	PR:P0DTD8	ORF7b protein (SARS-CoV-2)										
-	PR:P0DTC8	ORF8 protein (SARS-CoV-2)										
-	PR:P0DTD2	ORF9b protein (SARS-CoV-2)										
-	PR:A0A663DJA2	putative ORF10 protein (SARS-CoV-2)										
-	PR:P0DTF1	putative ORF3b protein (SARS-CoV-2)										
-	PR:P0DTG0	putative ORF3d protein (SARS-CoV-2)										
-	PR:P0DTD3	putative ORF9c protein (SARS-CoV-2)										
-	PR:000050263	rep gene translation product (SARS-CoV-2)					A protein that is a translation product of the ORF1ab gene in SARS-CoV-2.					
-	PR:P0DTC2	spike glycoprotein (SARS-CoV-2)					A protein that is a translation product of the S gene in SARS-CoV-2.					
-												
-peer review status menu		peer reviewed										
-		not peer reviewed										
-												
-functional effect category menu		ACE2 host variant dependency										
-		ACE2 receptor binding affinity										
-		aerosolization										
-		anthropozoonotic events										
-		antibody epitope effects										
-		antigenic test failure										
-		branch specific selection pressure										
-		caveolin binding										
-		clinical indicators										
-		convalescent plasma binding										
-		convalescent plasma escape										
-		dimerization										
-		environmental condition stability										
-		frequency based fitness										
-		gene expression increase										
-		homoplasy										
-		humoral response durability										
-		IFN activity										
-		immunosuppression variant emergence										
-		monoclonal antibody serial passage escape										
-		neutralizing plaque serial passage escape										
-		outcome hazard ratio										
-		pharmaceutical effectiveness										
-		posttranslational modifications										
-		protein cleavage										
-		reinfection										
-		RNA binding										
-		stress granule inhibition										
-		subgenomic RNA expression										
-		symptom prevalence										
-		syncytium formation										
-		T cell evasion										
-		tissue specific neutralization										
-		tissue specific replication effects										
-		trafficking										
-		transmissibility										
-		vaccine efficacy										
-		vaccinee plasma binding										
-		vaccine neutralization efficacy										
-		vaccine specific variants										
-		variant linear antibody epitope effects										
-		viral load										
-		virion structure										
+gene symbol menu	GENEPIO:0101135	orf1ab gene (SARS-CoV-2)										
+	GENEPIO:0101139	orf1a gene (SARS-CoV-2)										
+	GENEPIO:0101143	s gene (SARS-CoV-2)										
+	GENEPIO:0101147	orf3a gene (SARS-CoV-2)										
+	GENEPIO:0101151	e gene (SARS-CoV-2)										
+	GENEPIO:0101155	m gene (SARS-CoV-2)										
+	GENEPIO:0101159	orf6 gene (SARS-CoV-2)										
+	GENEPIO:0101163	orf7a gene (SARS-CoV-2)										
+	GENEPIO:0101167	orf7b gene (SARS-CoV-2)										
+	GENEPIO:0101171	orf8 gene (SARS-CoV-2)										
+	GENEPIO:0101175	n gene (SARS-CoV-2)										
+	GENEPIO:0101179	orf10 gene (SARS-CoV-2)										
+protein name menu												
+	GENEPIO:0101136	open reading frame 1ab polyprotein (SARS-CoV-2)										
+	GENEPIO:0101140	open reading frame 1a polyprotein (SARS-CoV-2)										
+	GENEPIO:0101144	surface glycoprotein (SARS-CoV-2)										
+	GENEPIO:0101148	open reading frame 3a protein (SARS-CoV-2)										
+	GENEPIO:0101152	envelope protein (SARS-CoV-2)										
+	GENEPIO:0101156	membrane glycoprotein (SARS-CoV-2)										
+	GENEPIO:0101160	open reading frame 6 protein (SARS-CoV-2)										
+	GENEPIO:0101164	open reading frame 7a protein (SARS-CoV-2)										
+	GENEPIO:0101168	open reading frame 7b protein (SARS-CoV-2)										
+	GENEPIO:0101172	open reading frame 8 protein (SARS-CoV-2)										
+	GENEPIO:0101176	nucleocapsid phosphoprotein (SARS-CoV-2)										
+	GENEPIO:0101180	open reading frame 10 protein (SARS-CoV-2)										
+protein symbol menu												
+	GENEPIO:0101137	Orf1ab protein (SARS-CoV-2)										
+	GENEPIO:0101141	Orf1a protein (SARS-CoV-2)										
+	GENEPIO:0101145	S protein (SARS-CoV-2)										
+	GENEPIO:0101149	Orf3a protein (SARS-CoV-2)										
+	GENEPIO:0101153	E protein (SARS-CoV-2)										
+	GENEPIO:0101157	M protein (SARS-CoV-2)										
+	GENEPIO:0101161	Orf6 protein (SARS-CoV-2)										
+	GENEPIO:0101165	Orf7a protein (SARS-CoV-2)										
+	GENEPIO:0101169	Orf7b protein (SARS-CoV-2)										
+	GENEPIO:0101173	Orf8 protein (SARS-CoV-2)										
+	GENEPIO:0101177	N protein (SARS-CoV-2)										
+	GENEPIO:0101181	Orf10 protein (SARS-CoV-2)										

@@ -1,36 +1,33 @@
 {
   "name": "VIRUSMVP_SARS-CoV-2",
   "description": "",
+  "in_language": "['en']",
   "id": "https://example.com/VIRUSMVP",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "prefixes": {
     "linkml": {
       "prefix_prefix": "linkml",
       "prefix_reference": "https://w3id.org/linkml/"
     },
+    "dcterms": {
+      "prefix_prefix": "dcterms",
+      "prefix_reference": "http://purl.org/dc/terms/"
+    },
     "GENEPIO": {
       "prefix_prefix": "GENEPIO",
       "prefix_reference": "http://purl.obolibrary.org/obo/GENEPIO_"
-    },
-    "OBI": {
-      "prefix_prefix": "OBI",
-      "prefix_reference": "http://purl.obolibrary.org/obo/OBI_"
-    },
-    "OGG": {
-      "prefix_prefix": "OGG",
-      "prefix_reference": "http://purl.obolibrary.org/obo/OGG_"
-    },
-    "PR": {
-      "prefix_prefix": "PR",
-      "prefix_reference": "http://purl.obolibrary.org/obo/PR_"
     },
     "NCBITaxon": {
       "prefix_prefix": "NCBITaxon",
       "prefix_reference": "http://purl.obolibrary.org/obo/NCBITaxon_"
     },
-    "dcterms": {
-      "prefix_prefix": "dcterms",
-      "prefix_reference": "http://purl.org/dc/terms/"
+    "OBI": {
+      "prefix_prefix": "OBI",
+      "prefix_reference": "http://purl.obolibrary.org/obo/OBI_"
+    },
+    "SIO": {
+      "prefix_prefix": "SIO",
+      "prefix_reference": "http://semanticscience.org/resource/SIO_"
     },
     "xsd": {
       "prefix_prefix": "xsd",
@@ -348,49 +345,107 @@
       "name": "gene name menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
-        "E gene of severe acute respiratory syndrome coronavirus 2": {
-          "text": "E gene of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740570"
+        "open reading frame 1ab polyprotein gene (SARS-CoV-2)": {
+          "text": "open reading frame 1ab polyprotein gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101134"
         },
-        "M gene of severe acute respiratory syndrome coronavirus 2": {
-          "text": "M gene of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740571"
+        "open reading frame 1a polyprotein gene (SARS-CoV-2)": {
+          "text": "open reading frame 1a polyprotein gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101138"
         },
-        "N gene of severe acute respiratory syndrome coronavirus 2": {
-          "text": "N gene of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740575"
+        "surface glycoprotein gene (SARS-CoV-2)": {
+          "text": "surface glycoprotein gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101142"
         },
-        "ORF10 of severe acute respiratory syndrome coronavirus 2": {
-          "text": "ORF10 of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740578"
+        "open reading frame 3a gene (SARS-CoV-2)": {
+          "text": "open reading frame 3a gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101146"
         },
-        "ORF1ab of severe acute respiratory syndrome coronavirus 2": {
-          "text": "ORF1ab of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740579"
+        "envelope gene (SARS-CoV-2)": {
+          "text": "envelope gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101150"
         },
-        "ORF3a of severe acute respiratory syndrome coronavirus 2": {
-          "text": "ORF3a of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740569"
+        "membrane glycoprotein gene (SARS-CoV-2)": {
+          "text": "membrane glycoprotein gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101154"
         },
-        "ORF6 of severe acute respiratory syndrome coronavirus 2": {
-          "text": "ORF6 of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740572"
+        "open reading frame 6 gene (SARS-CoV-2)": {
+          "text": "open reading frame 6 gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101158"
         },
-        "ORF7a of severe acute respiratory syndrome coronavirus 2": {
-          "text": "ORF7a of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740573"
+        "open reading frame 7a gene (SARS-CoV-2)": {
+          "text": "open reading frame 7a gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101162"
         },
-        "ORF7b of severe acute respiratory syndrome coronavirus 2": {
-          "text": "ORF7b of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740574"
+        "open reading frame 7b gene (SARS-CoV-2)": {
+          "text": "open reading frame 7b gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101166"
         },
-        "ORF8 of severe acute respiratory syndrome coronavirus 2": {
-          "text": "ORF8 of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740577"
+        "open reading frame 8 gene (SARS-CoV-2)": {
+          "text": "open reading frame 8 gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101170"
         },
-        "S gene of severe acute respiratory syndrome coronavirus 2": {
-          "text": "S gene of severe acute respiratory syndrome coronavirus 2",
-          "meaning": "OGG:3043740568"
+        "nucleocapsid phosphoprotein gene (SARS-CoV-2)": {
+          "text": "nucleocapsid phosphoprotein gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101174"
+        },
+        "open reading frame 10 gene (SARS-CoV-2)": {
+          "text": "open reading frame 10 gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101178"
+        }
+      }
+    },
+    "gene symbol menu": {
+      "name": "gene symbol menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "orf1ab gene (SARS-CoV-2)": {
+          "text": "orf1ab gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101135"
+        },
+        "orf1a gene (SARS-CoV-2)": {
+          "text": "orf1a gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101139"
+        },
+        "s gene (SARS-CoV-2)": {
+          "text": "s gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101143"
+        },
+        "orf3a gene (SARS-CoV-2)": {
+          "text": "orf3a gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101147"
+        },
+        "e gene (SARS-CoV-2)": {
+          "text": "e gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101151"
+        },
+        "m gene (SARS-CoV-2)": {
+          "text": "m gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101155"
+        },
+        "orf6 gene (SARS-CoV-2)": {
+          "text": "orf6 gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101159"
+        },
+        "orf7a gene (SARS-CoV-2)": {
+          "text": "orf7a gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101163"
+        },
+        "orf7b gene (SARS-CoV-2)": {
+          "text": "orf7b gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101167"
+        },
+        "orf8 gene (SARS-CoV-2)": {
+          "text": "orf8 gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101171"
+        },
+        "n gene (SARS-CoV-2)": {
+          "text": "n gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101175"
+        },
+        "orf10 gene (SARS-CoV-2)": {
+          "text": "orf10 gene (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101179"
         }
       }
     },
@@ -398,218 +453,107 @@
       "name": "protein name menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
-        "envelope small membrane protein (SARS-CoV-2)": {
-          "text": "envelope small membrane protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTC4"
+        "open reading frame 1ab polyprotein (SARS-CoV-2)": {
+          "text": "open reading frame 1ab polyprotein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101136"
         },
-        "membrane protein (SARS-CoV-2)": {
-          "text": "membrane protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTC5"
+        "open reading frame 1a polyprotein (SARS-CoV-2)": {
+          "text": "open reading frame 1a polyprotein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101140"
         },
-        "nucleoprotein (SARS-CoV-2)": {
-          "text": "nucleoprotein (SARS-CoV-2)",
-          "meaning": "PR:P0DTC9"
+        "surface glycoprotein (SARS-CoV-2)": {
+          "text": "surface glycoprotein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101144"
         },
-        "ORF3a protein (SARS-CoV-2)": {
-          "text": "ORF3a protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTC3"
+        "open reading frame 3a protein (SARS-CoV-2)": {
+          "text": "open reading frame 3a protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101148"
         },
-        "ORF3c protein (SARS-CoV-2)": {
-          "text": "ORF3c protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTG1"
+        "envelope protein (SARS-CoV-2)": {
+          "text": "envelope protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101152"
         },
-        "ORF6 protein (SARS-CoV-2)": {
-          "text": "ORF6 protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTC6"
+        "membrane glycoprotein (SARS-CoV-2)": {
+          "text": "membrane glycoprotein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101156"
         },
-        "ORF7a protein (SARS-CoV-2)": {
-          "text": "ORF7a protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTC7"
+        "open reading frame 6 protein (SARS-CoV-2)": {
+          "text": "open reading frame 6 protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101160"
         },
-        "ORF7b protein (SARS-CoV-2)": {
-          "text": "ORF7b protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTD8"
+        "open reading frame 7a protein (SARS-CoV-2)": {
+          "text": "open reading frame 7a protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101164"
         },
-        "ORF8 protein (SARS-CoV-2)": {
-          "text": "ORF8 protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTC8"
+        "open reading frame 7b protein (SARS-CoV-2)": {
+          "text": "open reading frame 7b protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101168"
         },
-        "ORF9b protein (SARS-CoV-2)": {
-          "text": "ORF9b protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTD2"
+        "open reading frame 8 protein (SARS-CoV-2)": {
+          "text": "open reading frame 8 protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101172"
         },
-        "putative ORF10 protein (SARS-CoV-2)": {
-          "text": "putative ORF10 protein (SARS-CoV-2)",
-          "meaning": "PR:A0A663DJA2"
+        "nucleocapsid phosphoprotein (SARS-CoV-2)": {
+          "text": "nucleocapsid phosphoprotein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101176"
         },
-        "putative ORF3b protein (SARS-CoV-2)": {
-          "text": "putative ORF3b protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTF1"
-        },
-        "putative ORF3d protein (SARS-CoV-2)": {
-          "text": "putative ORF3d protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTG0"
-        },
-        "putative ORF9c protein (SARS-CoV-2)": {
-          "text": "putative ORF9c protein (SARS-CoV-2)",
-          "meaning": "PR:P0DTD3"
-        },
-        "rep gene translation product (SARS-CoV-2)": {
-          "text": "rep gene translation product (SARS-CoV-2)",
-          "description": "A protein that is a translation product of the ORF1ab gene in SARS-CoV-2.",
-          "meaning": "PR:000050263"
-        },
-        "spike glycoprotein (SARS-CoV-2)": {
-          "text": "spike glycoprotein (SARS-CoV-2)",
-          "description": "A protein that is a translation product of the S gene in SARS-CoV-2.",
-          "meaning": "PR:P0DTC2"
+        "open reading frame 10 protein (SARS-CoV-2)": {
+          "text": "open reading frame 10 protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101180"
         }
       }
     },
-    "peer review status menu": {
-      "name": "peer review status menu",
+    "protein symbol menu": {
+      "name": "protein symbol menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
-        "peer reviewed": {
-          "text": "peer reviewed"
+        "Orf1ab protein (SARS-CoV-2)": {
+          "text": "Orf1ab protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101137"
         },
-        "not peer reviewed": {
-          "text": "not peer reviewed"
-        }
-      }
-    },
-    "functional effect category menu": {
-      "name": "functional effect category menu",
-      "from_schema": "https://example.com/VIRUSMVP",
-      "permissible_values": {
-        "ACE2 host variant dependency": {
-          "text": "ACE2 host variant dependency"
+        "Orf1a protein (SARS-CoV-2)": {
+          "text": "Orf1a protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101141"
         },
-        "ACE2 receptor binding affinity": {
-          "text": "ACE2 receptor binding affinity"
+        "S protein (SARS-CoV-2)": {
+          "text": "S protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101145"
         },
-        "aerosolization": {
-          "text": "aerosolization"
+        "Orf3a protein (SARS-CoV-2)": {
+          "text": "Orf3a protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101149"
         },
-        "anthropozoonotic events": {
-          "text": "anthropozoonotic events"
+        "E protein (SARS-CoV-2)": {
+          "text": "E protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101153"
         },
-        "antibody epitope effects": {
-          "text": "antibody epitope effects"
+        "M protein (SARS-CoV-2)": {
+          "text": "M protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101157"
         },
-        "antigenic test failure": {
-          "text": "antigenic test failure"
+        "Orf6 protein (SARS-CoV-2)": {
+          "text": "Orf6 protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101161"
         },
-        "branch specific selection pressure": {
-          "text": "branch specific selection pressure"
+        "Orf7a protein (SARS-CoV-2)": {
+          "text": "Orf7a protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101165"
         },
-        "caveolin binding": {
-          "text": "caveolin binding"
+        "Orf7b protein (SARS-CoV-2)": {
+          "text": "Orf7b protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101169"
         },
-        "clinical indicators": {
-          "text": "clinical indicators"
+        "Orf8 protein (SARS-CoV-2)": {
+          "text": "Orf8 protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101173"
         },
-        "convalescent plasma binding": {
-          "text": "convalescent plasma binding"
+        "N protein (SARS-CoV-2)": {
+          "text": "N protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101177"
         },
-        "convalescent plasma escape": {
-          "text": "convalescent plasma escape"
-        },
-        "dimerization": {
-          "text": "dimerization"
-        },
-        "environmental condition stability": {
-          "text": "environmental condition stability"
-        },
-        "frequency based fitness": {
-          "text": "frequency based fitness"
-        },
-        "gene expression increase": {
-          "text": "gene expression increase"
-        },
-        "homoplasy": {
-          "text": "homoplasy"
-        },
-        "humoral response durability": {
-          "text": "humoral response durability"
-        },
-        "IFN activity": {
-          "text": "IFN activity"
-        },
-        "immunosuppression variant emergence": {
-          "text": "immunosuppression variant emergence"
-        },
-        "monoclonal antibody serial passage escape": {
-          "text": "monoclonal antibody serial passage escape"
-        },
-        "neutralizing plaque serial passage escape": {
-          "text": "neutralizing plaque serial passage escape"
-        },
-        "outcome hazard ratio": {
-          "text": "outcome hazard ratio"
-        },
-        "pharmaceutical effectiveness": {
-          "text": "pharmaceutical effectiveness"
-        },
-        "posttranslational modifications": {
-          "text": "posttranslational modifications"
-        },
-        "protein cleavage": {
-          "text": "protein cleavage"
-        },
-        "reinfection": {
-          "text": "reinfection"
-        },
-        "RNA binding": {
-          "text": "RNA binding"
-        },
-        "stress granule inhibition": {
-          "text": "stress granule inhibition"
-        },
-        "subgenomic RNA expression": {
-          "text": "subgenomic RNA expression"
-        },
-        "symptom prevalence": {
-          "text": "symptom prevalence"
-        },
-        "syncytium formation": {
-          "text": "syncytium formation"
-        },
-        "T cell evasion": {
-          "text": "T cell evasion"
-        },
-        "tissue specific neutralization": {
-          "text": "tissue specific neutralization"
-        },
-        "tissue specific replication effects": {
-          "text": "tissue specific replication effects"
-        },
-        "trafficking": {
-          "text": "trafficking"
-        },
-        "transmissibility": {
-          "text": "transmissibility"
-        },
-        "vaccine efficacy": {
-          "text": "vaccine efficacy"
-        },
-        "vaccinee plasma binding": {
-          "text": "vaccinee plasma binding"
-        },
-        "vaccine neutralization efficacy": {
-          "text": "vaccine neutralization efficacy"
-        },
-        "vaccine specific variants": {
-          "text": "vaccine specific variants"
-        },
-        "variant linear antibody epitope effects": {
-          "text": "variant linear antibody epitope effects"
-        },
-        "viral load": {
-          "text": "viral load"
-        },
-        "virion structure": {
-          "text": "virion structure"
+        "Orf10 protein (SARS-CoV-2)": {
+          "text": "Orf10 protein (SARS-CoV-2)",
+          "meaning": "GENEPIO:0101181"
         }
       }
     }
@@ -629,8 +573,8 @@
       "range": "organism menu",
       "required": true
     },
-    "reference accession": {
-      "name": "reference accession",
+    "reference_accession": {
+      "name": "reference_accession",
       "description": "An identifier that specifies an individual sequence record in a public sequence repository.",
       "title": "reference accession",
       "comments": [
@@ -646,8 +590,8 @@
       "range": "reference accession menu",
       "required": true
     },
-    "reference database name": {
-      "name": "reference database name",
+    "reference_database_name": {
+      "name": "reference_database_name",
       "description": "An identifier of a biological or bioinformatics database.",
       "title": "reference database name",
       "comments": [
@@ -663,8 +607,8 @@
       "range": "reference database menu",
       "required": true
     },
-    "nucleotide position": {
-      "name": "nucleotide position",
+    "nucleotide_position": {
+      "name": "nucleotide_position",
       "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
       "title": "nucleotide position",
       "examples": [
@@ -675,10 +619,11 @@
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101033",
       "range": "integer",
-      "required": true
+      "required": true,
+      "minimum_value": 0
     },
-    "original mutation description": {
-      "name": "original mutation description",
+    "original_mutation_description": {
+      "name": "original_mutation_description",
       "description": "A sequence datum which describes a mutation, written in the user's own notation.",
       "title": "original mutation description",
       "examples": [
@@ -687,12 +632,12 @@
         }
       ],
       "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "GENEPIO:0101033",
+      "slot_uri": "GENEPIO:0101030",
       "range": "string",
       "required": true
     },
-    "nucleotide mutation": {
-      "name": "nucleotide mutation",
+    "nucleotide_mutation": {
+      "name": "nucleotide_mutation",
       "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
       "title": "nucleotide mutation",
       "comments": [
@@ -708,8 +653,8 @@
       "range": "WhitespaceMinimizedString",
       "recommended": true
     },
-    "amino acid mutation": {
-      "name": "amino acid mutation",
+    "amino_acid_mutation": {
+      "name": "amino_acid_mutation",
       "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
       "title": "amino acid mutation",
       "comments": [
@@ -725,8 +670,8 @@
       "range": "WhitespaceMinimizedString",
       "required": true
     },
-    "amino acid mutation alias": {
-      "name": "amino acid mutation alias",
+    "amino_acid_mutation_alias": {
+      "name": "amino_acid_mutation_alias",
       "description": "For SARS-CoV-2. The alias is an amino acid name indexed from the start of each nsp in Orf1ab, as opposed to from the start of the gene as is the default.",
       "title": "amino acid mutation alias",
       "comments": [
@@ -741,97 +686,83 @@
       "slot_uri": "GENEPIO:0100406",
       "range": "WhitespaceMinimizedString"
     },
-    "gene name": {
-      "name": "gene name",
+    "gene_name": {
+      "name": "gene_name",
       "description": "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol.",
       "title": "gene name",
-      "comments": [
-        "The long name for the gene/protein. Gene names or gene product names are acceptable.  SARS-CoV-2 gene names are from GENEPIO."
-      ],
       "examples": [
         {
-          "value": "Spike gene (SARS-CoV-2)"
+          "value": "surface glycoprotein gene (SARS-CoV-2)"
         }
       ],
       "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "OBI:0002878",
+      "slot_uri": "GENEPIO:0101130",
       "range": "gene name menu",
       "required": true
     },
-    "gene symbol": {
-      "name": "gene symbol",
+    "gene_symbol": {
+      "name": "gene_symbol",
       "description": "The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name.",
       "title": "gene symbol",
-      "comments": [
-        "Acceptable values may represent gene symbols or gene product symbols."
-      ],
       "examples": [
         {
-          "value": "S gene"
+          "value": "s gene (SARS-CoV-2)"
         }
       ],
       "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "OBI:0002877",
-      "range": "string",
+      "slot_uri": "GENEPIO:0101131",
+      "range": "gene symbol menu",
       "required": true
     },
-    "protein name": {
-      "name": "protein name",
+    "protein_name": {
+      "name": "protein_name",
       "description": "The name of a protein, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a protein symbol. It (typically) may be used to identify similar proteins in different species and to derive a protein symbol.",
       "title": "protein name",
-      "comments": [
-        "Protein name taken from the Protein Ontology."
-      ],
       "examples": [
         {
-          "value": "Spike protein"
+          "value": "surface glycoprotein (SARS-CoV-2)"
         }
       ],
       "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "GENEPIO:TBA_1",
+      "slot_uri": "GENEPIO:0101132",
       "range": "protein name menu",
       "required": true
     },
-    "protein symbol": {
-      "name": "protein symbol",
+    "protein_symbol": {
+      "name": "protein_symbol",
       "description": "The short name of a protein; a single word that does not contain white space characters. It is typically derived from the protein name.",
       "title": "protein symbol",
       "examples": [
         {
-          "value": "S protein"
+          "value": "S protein (SARS-CoV-2)"
         }
       ],
       "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "GENEPIO:TBA_2",
-      "range": "string",
+      "slot_uri": "GENEPIO:0101133",
+      "range": "protein symbol menu",
       "required": true
     },
-    "assay": {
-      "name": "assay",
-      "description": "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it.",
-      "title": "assay",
-      "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "OBI:0000070",
-      "range": "string"
-    },
-    "mutation functional effect category": {
-      "name": "mutation functional effect category",
+    "variant_functional_effect": {
+      "name": "variant_functional_effect",
       "description": "The functional category of the mutation impact.",
-      "title": "mutation functional effect category",
+      "title": "variant functional effect",
+      "comments": [
+        "Freetext; a future update will have a picklist here."
+      ],
       "examples": [
         {
           "value": "dimerization"
         }
       ],
       "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "GENEPIO:TBA_3",
-      "range": "functional effect category menu",
+      "slot_uri": "GENEPIO:0101127",
+      "range": "string",
       "required": true
     },
-    "mutation functional effect description": {
-      "name": "mutation functional effect description",
-      "description": "A proposition which is a freetext description of the functional effect of a mutation.",
-      "title": "mutation functional effect description",
+    "variant_functional_effect_description": {
+      "name": "variant_functional_effect_description",
+      "description": "A freetext description of the functional effect of a mutation.",
+      "title": "variant functional effect description",
       "examples": [
         {
           "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
@@ -847,7 +778,7 @@
       "description": "The last name of the first author of the paper or other resource containing the evidence for the mutation impact.",
       "title": "author",
       "comments": [
-        "The surname of the publication's first author."
+        "The surname of the publication's first author, without \"et al.\" added."
       ],
       "examples": [
         {
@@ -859,8 +790,8 @@
       "range": "string",
       "required": true
     },
-    "publication year": {
-      "name": "publication year",
+    "publication_year": {
+      "name": "publication_year",
       "description": "The publication year of the evidence source.",
       "title": "publication year",
       "examples": [
@@ -918,9 +849,9 @@
       "range": "string",
       "recommended": true
     },
-    "peer review status": {
-      "name": "peer review status",
-      "description": "Review stage for the literature evidence document.",
+    "peer_review_status": {
+      "name": "peer_review_status",
+      "description": "Peer review status for the literature evidence document: true or false.",
       "title": "peer review status",
       "examples": [
         {
@@ -928,21 +859,28 @@
         }
       ],
       "from_schema": "https://example.com/VIRUSMVP",
-      "slot_uri": "GENEPIO:TBA_4",
-      "range": "peer review status menu",
+      "slot_uri": "SIO:001035",
+      "range": "boolean",
       "required": true
     },
     "curator": {
       "name": "curator",
       "description": "The ORCID of the curator who created the annotation record.",
       "title": "curator",
+      "comments": [
+        "If no ORCID is available, write the curator's full name here."
+      ],
+      "examples": [
+        {
+          "value": "0000-0002-0548-891X"
+        }
+      ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dcterms:contributor",
-      "range": "string",
-      "required": true
+      "range": "string"
     },
-    "mutation functional annotation resource": {
-      "name": "mutation functional annotation resource",
+    "mutation_functional_annotation_resource": {
+      "name": "mutation_functional_annotation_resource",
       "description": "The resource containing the functional annotation for the mutation.",
       "title": "mutation functional annotation resource",
       "examples": [
@@ -963,124 +901,122 @@
     },
     "VIRUSMVP_SARS-CoV-2": {
       "name": "VIRUSMVP_SARS-CoV-2",
-      "description": "Specification for VIRUSMVP mutation functional impact data gathering",
+      "description": "Specification for VIRUS-MVP SARS-CoV-2 mutation functional impact data gathering",
       "from_schema": "https://example.com/VIRUSMVP",
+      "see_also": [
+        "templates/virusmvp/SOP.pdf"
+      ],
       "is_a": "dh_interface",
       "slot_usage": {
         "organism": {
           "name": "organism",
           "rank": 1,
-          "slot_group": "Reference genome information"
+          "slot_group": "reference sequence information"
         },
-        "reference accession": {
-          "name": "reference accession",
+        "reference_accession": {
+          "name": "reference_accession",
           "rank": 2,
-          "slot_group": "Reference genome information"
+          "slot_group": "reference sequence information"
         },
-        "reference database name": {
-          "name": "reference database name",
+        "reference_database_name": {
+          "name": "reference_database_name",
           "rank": 3,
-          "slot_group": "Reference genome information"
+          "slot_group": "reference sequence information"
         },
-        "nucleotide position": {
-          "name": "nucleotide position",
+        "nucleotide_position": {
+          "name": "nucleotide_position",
           "rank": 4,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "original mutation description": {
-          "name": "original mutation description",
+        "original_mutation_description": {
+          "name": "original_mutation_description",
           "rank": 5,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "nucleotide mutation": {
-          "name": "nucleotide mutation",
+        "nucleotide_mutation": {
+          "name": "nucleotide_mutation",
           "rank": 6,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "amino acid mutation": {
-          "name": "amino acid mutation",
+        "amino_acid_mutation": {
+          "name": "amino_acid_mutation",
           "rank": 7,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "amino acid mutation alias": {
-          "name": "amino acid mutation alias",
+        "amino_acid_mutation_alias": {
+          "name": "amino_acid_mutation_alias",
           "rank": 8,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "gene name": {
-          "name": "gene name",
+        "gene_name": {
+          "name": "gene_name",
           "rank": 9,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "gene symbol": {
-          "name": "gene symbol",
+        "gene_symbol": {
+          "name": "gene_symbol",
           "rank": 10,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "protein name": {
-          "name": "protein name",
+        "protein_name": {
+          "name": "protein_name",
           "rank": 11,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "protein symbol": {
-          "name": "protein symbol",
+        "protein_symbol": {
+          "name": "protein_symbol",
           "rank": 12,
-          "slot_group": "Mutation position information"
+          "slot_group": "mutation location information"
         },
-        "assay": {
-          "name": "assay",
+        "variant_functional_effect": {
+          "name": "variant_functional_effect",
           "rank": 13,
-          "slot_group": "Functional effect information"
+          "slot_group": "functional effect information"
         },
-        "mutation functional effect category": {
-          "name": "mutation functional effect category",
+        "variant_functional_effect_description": {
+          "name": "variant_functional_effect_description",
           "rank": 14,
-          "slot_group": "Functional effect information"
-        },
-        "mutation functional effect description": {
-          "name": "mutation functional effect description",
-          "rank": 15,
-          "slot_group": "Functional effect information"
+          "slot_group": "functional effect information"
         },
         "author": {
           "name": "author",
-          "rank": 16,
-          "slot_group": "Literature evidence citation"
+          "rank": 15,
+          "slot_group": "literature citation"
         },
-        "publication year": {
-          "name": "publication year",
-          "rank": 17,
-          "slot_group": "Literature evidence citation"
+        "publication_year": {
+          "name": "publication_year",
+          "rank": 16,
+          "slot_group": "literature citation"
         },
         "URL": {
           "name": "URL",
-          "rank": 18,
-          "slot_group": "Literature evidence citation"
+          "rank": 17,
+          "slot_group": "literature citation"
         },
         "DOI": {
           "name": "DOI",
-          "rank": 19,
-          "slot_group": "Literature evidence citation"
+          "rank": 18,
+          "slot_group": "literature citation"
         },
         "PMID": {
           "name": "PMID",
-          "rank": 20,
-          "slot_group": "Literature evidence citation"
+          "rank": 19,
+          "slot_group": "literature citation"
         },
-        "peer review status": {
-          "name": "peer review status",
-          "rank": 21,
-          "slot_group": "Literature evidence citation"
+        "peer_review_status": {
+          "name": "peer_review_status",
+          "rank": 20,
+          "slot_group": "literature citation"
         },
         "curator": {
           "name": "curator",
-          "rank": 22,
-          "slot_group": "Provenance"
+          "rank": 21,
+          "slot_group": "contributor acknowledgement"
         },
-        "mutation functional annotation resource": {
-          "name": "mutation functional annotation resource",
-          "rank": 23,
-          "slot_group": "Provenance"
+        "mutation_functional_annotation_resource": {
+          "name": "mutation_functional_annotation_resource",
+          "rank": 22,
+          "slot_group": "contributor acknowledgement"
         }
       },
       "attributes": {
@@ -1096,12 +1032,12 @@
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Reference genome information",
+          "slot_group": "reference sequence information",
           "range": "organism menu",
           "required": true
         },
-        "reference accession": {
-          "name": "reference accession",
+        "reference_accession": {
+          "name": "reference_accession",
           "description": "An identifier that specifies an individual sequence record in a public sequence repository.",
           "title": "reference accession",
           "from_schema": "https://example.com/VIRUSMVP",
@@ -1112,12 +1048,12 @@
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Reference genome information",
+          "slot_group": "reference sequence information",
           "range": "reference accession menu",
           "required": true
         },
-        "reference database name": {
-          "name": "reference database name",
+        "reference_database_name": {
+          "name": "reference_database_name",
           "description": "An identifier of a biological or bioinformatics database.",
           "title": "reference database name",
           "from_schema": "https://example.com/VIRUSMVP",
@@ -1128,12 +1064,12 @@
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Reference genome information",
+          "slot_group": "reference sequence information",
           "range": "reference database menu",
           "required": true
         },
-        "nucleotide position": {
-          "name": "nucleotide position",
+        "nucleotide_position": {
+          "name": "nucleotide_position",
           "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
           "title": "nucleotide position",
           "from_schema": "https://example.com/VIRUSMVP",
@@ -1144,28 +1080,29 @@
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
           "range": "integer",
-          "required": true
+          "required": true,
+          "minimum_value": 0
         },
-        "original mutation description": {
-          "name": "original mutation description",
+        "original_mutation_description": {
+          "name": "original_mutation_description",
           "description": "A sequence datum which describes a mutation, written in the user's own notation.",
           "title": "original mutation description",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 5,
-          "slot_uri": "GENEPIO:0101033",
+          "slot_uri": "GENEPIO:0101030",
           "alias": "original_mutation_description",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
           "range": "string",
           "required": true
         },
-        "nucleotide mutation": {
-          "name": "nucleotide mutation",
+        "nucleotide_mutation": {
+          "name": "nucleotide_mutation",
           "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "nucleotide mutation",
           "from_schema": "https://example.com/VIRUSMVP",
@@ -1176,12 +1113,12 @@
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
           "range": "WhitespaceMinimizedString",
           "recommended": true
         },
-        "amino acid mutation": {
-          "name": "amino acid mutation",
+        "amino_acid_mutation": {
+          "name": "amino_acid_mutation",
           "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "amino acid mutation",
           "from_schema": "https://example.com/VIRUSMVP",
@@ -1192,12 +1129,12 @@
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
           "range": "WhitespaceMinimizedString",
           "required": true
         },
-        "amino acid mutation alias": {
-          "name": "amino acid mutation alias",
+        "amino_acid_mutation_alias": {
+          "name": "amino_acid_mutation_alias",
           "description": "For SARS-CoV-2. The alias is an amino acid name indexed from the start of each nsp in Orf1ab, as opposed to from the start of the gene as is the default.",
           "title": "amino acid mutation alias",
           "from_schema": "https://example.com/VIRUSMVP",
@@ -1208,117 +1145,102 @@
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
           "range": "WhitespaceMinimizedString"
         },
-        "gene name": {
-          "name": "gene name",
+        "gene_name": {
+          "name": "gene_name",
           "description": "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol.",
           "title": "gene name",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 9,
-          "slot_uri": "OBI:0002878",
+          "slot_uri": "GENEPIO:0101130",
           "alias": "gene_name",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
           "range": "gene name menu",
           "required": true
         },
-        "gene symbol": {
-          "name": "gene symbol",
+        "gene_symbol": {
+          "name": "gene_symbol",
           "description": "The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name.",
           "title": "gene symbol",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 10,
-          "slot_uri": "OBI:0002877",
+          "slot_uri": "GENEPIO:0101131",
           "alias": "gene_symbol",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
-          "range": "string",
+          "slot_group": "mutation location information",
+          "range": "gene symbol menu",
           "required": true
         },
-        "protein name": {
-          "name": "protein name",
+        "protein_name": {
+          "name": "protein_name",
           "description": "The name of a protein, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a protein symbol. It (typically) may be used to identify similar proteins in different species and to derive a protein symbol.",
           "title": "protein name",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 11,
-          "slot_uri": "GENEPIO:TBA_1",
+          "slot_uri": "GENEPIO:0101132",
           "alias": "protein_name",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
           "range": "protein name menu",
           "required": true
         },
-        "protein symbol": {
-          "name": "protein symbol",
+        "protein_symbol": {
+          "name": "protein_symbol",
           "description": "The short name of a protein; a single word that does not contain white space characters. It is typically derived from the protein name.",
           "title": "protein symbol",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 12,
-          "slot_uri": "GENEPIO:TBA_2",
+          "slot_uri": "GENEPIO:0101133",
           "alias": "protein_symbol",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Mutation position information",
+          "slot_group": "mutation location information",
+          "range": "protein symbol menu",
+          "required": true
+        },
+        "variant_functional_effect": {
+          "name": "variant_functional_effect",
+          "description": "The functional category of the mutation impact.",
+          "title": "variant functional effect",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 13,
+          "slot_uri": "GENEPIO:0101127",
+          "alias": "variant_functional_effect",
+          "owner": "VIRUSMVP_SARS-CoV-2",
+          "domain_of": [
+            "VIRUSMVP_SARS-CoV-2"
+          ],
+          "slot_group": "functional effect information",
           "range": "string",
           "required": true
         },
-        "assay": {
-          "name": "assay",
-          "description": "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it.",
-          "title": "assay",
-          "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 13,
-          "slot_uri": "OBI:0000070",
-          "alias": "assay",
-          "owner": "VIRUSMVP_SARS-CoV-2",
-          "domain_of": [
-            "VIRUSMVP_SARS-CoV-2"
-          ],
-          "slot_group": "Functional effect information",
-          "range": "string"
-        },
-        "mutation functional effect category": {
-          "name": "mutation functional effect category",
-          "description": "The functional category of the mutation impact.",
-          "title": "mutation functional effect category",
+        "variant_functional_effect_description": {
+          "name": "variant_functional_effect_description",
+          "description": "A freetext description of the functional effect of a mutation.",
+          "title": "variant functional effect description",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 14,
-          "slot_uri": "GENEPIO:TBA_3",
-          "alias": "mutation_functional_effect_category",
-          "owner": "VIRUSMVP_SARS-CoV-2",
-          "domain_of": [
-            "VIRUSMVP_SARS-CoV-2"
-          ],
-          "slot_group": "Functional effect information",
-          "range": "functional effect category menu",
-          "required": true
-        },
-        "mutation functional effect description": {
-          "name": "mutation functional effect description",
-          "description": "A proposition which is a freetext description of the functional effect of a mutation.",
-          "title": "mutation functional effect description",
-          "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 15,
           "slot_uri": "GENEPIO:0101036",
-          "alias": "mutation_functional_effect_description",
+          "alias": "variant_functional_effect_description",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Functional effect information",
+          "slot_group": "functional effect information",
           "range": "string",
           "required": true
         },
@@ -1327,30 +1249,30 @@
           "description": "The last name of the first author of the paper or other resource containing the evidence for the mutation impact.",
           "title": "author",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 16,
+          "rank": 15,
           "slot_uri": "dcterms:creator",
           "alias": "author",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Literature evidence citation",
+          "slot_group": "literature citation",
           "range": "string",
           "required": true
         },
-        "publication year": {
-          "name": "publication year",
+        "publication_year": {
+          "name": "publication_year",
           "description": "The publication year of the evidence source.",
           "title": "publication year",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 17,
+          "rank": 16,
           "slot_uri": "dcterms:date",
           "alias": "publication_year",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Literature evidence citation",
+          "slot_group": "literature citation",
           "range": "integer",
           "required": true
         },
@@ -1359,14 +1281,14 @@
           "description": "A link to the literature evidence source.",
           "title": "URL",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 18,
+          "rank": 17,
           "slot_uri": "dcterms:source",
           "alias": "URL",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Literature evidence citation",
+          "slot_group": "literature citation",
           "range": "string",
           "required": true
         },
@@ -1375,14 +1297,14 @@
           "description": "The DOI of the literature evidence source.",
           "title": "DOI",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 19,
+          "rank": 18,
           "slot_uri": "dbXref",
           "alias": "DOI",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Literature evidence citation",
+          "slot_group": "literature citation",
           "range": "string",
           "recommended": true
         },
@@ -1391,31 +1313,31 @@
           "description": "The PMID of the literature evidence source.",
           "title": "PMID",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 20,
+          "rank": 19,
           "slot_uri": "dbXref",
           "alias": "PMID",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Literature evidence citation",
+          "slot_group": "literature citation",
           "range": "string",
           "recommended": true
         },
-        "peer review status": {
-          "name": "peer review status",
-          "description": "Review stage for the literature evidence document.",
+        "peer_review_status": {
+          "name": "peer_review_status",
+          "description": "Peer review status for the literature evidence document: true or false.",
           "title": "peer review status",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 21,
-          "slot_uri": "GENEPIO:TBA_4",
+          "rank": 20,
+          "slot_uri": "SIO:001035",
           "alias": "peer_review_status",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Literature evidence citation",
-          "range": "peer review status menu",
+          "slot_group": "literature citation",
+          "range": "boolean",
           "required": true
         },
         "curator": {
@@ -1423,30 +1345,29 @@
           "description": "The ORCID of the curator who created the annotation record.",
           "title": "curator",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 22,
+          "rank": 21,
           "slot_uri": "dcterms:contributor",
           "alias": "curator",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Provenance",
-          "range": "string",
-          "required": true
+          "slot_group": "contributor acknowledgement",
+          "range": "string"
         },
-        "mutation functional annotation resource": {
-          "name": "mutation functional annotation resource",
+        "mutation_functional_annotation_resource": {
+          "name": "mutation_functional_annotation_resource",
           "description": "The resource containing the functional annotation for the mutation.",
           "title": "mutation functional annotation resource",
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 23,
+          "rank": 22,
           "slot_uri": "dcterms:seeAlso",
           "alias": "mutation_functional_annotation_resource",
           "owner": "VIRUSMVP_SARS-CoV-2",
           "domain_of": [
             "VIRUSMVP_SARS-CoV-2"
           ],
-          "slot_group": "Provenance",
+          "slot_group": "contributor acknowledgement",
           "range": "string"
         }
       }
