@@ -74,7 +74,7 @@ Descriptions of changes are provided in [release notes](https://github.com/cidgo
 
 The ontological relationships between the terms in the reference guide are captured in these ontology models.
 
-The first model describes the relationships between information about mutations and the physical mutations themselves, which are located within a genome of some organism.  This model is both flexible and robust enough to work with different variant naming conventions.
+The first model describes the relationships between information about mutations and the physical mutations themselves, which are located within a genome of some organism.  This model is both flexible and robust enough to work with different variant naming conventions. Entities outlined in orange are captured in the DataHarmonizer template.
 ![mutation model](https://github.com/cidgoh/pathogen-mutation-functionalannotation-package/blob/main/img/mutations.drawio.png)
 
 The second model describes one or more mutation symbols that are correlated with a functional effect, as reported in the literature. 
