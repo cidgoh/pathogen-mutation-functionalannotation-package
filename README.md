@@ -72,8 +72,9 @@ Descriptions of changes are provided in [release notes](https://github.com/cidgo
 
 ## Ontology models
 
-The ontological relationships between the terms in the reference guide are captured in this ontology model:
-![mutation record](https://github.com/cidgoh/pathogen-mutation-functionalannotation-package/blob/main/img/mutationrecord.drawio.png)
+The ontological relationships between the terms in the reference guide are captured in these ontology models:
+![mutation model](https://github.com/cidgoh/pathogen-mutation-functionalannotation-package/blob/main/img/mutations.drawio.png)
+![evidence model](https://github.com/cidgoh/pathogen-mutation-functionalannotation-package/blob/main/img/evidence.drawio.png)
 
 ## Contacts
 For more information and/or assistance, contact Madeline Iseminger at miseming at sfu dot ca or submit a repository [issue request](https://github.com/cidgoh/pathogen-mutation-functionalannotation-package/issues).
