@@ -2,6 +2,8 @@
 
 The contents of this directory include the DataHarmonizer spreadsheet-based implementation of the VIRUS-MVP functional annotation standard.
 
+Templates for SARS-CoV-2 and for MPOX are available.
+
 ## Files
 
 

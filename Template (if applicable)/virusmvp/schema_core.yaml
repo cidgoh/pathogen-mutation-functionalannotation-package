@@ -1,11 +1,11 @@
 id: https://example.com/VIRUSMVP
-name: VIRUSMVP_SARS-CoV-2
-description: ""
+name: VIRUSMVP
+description: ''
 version: 1.0.0
-in_language: 
-- 'en'
+in_language:
+- en
 imports:
-- 'linkml:types'
+- linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
   dcterms: http://purl.org/dc/terms/
@@ -13,16 +13,20 @@ prefixes:
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   OBI: http://purl.obolibrary.org/obo/OBI_
   SIO: http://semanticscience.org/resource/SIO_
-
 classes:
   dh_interface:
     name: dh_interface
-    description: 'A DataHarmonizer interface'
-  'VIRUSMVP_SARS-CoV-2':
-    name: 'VIRUSMVP_SARS-CoV-2'
-    description: Specification for VIRUS-MVP SARS-CoV-2 mutation functional impact data gathering
+    description: A DataHarmonizer interface
+  'VirusMVPSARSCoV2':
+    name: VirusMVPSARSCoV2
+    description: Specification for VIRUS-MVP SARS-CoV-2 mutation functional impact
+      data gathering
     is_a: dh_interface
-    see_also: templates/virusmvp/SOP.pdf
+  'VirusMVPMpox':
+    name: VirusMVPMpox
+    description: Specification for VIRUS-MVP MPOX mutation functional impact
+      data gathering
+    is_a: dh_interface
 slots: {}
 enums: {}
 types:
