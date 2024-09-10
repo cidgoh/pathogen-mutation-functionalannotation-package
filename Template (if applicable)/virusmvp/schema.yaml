@@ -35,7 +35,9 @@ classes:
     - gene_symbol
     - protein_name
     - protein_symbol
-    - variant_functional_effect
+    - measured_variant_functional_effect
+    - inferred_variant_functional_effect
+    - measured_viral_life_cycle_functional_effect
     - variant_functional_effect_description
     - cvx_code
     - drugbank_accession_number
@@ -91,44 +93,50 @@ classes:
         rank: 12
         slot_group: mutation location information
         range: SARSCoV2ProteinSymbolMenu
-      variant_functional_effect:
+      measured_variant_functional_effect:
         rank: 13
-        slot_group: functional effect information
-      variant_functional_effect_description:
+        slot_group: variant functional effect information
+      inferred_variant_functional_effect:
         rank: 14
         slot_group: variant functional effect information
-      cvx_code:
+      measured_viral_life_cycle_functional_effect:
         rank: 15
         slot_group: variant functional effect information
-      drugbank_accession_number:
+      variant_functional_effect_description:
         rank: 16
         slot_group: variant functional effect information
-      antibody_registry_id:
+      cvx_code:
         rank: 17
         slot_group: variant functional effect information
-      author:
+      drugbank_accession_number:
         rank: 18
-        slot_group: literature citation
-      publication_year:
+        slot_group: variant functional effect information
+      antibody_registry_id:
         rank: 19
-        slot_group: literature citation
-      url:
+        slot_group: variant functional effect information
+      author:
         rank: 20
         slot_group: literature citation
-      doi:
+      publication_year:
         rank: 21
         slot_group: literature citation
-      pmid:
+      url:
         rank: 22
         slot_group: literature citation
-      peer_review_status:
+      doi:
         rank: 23
         slot_group: literature citation
-      curator:
+      pmid:
         rank: 24
+        slot_group: literature citation
+      peer_review_status:
+        rank: 25
+        slot_group: literature citation
+      curator:
+        rank: 26
         slot_group: contributor acknowledgement
       mutation_functional_annotation_resource:
-        rank: 25
+        rank: 27
         slot_group: contributor acknowledgement
   VirusMVPMpox:
     name: VirusMVPMpox
@@ -149,7 +157,9 @@ classes:
     - strand_orientation
     - protein_name
     - protein_symbol
-    - variant_functional_effect
+    - measured_variant_functional_effect
+    - inferred_variant_functional_effect
+    - measured_viral_life_cycle_functional_effect
     - variant_functional_effect_description
     - cvx_code
     - drugbank_accession_number
@@ -208,44 +218,50 @@ classes:
         rank: 13
         slot_group: mutation location information
         range: MPOXProteinSymbolMenu
-      variant_functional_effect:
+      measured_variant_functional_effect:
         rank: 14
-        slot_group: functional effect information
-      variant_functional_effect_description:
+        slot_group: variant functional effect information
+      inferred_variant_functional_effect:
         rank: 15
         slot_group: variant functional effect information
-      cvx_code:
+      measured_viral_life_cycle_functional_effect:
         rank: 16
         slot_group: variant functional effect information
-      drugbank_accession_number:
+      variant_functional_effect_description:
         rank: 17
         slot_group: variant functional effect information
-      antibody_registry_id:
+      cvx_code:
         rank: 18
         slot_group: variant functional effect information
-      author:
+      drugbank_accession_number:
         rank: 19
-        slot_group: literature citation
-      publication_year:
+        slot_group: variant functional effect information
+      antibody_registry_id:
         rank: 20
-        slot_group: literature citation
-      url:
+        slot_group: variant functional effect information
+      author:
         rank: 21
         slot_group: literature citation
-      doi:
+      publication_year:
         rank: 22
         slot_group: literature citation
-      pmid:
+      url:
         rank: 23
         slot_group: literature citation
-      peer_review_status:
+      doi:
         rank: 24
         slot_group: literature citation
-      curator:
+      pmid:
         rank: 25
+        slot_group: literature citation
+      peer_review_status:
+        rank: 26
+        slot_group: literature citation
+      curator:
+        rank: 27
         slot_group: contributor acknowledgement
       mutation_functional_annotation_resource:
-        rank: 26
+        rank: 28
         slot_group: contributor acknowledgement
 slots:
   organism:
@@ -385,24 +401,45 @@ slots:
     title: gene orientation
     slot_uri: GENEPIO:0700000
     range: GeneOrientationMenu
+    required: true
   strand_orientation:
     name: strand_orientation
     title: strand orientation
     slot_uri: GENEPIO:0700001
     range: StrandOrientationMenu
-  variant_functional_effect:
-    name: variant_functional_effect
-    title: variant functional effect
+    required: true
+  measured_variant_functional_effect:
+    name: measured_variant_functional_effect
+    title: measured variant functional effect
     description: The functional category of the mutation impact.
     comments: Freetext; a future update will have a picklist here.
     slot_uri: GENEPIO:0101127
-    range: string
+    range: VariantFunctionalEffectMenu
+    multivalued: true
     required: true
     examples:
     - value: dimerization
+  inferred_variant_functional_effect:
+    name: inferred_variant_functional_effect
+    title: inferred variant functional effect
+    description: The functional category of the mutation impact.
+    comments: Freetext; a future update will have a picklist here.
+    slot_uri: GENEPIO:0101127
+    range: VariantFunctionalEffectMenu
+    multivalued: true
+    recommended: true
+    examples:
+    - value: dimerization
+  measured_viral_life_cycle_functional_effect:
+    name: measured_viral_life_cycle_functional_effect
+    title: measured viral life cycle functional effect
+    slot_uri: GENEPIO:0101990
+    range: ViralLifeCycleMenu
+    multivalued: true
+    recommended: true
   variant_functional_effect_description:
     name: variant_functional_effect_description
-    title: variant functional effect description
+    title: measured variant functional effect description
     description: A freetext description of the functional effect of a mutation.
     slot_uri: GENEPIO:0101036
     range: string
@@ -527,14 +564,12 @@ enums:
   ReferenceDatabaseMenu:
     name: ReferenceDatabaseMenu
     title: reference database menu
-    description: ''
     permissible_values:
       RefSeq:
         text: RefSeq
   StrandOrientationMenu:
     name: StrandOrientationMenu
     title: strand orientation menu
-    description: ''
     permissible_values:
       antisense strand orientation:
         text: antisense strand orientation
@@ -545,7 +580,6 @@ enums:
   GeneOrientationMenu:
     name: GeneOrientationMenu
     title: gene orientation menu
-    description: ''
     permissible_values:
       forward gene orientation:
         text: forward gene orientation
@@ -553,10 +587,454 @@ enums:
       reverse gene orientation:
         text: reverse gene orientation
         meaning: GENEPIO:0700005
+  VariantFunctionalEffectMenu:
+    name: VariantFunctionalEffectMenu
+    title: variant functional effect menu
+    permissible_values:
+      altered binding affinity:
+        text: altered binding affinity
+        meaning: GENEPIO:0101924
+      increased binding affinity:
+        text: increased binding affinity
+        meaning: GENEPIO:0101925
+        is_a: altered binding affinity
+      decreased binding affinity:
+        text: decreased binding affinity
+        meaning: GENEPIO:0101926
+        is_a: altered binding affinity
+      altered posttranslational modification:
+        text: altered posttranslational modification
+        meaning: GENEPIO:0101893
+      increased posttranslational modification:
+        text: increased posttranslational modification
+        meaning: GENEPIO:0101927
+        is_a: altered posttranslational modification
+      decreased posttranslational modification:
+        text: decreased posttranslational modification
+        meaning: GENEPIO:0101928
+        is_a: altered posttranslational modification
+      altered dimerization:
+        text: altered dimerization
+        meaning: GENEPIO:0101894
+      increased dimerization:
+        text: increased dimerization
+        meaning: GENEPIO:0101929
+        is_a: altered dimerization
+      decreased dimerization:
+        text: decreased dimerization
+        meaning: GENEPIO:0101930
+        is_a: altered dimerization
+      altered proteolysis:
+        text: altered proteolysis
+        meaning: GENEPIO:0101895
+      increased proteolysis:
+        text: increased proteolysis
+        meaning: GENEPIO:0101931
+        is_a: altered proteolysis
+      decreased proteolysis:
+        text: decreased proteolysis
+        meaning: GENEPIO:0101932
+        is_a: altered proteolysis
+      protein conformation:
+        text: protein conformation
+        meaning: GENEPIO:0101896
+      altered host cell stress granule formation:
+        text: altered host cell stress granule formation
+        meaning: GENEPIO:0101897
+      increased host cell stress granule formation:
+        text: increased host cell stress granule formation
+        meaning: GENEPIO:0101933
+        is_a: altered host cell stress granule formation
+      decreased host cell stress granule formation:
+        text: decreased host cell stress granule formation
+        meaning: GENEPIO:0101934
+        is_a: altered host cell stress granule formation
+      altered host cell syncytium formation:
+        text: altered host cell syncytium formation
+        meaning: GENEPIO:0101898
+      increased host cell syncytium formation:
+        text: increased host cell syncytium formation
+        meaning: GENEPIO:0101935
+        is_a: altered host cell syncytium formation
+      decreased host cell syncytium formation:
+        text: decreased host cell syncytium formation
+        meaning: GENEPIO:0101936
+        is_a: altered host cell syncytium formation
+      detected in immunosuppressed host:
+        text: detected in immunosuppressed host
+        meaning: GENEPIO:0101899
+      detected in reinfected host:
+        text: detected in reinfected host
+        meaning: GENEPIO:0101900
+      host symptomaticity:
+        text: host symptomaticity
+        meaning: GENEPIO:0101901
+      host clinical indicator:
+        text: host clinical indicator
+        meaning: GENEPIO:0101902
+      altered risk:
+        text: altered risk
+        meaning: GENEPIO:0101937
+      increased risk:
+        text: increased risk
+        meaning: GENEPIO:0101938
+        is_a: altered risk
+      decreased risk:
+        text: decreased risk
+        meaning: GENEPIO:0101939
+        is_a: altered risk
+      selective pressure:
+        text: selective pressure
+        meaning: GENEPIO:0101904
+      homoplasy:
+        text: homoplasy
+        meaning: GENEPIO:0101905
+      infectious agent host range:
+        text: infectious agent host range
+        meaning: GENEPIO:0101906
+      altered detectability of infectious agent:
+        text: altered detectability of infectious agent
+        meaning: GENEPIO:0101940
+      increased detectability of infectious agent:
+        text: increased detectability of infectious agent
+        meaning: GENEPIO:0101941
+        is_a: altered detectability of infectious agent
+      decreased detectability of infectious agent:
+        text: decreased detectability of infectious agent
+        meaning: GENEPIO:0101942
+        is_a: altered detectability of infectious agent
+      altered susceptibility of infectious agent to environmental condition:
+        text: altered susceptibility of infectious agent to environmental condition
+        meaning: GENEPIO:0101943
+      increased susceptibility of infectious agent to environmental condition:
+        text: increased susceptibility of infectious agent to environmental condition
+        meaning: GENEPIO:0101944
+        is_a: altered susceptibility of infectious agent to environmental condition
+      decreased susceptibility of infectious agent to environmental condition:
+        text: decreased susceptibility of infectious agent to environmental condition
+        meaning: GENEPIO:0101945
+        is_a: altered susceptibility of infectious agent to environmental condition
+      resistance of infectious agent to environmental condition:
+        text: resistance of infectious agent to environmental condition
+        meaning: GENEPIO:0101946
+      altered susceptibility of infectious agent to temperature condition:
+        text: altered susceptibility of infectious agent to temperature condition
+        meaning: GENEPIO:0101947
+        is_a: resistance of infectious agent to environmental condition
+      increased susceptibility of infectious agent to temperature condition:
+        text: increased susceptibility of infectious agent to temperature condition
+        meaning: GENEPIO:0101948
+        is_a: altered susceptibility of infectious agent to temperature condition
+      decreased susceptibility of infectious agent to temperature condition:
+        text: decreased susceptibility of infectious agent to temperature condition
+        meaning: GENEPIO:0101949
+        is_a: altered susceptibility of infectious agent to temperature condition
+      resistance of infectious agent to temperature condition:
+        text: resistance of infectious agent to temperature condition
+        meaning: GENEPIO:0101950
+        is_a: resistance of infectious agent to environmental condition
+      altered antipathogenic agent susceptibility of infectious agent:
+        text: altered antipathogenic agent susceptibility of infectious agent
+        meaning: GENEPIO:0101951
+      increased antipathogenic agent susceptibility of infectious agent:
+        text: increased antipathogenic agent susceptibility of infectious agent
+        meaning: GENEPIO:0101952
+        is_a: altered antipathogenic agent susceptibility of infectious agent
+      decreased antipathogenic agent susceptibility of infectious agent:
+        text: decreased antipathogenic agent susceptibility of infectious agent
+        meaning: GENEPIO:0101953
+        is_a: altered antipathogenic agent susceptibility of infectious agent
+      antipathogenic agent resistance of infectious agent:
+        text: antipathogenic agent resistance of infectious agent
+        meaning: GENEPIO:0101954
+      altered therapeutic agent susceptibility of infectious agent:
+        text: altered therapeutic agent susceptibility of infectious agent
+        meaning: GENEPIO:0101955
+        is_a: antipathogenic agent resistance of infectious agent
+      increased therapeutic agent susceptibility of infectious agent:
+        text: increased therapeutic agent susceptibility of infectious agent
+        meaning: GENEPIO:0101956
+        is_a: altered therapeutic agent susceptibility of infectious agent
+      decreased therapeutic agent susceptibility of infectious agent:
+        text: decreased therapeutic agent susceptibility of infectious agent
+        meaning: GENEPIO:0101957
+        is_a: altered therapeutic agent susceptibility of infectious agent
+      therapeutic agent resistance of infectious agent:
+        text: therapeutic agent resistance of infectious agent
+        meaning: GENEPIO:0101958
+        is_a: antipathogenic agent resistance of infectious agent
+      altered monoclonal antibody susceptibility of infectious agent:
+        text: altered monoclonal antibody susceptibility of infectious agent
+        meaning: GENEPIO:0101959
+        is_a: antipathogenic agent resistance of infectious agent
+      increased monoclonal antibody susceptibility of infectious agent:
+        text: increased monoclonal antibody susceptibility of infectious agent
+        meaning: GENEPIO:0101960
+        is_a: altered monoclonal antibody susceptibility of infectious agent
+      decreased monoclonal antibody susceptibility of infectious agent:
+        text: decreased monoclonal antibody susceptibility of infectious agent
+        meaning: GENEPIO:0101961
+        is_a: altered monoclonal antibody susceptibility of infectious agent
+      monoclonal antibody resistance of infectious agent:
+        text: monoclonal antibody resistance of infectious agent
+        meaning: GENEPIO:0101962
+        is_a: antipathogenic agent resistance of infectious agent
+      altered convalescent plasma susceptibility of infectious agent:
+        text: altered convalescent plasma susceptibility of infectious agent
+        meaning: GENEPIO:0101963
+        is_a: antipathogenic agent resistance of infectious agent
+      increased convalescent plasma susceptibility of infectious agent:
+        text: increased convalescent plasma susceptibility of infectious agent
+        meaning: GENEPIO:0101964
+        is_a: altered convalescent plasma susceptibility of infectious agent
+      decreased convalescent plasma susceptibility of infectious agent:
+        text: decreased convalescent plasma susceptibility of infectious agent
+        meaning: GENEPIO:0101965
+        is_a: altered convalescent plasma susceptibility of infectious agent
+      convalescent plasma resistance of infectious agent:
+        text: convalescent plasma resistance of infectious agent
+        meaning: GENEPIO:0101966
+        is_a: antipathogenic agent resistance of infectious agent
+      altered host immune response susceptibility of infectious agent:
+        text: altered host immune response susceptibility of infectious agent
+        meaning: GENEPIO:0101967
+      increased host immune response susceptibility of infectious agent:
+        text: increased host immune response susceptibility of infectious agent
+        meaning: GENEPIO:0101968
+        is_a: altered host immune response susceptibility of infectious agent
+      decreased host immune response susceptibility of infectious agent:
+        text: decreased host immune response susceptibility of infectious agent
+        meaning: GENEPIO:0101969
+        is_a: altered host immune response susceptibility of infectious agent
+      host immune response resistance of infectious agent:
+        text: host immune response resistance of infectious agent
+        meaning: GENEPIO:0101970
+      altered host adaptive immune response susceptibility of infectious agent:
+        text: altered host adaptive immune response susceptibility of infectious agent
+        meaning: GENEPIO:0101971
+        is_a: host immune response resistance of infectious agent
+      increased host adaptive immune response susceptibility of infectious agent:
+        text: increased host adaptive immune response susceptibility of infectious
+          agent
+        meaning: GENEPIO:0101972
+        is_a: altered host adaptive immune response susceptibility of infectious agent
+      decreased host adaptive immune response susceptibility of infectious agent:
+        text: decreased host adaptive immune response susceptibility of infectious
+          agent
+        meaning: GENEPIO:0101973
+        is_a: altered host adaptive immune response susceptibility of infectious agent
+      altered cytotoxic T cell neutralization response susceptibility of infectious agent:
+        text: altered cytotoxic T cell neutralization response susceptibility of infectious
+          agent
+        meaning: GENEPIO:0101983
+        is_a: altered host adaptive immune response susceptibility of infectious agent
+      increased cytotoxic T cell neutralization response susceptibility of infectious agent:
+        text: increased cytotoxic T cell neutralization response susceptibility of
+          infectious agent
+        meaning: GENEPIO:0101984
+        is_a: altered cytotoxic T cell neutralization response susceptibility of infectious
+          agent
+      decreased cytotoxic T cell neutralization response susceptibility of infectious agent:
+        text: decreased cytotoxic T cell neutralization response susceptibility of
+          infectious agent
+        meaning: GENEPIO:0101985
+        is_a: altered cytotoxic T cell neutralization response susceptibility of infectious
+          agent
+      cytotoxic T cell neutralization response resistance of infectious agent:
+        text: cytotoxic T cell neutralization response resistance of infectious agent
+        meaning: GENEPIO:0101986
+        is_a: altered host adaptive immune response susceptibility of infectious agent
+      host adaptive immune response resistance of infectious agent:
+        text: host adaptive immune response resistance of infectious agent
+        meaning: GENEPIO:0101974
+        is_a: host immune response resistance of infectious agent
+      altered host innate immune response susceptibility of infectious agent:
+        text: altered host innate immune response susceptibility of infectious agent
+        meaning: GENEPIO:0101975
+        is_a: host immune response resistance of infectious agent
+      increased host innate immune response susceptibility of infectious agent:
+        text: increased host innate immune response susceptibility of infectious agent
+        meaning: GENEPIO:0101976
+        is_a: altered host innate immune response susceptibility of infectious agent
+      decreased host innate immune response susceptibility of infectious agent:
+        text: decreased host innate immune response susceptibility of infectious agent
+        meaning: GENEPIO:0101977
+        is_a: altered host innate immune response susceptibility of infectious agent
+      host innate immune response resistance of infectious agent:
+        text: host innate immune response resistance of infectious agent
+        meaning: GENEPIO:0101978
+        is_a: host immune response resistance of infectious agent
+      altered Type I interferon activation response susceptibility of infectious agent:
+        text: altered Type I interferon activation response susceptibility of infectious
+          agent
+        meaning: GENEPIO:0101979
+        is_a: host innate immune response resistance of infectious agent
+      increased Type I interferon activation response susceptibility of infectious agent:
+        text: increased Type I interferon activation response susceptibility of infectious
+          agent
+        meaning: GENEPIO:0101980
+        is_a: altered Type I interferon activation response susceptibility of infectious
+          agent
+      decreased Type I interferon activation response susceptibility of infectious agent:
+        text: decreased Type I interferon activation response susceptibility of infectious
+          agent
+        meaning: GENEPIO:0101981
+        is_a: altered Type I interferon activation response susceptibility of infectious
+          agent
+      Type I interferon activation response resistance of infectious agent:
+        text: Type I interferon activation response resistance of infectious agent
+        meaning: GENEPIO:0101982
+        is_a: host innate immune response resistance of infectious agent
+      altered viral load:
+        text: altered viral load
+        meaning: GENEPIO:0101987
+      increased viral load:
+        text: increased viral load
+        meaning: GENEPIO:0101988
+        is_a: altered viral load
+      decreased viral load:
+        text: decreased viral load
+        meaning: GENEPIO:0101989
+        is_a: altered viral load
+      altered infectious agent transmissibility:
+        text: altered infectious agent transmissibility
+        meaning: GENEPIO:0102015
+      increased infectious agent transmissibility:
+        text: increased infectious agent transmissibility
+        meaning: GENEPIO:0102016
+        is_a: altered infectious agent transmissibility
+      decreased infectious agent transmissibility:
+        text: decreased infectious agent transmissibility
+        meaning: GENEPIO:0102017
+        is_a: altered infectious agent transmissibility
+      altered drug susceptibility of infectious agent:
+        text: altered drug susceptibility of infectious agent
+        meaning: GENEPIO:0102018
+      increased drug susceptibility of infectious agent:
+        text: increased drug susceptibility of infectious agent
+        meaning: GENEPIO:0102019
+        is_a: altered drug susceptibility of infectious agent
+      decreased drug susceptibility of infectious agent:
+        text: decreased drug susceptibility of infectious agent
+        meaning: GENEPIO:0102020
+        is_a: altered drug susceptibility of infectious agent
+      altered infectivity:
+        text: altered infectivity
+        meaning: GENEPIO:0102021
+      increased infectivity:
+        text: increased infectivity
+        meaning: GENEPIO:0102022
+        is_a: altered infectivity
+      decreased infectivity:
+        text: decreased infectivity
+        meaning: GENEPIO:0102023
+        is_a: altered infectivity
+      altered macromolecular stability:
+        text: altered macromolecular stability
+        meaning: GENEPIO:0102024
+      increased macromolecular stability:
+        text: increased macromolecular stability
+        meaning: GENEPIO:0102025
+        is_a: altered macromolecular stability
+      decreased macromolecular stability:
+        text: decreased macromolecular stability
+        meaning: GENEPIO:0102026
+        is_a: altered macromolecular stability
+  ViralLifeCycleMenu:
+    name: ViralLifeCycleMenu
+    title: ''
+    permissible_values:
+      altered intracellular transport of virus:
+        text: altered intracellular transport of virus
+        meaning: GENEPIO:0101991
+      increased intracellular transport of virus:
+        text: increased intracellular transport of virus
+        meaning: GENEPIO:0101992
+        is_a: altered intracellular transport of virus
+      decreased intracellular transport of virus:
+        text: decreased intracellular transport of virus
+        meaning: GENEPIO:0101993
+        is_a: altered intracellular transport of virus
+      altered symbiont entry into host cell:
+        text: altered symbiont entry into host cell
+        meaning: GENEPIO:0101994
+      increased symbiont entry into host cell:
+        text: increased symbiont entry into host cell
+        meaning: GENEPIO:0101995
+        is_a: altered symbiont entry into host cell
+      decreased symbiont entry into host cell:
+        text: decreased symbiont entry into host cell
+        meaning: GENEPIO:0101996
+        is_a: altered symbiont entry into host cell
+      altered viral genome integration into host DNA:
+        text: altered viral genome integration into host DNA
+        meaning: GENEPIO:0101997
+      increased viral genome integration into host DNA:
+        text: increased viral genome integration into host DNA
+        meaning: GENEPIO:0101998
+        is_a: altered viral genome integration into host DNA
+      decreased viral genome integration into host DNA:
+        text: decreased viral genome integration into host DNA
+        meaning: GENEPIO:0101999
+        is_a: altered viral genome integration into host DNA
+      altered viral genome replication:
+        text: altered viral genome replication
+        meaning: GENEPIO:0102000
+      increased viral genome replication:
+        text: increased viral genome replication
+        meaning: GENEPIO:0102001
+        is_a: altered viral genome replication
+      decreased viral genome replication:
+        text: decreased viral genome replication
+        meaning: GENEPIO:0102002
+        is_a: altered viral genome replication
+      altered viral release from host cell:
+        text: altered viral release from host cell
+        meaning: GENEPIO:0102003
+      increased viral release from host cell:
+        text: increased viral release from host cell
+        meaning: GENEPIO:0102004
+        is_a: altered viral release from host cell
+      decreased viral release from host cell:
+        text: decreased viral release from host cell
+        meaning: GENEPIO:0102005
+        is_a: altered viral release from host cell
+      altered virion assembly:
+        text: altered virion assembly
+        meaning: GENEPIO:0102006
+      increased virion assembly:
+        text: increased virion assembly
+        meaning: GENEPIO:0102007
+        is_a: altered virion assembly
+      decreased virion assembly:
+        text: decreased virion assembly
+        meaning: GENEPIO:0102008
+        is_a: altered virion assembly
+      altered virion attachment to host cell:
+        text: altered virion attachment to host cell
+        meaning: GENEPIO:0102009
+      increased virion attachment to host cell:
+        text: increased virion attachment to host cell
+        meaning: GENEPIO:0102010
+        is_a: altered virion attachment to host cell
+      decreased virion attachment to host cell:
+        text: decreased virion attachment to host cell
+        meaning: GENEPIO:0102011
+        is_a: altered virion attachment to host cell
+      altered virus maturation:
+        text: altered virus maturation
+        meaning: GENEPIO:0102012
+      increased virus maturation:
+        text: increased virus maturation
+        meaning: GENEPIO:0102013
+        is_a: altered virus maturation
+      decreased virus maturation:
+        text: decreased virus maturation
+        meaning: GENEPIO:0102014
+        is_a: altered virus maturation
   SARSCoV2OrganismMenu:
     name: SARSCoV2OrganismMenu
     title: SARS-CoV-2 organism menu
-    description: ''
     permissible_values:
       Severe acute respiratory syndrome coronavirus 2:
         text: Severe acute respiratory syndrome coronavirus 2
@@ -564,14 +1042,12 @@ enums:
   SARSCoV2ReferenceAccessionMenu:
     name: SARSCoV2ReferenceAccessionMenu
     title: SARS-CoV-2 reference accession menu
-    description: ''
     permissible_values:
       NC_045512.2:
         text: NC_045512.2
   SARSCoV2GeneNameMenu:
     name: SARSCoV2GeneNameMenu
     title: SARS-CoV-2 gene name menu
-    description: ''
     permissible_values:
       open reading frame 1ab polyprotein gene (SARS-CoV-2):
         text: open reading frame 1ab polyprotein gene (SARS-CoV-2)
@@ -612,7 +1088,6 @@ enums:
   SARSCoV2GeneSymbolMenu:
     name: SARSCoV2GeneSymbolMenu
     title: SARS-CoV-2 gene symbol menu
-    description: ''
     permissible_values:
       orf1ab gene (SARS-CoV-2):
         text: orf1ab gene (SARS-CoV-2)
@@ -653,7 +1128,6 @@ enums:
   SARSCoV2ProteinNameMenu:
     name: SARSCoV2ProteinNameMenu
     title: SARS-CoV-2 protein name menu
-    description: ''
     permissible_values:
       open reading frame 1ab polyprotein (SARS-CoV-2):
         text: open reading frame 1ab polyprotein (SARS-CoV-2)
@@ -694,7 +1168,6 @@ enums:
   SARSCoV2ProteinSymbolMenu:
     name: SARSCoV2ProteinSymbolMenu
     title: SARS-CoV-2 protein symbol menu
-    description: ''
     permissible_values:
       Orf1ab protein (SARS-CoV-2):
         text: Orf1ab protein (SARS-CoV-2)
@@ -735,7 +1208,6 @@ enums:
   MPOXOrganismMenu:
     name: MPOXOrganismMenu
     title: Mpox organism menu
-    description: ''
     permissible_values:
       Monkeypox virus:
         text: Monkeypox virus
@@ -743,14 +1215,12 @@ enums:
   MPOXReferenceAccessionMenu:
     name: MPOXReferenceAccessionMenu
     title: Mpox reference accession menu
-    description: ''
     permissible_values:
       NC_063383.1:
         text: NC_063383.1
   MPOXGeneNameMenu:
     name: MPOXGeneNameMenu
     title: Mpox gene name menu
-    description: ''
     permissible_values:
       orthopoxvirus gene 001 (MPOX):
         text: orthopoxvirus gene 001 (MPOX)
@@ -1271,7 +1741,6 @@ enums:
   MPOXGeneSymbolMenu:
     name: MPOXGeneSymbolMenu
     title: Mpox gene symbol menu
-    description: ''
     permissible_values:
       opg001 gene (MPOX):
         text: opg001 gene (MPOX)
@@ -1792,7 +2261,6 @@ enums:
   MPOXProteinNameMenu:
     name: MPOXProteinNameMenu
     title: Mpox protein name menu
-    description: ''
     permissible_values:
       Chemokine binding protein (MPOX):
         text: Chemokine binding protein (MPOX)
@@ -2269,7 +2737,6 @@ enums:
   MPOXProteinSymbolMenu:
     name: MPOXProteinSymbolMenu
     title: Mpox protein symbol menu
-    description: ''
     permissible_values:
       Opg001 protein (MPOX):
         text: Opg001 protein (MPOX)

@@ -315,7 +315,6 @@
   "enums": {
     "ReferenceDatabaseMenu": {
       "name": "ReferenceDatabaseMenu",
-      "description": "",
       "title": "reference database menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -326,7 +325,6 @@
     },
     "StrandOrientationMenu": {
       "name": "StrandOrientationMenu",
-      "description": "",
       "title": "strand orientation menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -342,7 +340,6 @@
     },
     "GeneOrientationMenu": {
       "name": "GeneOrientationMenu",
-      "description": "",
       "title": "gene orientation menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -356,9 +353,562 @@
         }
       }
     },
+    "VariantFunctionalEffectMenu": {
+      "name": "VariantFunctionalEffectMenu",
+      "title": "variant functional effect menu",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "altered binding affinity": {
+          "text": "altered binding affinity",
+          "meaning": "GENEPIO:0101924"
+        },
+        "increased binding affinity": {
+          "text": "increased binding affinity",
+          "meaning": "GENEPIO:0101925",
+          "is_a": "altered binding affinity"
+        },
+        "decreased binding affinity": {
+          "text": "decreased binding affinity",
+          "meaning": "GENEPIO:0101926",
+          "is_a": "altered binding affinity"
+        },
+        "altered posttranslational modification": {
+          "text": "altered posttranslational modification",
+          "meaning": "GENEPIO:0101893"
+        },
+        "increased posttranslational modification": {
+          "text": "increased posttranslational modification",
+          "meaning": "GENEPIO:0101927",
+          "is_a": "altered posttranslational modification"
+        },
+        "decreased posttranslational modification": {
+          "text": "decreased posttranslational modification",
+          "meaning": "GENEPIO:0101928",
+          "is_a": "altered posttranslational modification"
+        },
+        "altered dimerization": {
+          "text": "altered dimerization",
+          "meaning": "GENEPIO:0101894"
+        },
+        "increased dimerization": {
+          "text": "increased dimerization",
+          "meaning": "GENEPIO:0101929",
+          "is_a": "altered dimerization"
+        },
+        "decreased dimerization": {
+          "text": "decreased dimerization",
+          "meaning": "GENEPIO:0101930",
+          "is_a": "altered dimerization"
+        },
+        "altered proteolysis": {
+          "text": "altered proteolysis",
+          "meaning": "GENEPIO:0101895"
+        },
+        "increased proteolysis": {
+          "text": "increased proteolysis",
+          "meaning": "GENEPIO:0101931",
+          "is_a": "altered proteolysis"
+        },
+        "decreased proteolysis": {
+          "text": "decreased proteolysis",
+          "meaning": "GENEPIO:0101932",
+          "is_a": "altered proteolysis"
+        },
+        "protein conformation": {
+          "text": "protein conformation",
+          "meaning": "GENEPIO:0101896"
+        },
+        "altered host cell stress granule formation": {
+          "text": "altered host cell stress granule formation",
+          "meaning": "GENEPIO:0101897"
+        },
+        "increased host cell stress granule formation": {
+          "text": "increased host cell stress granule formation",
+          "meaning": "GENEPIO:0101933",
+          "is_a": "altered host cell stress granule formation"
+        },
+        "decreased host cell stress granule formation": {
+          "text": "decreased host cell stress granule formation",
+          "meaning": "GENEPIO:0101934",
+          "is_a": "altered host cell stress granule formation"
+        },
+        "altered host cell syncytium formation": {
+          "text": "altered host cell syncytium formation",
+          "meaning": "GENEPIO:0101898"
+        },
+        "increased host cell syncytium formation": {
+          "text": "increased host cell syncytium formation",
+          "meaning": "GENEPIO:0101935",
+          "is_a": "altered host cell syncytium formation"
+        },
+        "decreased host cell syncytium formation": {
+          "text": "decreased host cell syncytium formation",
+          "meaning": "GENEPIO:0101936",
+          "is_a": "altered host cell syncytium formation"
+        },
+        "detected in immunosuppressed host": {
+          "text": "detected in immunosuppressed host",
+          "meaning": "GENEPIO:0101899"
+        },
+        "detected in reinfected host": {
+          "text": "detected in reinfected host",
+          "meaning": "GENEPIO:0101900"
+        },
+        "host symptomaticity": {
+          "text": "host symptomaticity",
+          "meaning": "GENEPIO:0101901"
+        },
+        "host clinical indicator": {
+          "text": "host clinical indicator",
+          "meaning": "GENEPIO:0101902"
+        },
+        "altered risk": {
+          "text": "altered risk",
+          "meaning": "GENEPIO:0101937"
+        },
+        "increased risk": {
+          "text": "increased risk",
+          "meaning": "GENEPIO:0101938",
+          "is_a": "altered risk"
+        },
+        "decreased risk": {
+          "text": "decreased risk",
+          "meaning": "GENEPIO:0101939",
+          "is_a": "altered risk"
+        },
+        "selective pressure": {
+          "text": "selective pressure",
+          "meaning": "GENEPIO:0101904"
+        },
+        "homoplasy": {
+          "text": "homoplasy",
+          "meaning": "GENEPIO:0101905"
+        },
+        "infectious agent host range": {
+          "text": "infectious agent host range",
+          "meaning": "GENEPIO:0101906"
+        },
+        "altered detectability of infectious agent": {
+          "text": "altered detectability of infectious agent",
+          "meaning": "GENEPIO:0101940"
+        },
+        "increased detectability of infectious agent": {
+          "text": "increased detectability of infectious agent",
+          "meaning": "GENEPIO:0101941",
+          "is_a": "altered detectability of infectious agent"
+        },
+        "decreased detectability of infectious agent": {
+          "text": "decreased detectability of infectious agent",
+          "meaning": "GENEPIO:0101942",
+          "is_a": "altered detectability of infectious agent"
+        },
+        "altered susceptibility of infectious agent to environmental condition": {
+          "text": "altered susceptibility of infectious agent to environmental condition",
+          "meaning": "GENEPIO:0101943"
+        },
+        "increased susceptibility of infectious agent to environmental condition": {
+          "text": "increased susceptibility of infectious agent to environmental condition",
+          "meaning": "GENEPIO:0101944",
+          "is_a": "altered susceptibility of infectious agent to environmental condition"
+        },
+        "decreased susceptibility of infectious agent to environmental condition": {
+          "text": "decreased susceptibility of infectious agent to environmental condition",
+          "meaning": "GENEPIO:0101945",
+          "is_a": "altered susceptibility of infectious agent to environmental condition"
+        },
+        "resistance of infectious agent to environmental condition": {
+          "text": "resistance of infectious agent to environmental condition",
+          "meaning": "GENEPIO:0101946"
+        },
+        "altered susceptibility of infectious agent to temperature condition": {
+          "text": "altered susceptibility of infectious agent to temperature condition",
+          "meaning": "GENEPIO:0101947",
+          "is_a": "resistance of infectious agent to environmental condition"
+        },
+        "increased susceptibility of infectious agent to temperature condition": {
+          "text": "increased susceptibility of infectious agent to temperature condition",
+          "meaning": "GENEPIO:0101948",
+          "is_a": "altered susceptibility of infectious agent to temperature condition"
+        },
+        "decreased susceptibility of infectious agent to temperature condition": {
+          "text": "decreased susceptibility of infectious agent to temperature condition",
+          "meaning": "GENEPIO:0101949",
+          "is_a": "altered susceptibility of infectious agent to temperature condition"
+        },
+        "resistance of infectious agent to temperature condition": {
+          "text": "resistance of infectious agent to temperature condition",
+          "meaning": "GENEPIO:0101950",
+          "is_a": "resistance of infectious agent to environmental condition"
+        },
+        "altered antipathogenic agent susceptibility of infectious agent": {
+          "text": "altered antipathogenic agent susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101951"
+        },
+        "increased antipathogenic agent susceptibility of infectious agent": {
+          "text": "increased antipathogenic agent susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101952",
+          "is_a": "altered antipathogenic agent susceptibility of infectious agent"
+        },
+        "decreased antipathogenic agent susceptibility of infectious agent": {
+          "text": "decreased antipathogenic agent susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101953",
+          "is_a": "altered antipathogenic agent susceptibility of infectious agent"
+        },
+        "antipathogenic agent resistance of infectious agent": {
+          "text": "antipathogenic agent resistance of infectious agent",
+          "meaning": "GENEPIO:0101954"
+        },
+        "altered therapeutic agent susceptibility of infectious agent": {
+          "text": "altered therapeutic agent susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101955",
+          "is_a": "antipathogenic agent resistance of infectious agent"
+        },
+        "increased therapeutic agent susceptibility of infectious agent": {
+          "text": "increased therapeutic agent susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101956",
+          "is_a": "altered therapeutic agent susceptibility of infectious agent"
+        },
+        "decreased therapeutic agent susceptibility of infectious agent": {
+          "text": "decreased therapeutic agent susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101957",
+          "is_a": "altered therapeutic agent susceptibility of infectious agent"
+        },
+        "therapeutic agent resistance of infectious agent": {
+          "text": "therapeutic agent resistance of infectious agent",
+          "meaning": "GENEPIO:0101958",
+          "is_a": "antipathogenic agent resistance of infectious agent"
+        },
+        "altered monoclonal antibody susceptibility of infectious agent": {
+          "text": "altered monoclonal antibody susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101959",
+          "is_a": "antipathogenic agent resistance of infectious agent"
+        },
+        "increased monoclonal antibody susceptibility of infectious agent": {
+          "text": "increased monoclonal antibody susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101960",
+          "is_a": "altered monoclonal antibody susceptibility of infectious agent"
+        },
+        "decreased monoclonal antibody susceptibility of infectious agent": {
+          "text": "decreased monoclonal antibody susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101961",
+          "is_a": "altered monoclonal antibody susceptibility of infectious agent"
+        },
+        "monoclonal antibody resistance of infectious agent": {
+          "text": "monoclonal antibody resistance of infectious agent",
+          "meaning": "GENEPIO:0101962",
+          "is_a": "antipathogenic agent resistance of infectious agent"
+        },
+        "altered convalescent plasma susceptibility of infectious agent": {
+          "text": "altered convalescent plasma susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101963",
+          "is_a": "antipathogenic agent resistance of infectious agent"
+        },
+        "increased convalescent plasma susceptibility of infectious agent": {
+          "text": "increased convalescent plasma susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101964",
+          "is_a": "altered convalescent plasma susceptibility of infectious agent"
+        },
+        "decreased convalescent plasma susceptibility of infectious agent": {
+          "text": "decreased convalescent plasma susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101965",
+          "is_a": "altered convalescent plasma susceptibility of infectious agent"
+        },
+        "convalescent plasma resistance of infectious agent": {
+          "text": "convalescent plasma resistance of infectious agent",
+          "meaning": "GENEPIO:0101966",
+          "is_a": "antipathogenic agent resistance of infectious agent"
+        },
+        "altered host immune response susceptibility of infectious agent": {
+          "text": "altered host immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101967"
+        },
+        "increased host immune response susceptibility of infectious agent": {
+          "text": "increased host immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101968",
+          "is_a": "altered host immune response susceptibility of infectious agent"
+        },
+        "decreased host immune response susceptibility of infectious agent": {
+          "text": "decreased host immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101969",
+          "is_a": "altered host immune response susceptibility of infectious agent"
+        },
+        "host immune response resistance of infectious agent": {
+          "text": "host immune response resistance of infectious agent",
+          "meaning": "GENEPIO:0101970"
+        },
+        "altered host adaptive immune response susceptibility of infectious agent": {
+          "text": "altered host adaptive immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101971",
+          "is_a": "host immune response resistance of infectious agent"
+        },
+        "increased host adaptive immune response susceptibility of infectious agent": {
+          "text": "increased host adaptive immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101972",
+          "is_a": "altered host adaptive immune response susceptibility of infectious agent"
+        },
+        "decreased host adaptive immune response susceptibility of infectious agent": {
+          "text": "decreased host adaptive immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101973",
+          "is_a": "altered host adaptive immune response susceptibility of infectious agent"
+        },
+        "altered cytotoxic T cell neutralization response susceptibility of infectious agent": {
+          "text": "altered cytotoxic T cell neutralization response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101983",
+          "is_a": "altered host adaptive immune response susceptibility of infectious agent"
+        },
+        "increased cytotoxic T cell neutralization response susceptibility of infectious agent": {
+          "text": "increased cytotoxic T cell neutralization response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101984",
+          "is_a": "altered cytotoxic T cell neutralization response susceptibility of infectious agent"
+        },
+        "decreased cytotoxic T cell neutralization response susceptibility of infectious agent": {
+          "text": "decreased cytotoxic T cell neutralization response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101985",
+          "is_a": "altered cytotoxic T cell neutralization response susceptibility of infectious agent"
+        },
+        "cytotoxic T cell neutralization response resistance of infectious agent": {
+          "text": "cytotoxic T cell neutralization response resistance of infectious agent",
+          "meaning": "GENEPIO:0101986",
+          "is_a": "altered host adaptive immune response susceptibility of infectious agent"
+        },
+        "host adaptive immune response resistance of infectious agent": {
+          "text": "host adaptive immune response resistance of infectious agent",
+          "meaning": "GENEPIO:0101974",
+          "is_a": "host immune response resistance of infectious agent"
+        },
+        "altered host innate immune response susceptibility of infectious agent": {
+          "text": "altered host innate immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101975",
+          "is_a": "host immune response resistance of infectious agent"
+        },
+        "increased host innate immune response susceptibility of infectious agent": {
+          "text": "increased host innate immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101976",
+          "is_a": "altered host innate immune response susceptibility of infectious agent"
+        },
+        "decreased host innate immune response susceptibility of infectious agent": {
+          "text": "decreased host innate immune response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101977",
+          "is_a": "altered host innate immune response susceptibility of infectious agent"
+        },
+        "host innate immune response resistance of infectious agent": {
+          "text": "host innate immune response resistance of infectious agent",
+          "meaning": "GENEPIO:0101978",
+          "is_a": "host immune response resistance of infectious agent"
+        },
+        "altered Type I interferon activation response susceptibility of infectious agent": {
+          "text": "altered Type I interferon activation response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101979",
+          "is_a": "host innate immune response resistance of infectious agent"
+        },
+        "increased Type I interferon activation response susceptibility of infectious agent": {
+          "text": "increased Type I interferon activation response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101980",
+          "is_a": "altered Type I interferon activation response susceptibility of infectious agent"
+        },
+        "decreased Type I interferon activation response susceptibility of infectious agent": {
+          "text": "decreased Type I interferon activation response susceptibility of infectious agent",
+          "meaning": "GENEPIO:0101981",
+          "is_a": "altered Type I interferon activation response susceptibility of infectious agent"
+        },
+        "Type I interferon activation response resistance of infectious agent": {
+          "text": "Type I interferon activation response resistance of infectious agent",
+          "meaning": "GENEPIO:0101982",
+          "is_a": "host innate immune response resistance of infectious agent"
+        },
+        "altered viral load": {
+          "text": "altered viral load",
+          "meaning": "GENEPIO:0101987"
+        },
+        "increased viral load": {
+          "text": "increased viral load",
+          "meaning": "GENEPIO:0101988",
+          "is_a": "altered viral load"
+        },
+        "decreased viral load": {
+          "text": "decreased viral load",
+          "meaning": "GENEPIO:0101989",
+          "is_a": "altered viral load"
+        },
+        "altered infectious agent transmissibility": {
+          "text": "altered infectious agent transmissibility",
+          "meaning": "GENEPIO:0102015"
+        },
+        "increased infectious agent transmissibility": {
+          "text": "increased infectious agent transmissibility",
+          "meaning": "GENEPIO:0102016",
+          "is_a": "altered infectious agent transmissibility"
+        },
+        "decreased infectious agent transmissibility": {
+          "text": "decreased infectious agent transmissibility",
+          "meaning": "GENEPIO:0102017",
+          "is_a": "altered infectious agent transmissibility"
+        },
+        "altered drug susceptibility of infectious agent": {
+          "text": "altered drug susceptibility of infectious agent",
+          "meaning": "GENEPIO:0102018"
+        },
+        "increased drug susceptibility of infectious agent": {
+          "text": "increased drug susceptibility of infectious agent",
+          "meaning": "GENEPIO:0102019",
+          "is_a": "altered drug susceptibility of infectious agent"
+        },
+        "decreased drug susceptibility of infectious agent": {
+          "text": "decreased drug susceptibility of infectious agent",
+          "meaning": "GENEPIO:0102020",
+          "is_a": "altered drug susceptibility of infectious agent"
+        },
+        "altered infectivity": {
+          "text": "altered infectivity",
+          "meaning": "GENEPIO:0102021"
+        },
+        "increased infectivity": {
+          "text": "increased infectivity",
+          "meaning": "GENEPIO:0102022",
+          "is_a": "altered infectivity"
+        },
+        "decreased infectivity": {
+          "text": "decreased infectivity",
+          "meaning": "GENEPIO:0102023",
+          "is_a": "altered infectivity"
+        },
+        "altered macromolecular stability": {
+          "text": "altered macromolecular stability",
+          "meaning": "GENEPIO:0102024"
+        },
+        "increased macromolecular stability": {
+          "text": "increased macromolecular stability",
+          "meaning": "GENEPIO:0102025",
+          "is_a": "altered macromolecular stability"
+        },
+        "decreased macromolecular stability": {
+          "text": "decreased macromolecular stability",
+          "meaning": "GENEPIO:0102026",
+          "is_a": "altered macromolecular stability"
+        }
+      }
+    },
+    "ViralLifeCycleMenu": {
+      "name": "ViralLifeCycleMenu",
+      "title": "",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "permissible_values": {
+        "altered intracellular transport of virus": {
+          "text": "altered intracellular transport of virus",
+          "meaning": "GENEPIO:0101991"
+        },
+        "increased intracellular transport of virus": {
+          "text": "increased intracellular transport of virus",
+          "meaning": "GENEPIO:0101992",
+          "is_a": "altered intracellular transport of virus"
+        },
+        "decreased intracellular transport of virus": {
+          "text": "decreased intracellular transport of virus",
+          "meaning": "GENEPIO:0101993",
+          "is_a": "altered intracellular transport of virus"
+        },
+        "altered symbiont entry into host cell": {
+          "text": "altered symbiont entry into host cell",
+          "meaning": "GENEPIO:0101994"
+        },
+        "increased symbiont entry into host cell": {
+          "text": "increased symbiont entry into host cell",
+          "meaning": "GENEPIO:0101995",
+          "is_a": "altered symbiont entry into host cell"
+        },
+        "decreased symbiont entry into host cell": {
+          "text": "decreased symbiont entry into host cell",
+          "meaning": "GENEPIO:0101996",
+          "is_a": "altered symbiont entry into host cell"
+        },
+        "altered viral genome integration into host DNA": {
+          "text": "altered viral genome integration into host DNA",
+          "meaning": "GENEPIO:0101997"
+        },
+        "increased viral genome integration into host DNA": {
+          "text": "increased viral genome integration into host DNA",
+          "meaning": "GENEPIO:0101998",
+          "is_a": "altered viral genome integration into host DNA"
+        },
+        "decreased viral genome integration into host DNA": {
+          "text": "decreased viral genome integration into host DNA",
+          "meaning": "GENEPIO:0101999",
+          "is_a": "altered viral genome integration into host DNA"
+        },
+        "altered viral genome replication": {
+          "text": "altered viral genome replication",
+          "meaning": "GENEPIO:0102000"
+        },
+        "increased viral genome replication": {
+          "text": "increased viral genome replication",
+          "meaning": "GENEPIO:0102001",
+          "is_a": "altered viral genome replication"
+        },
+        "decreased viral genome replication": {
+          "text": "decreased viral genome replication",
+          "meaning": "GENEPIO:0102002",
+          "is_a": "altered viral genome replication"
+        },
+        "altered viral release from host cell": {
+          "text": "altered viral release from host cell",
+          "meaning": "GENEPIO:0102003"
+        },
+        "increased viral release from host cell": {
+          "text": "increased viral release from host cell",
+          "meaning": "GENEPIO:0102004",
+          "is_a": "altered viral release from host cell"
+        },
+        "decreased viral release from host cell": {
+          "text": "decreased viral release from host cell",
+          "meaning": "GENEPIO:0102005",
+          "is_a": "altered viral release from host cell"
+        },
+        "altered virion assembly": {
+          "text": "altered virion assembly",
+          "meaning": "GENEPIO:0102006"
+        },
+        "increased virion assembly": {
+          "text": "increased virion assembly",
+          "meaning": "GENEPIO:0102007",
+          "is_a": "altered virion assembly"
+        },
+        "decreased virion assembly": {
+          "text": "decreased virion assembly",
+          "meaning": "GENEPIO:0102008",
+          "is_a": "altered virion assembly"
+        },
+        "altered virion attachment to host cell": {
+          "text": "altered virion attachment to host cell",
+          "meaning": "GENEPIO:0102009"
+        },
+        "increased virion attachment to host cell": {
+          "text": "increased virion attachment to host cell",
+          "meaning": "GENEPIO:0102010",
+          "is_a": "altered virion attachment to host cell"
+        },
+        "decreased virion attachment to host cell": {
+          "text": "decreased virion attachment to host cell",
+          "meaning": "GENEPIO:0102011",
+          "is_a": "altered virion attachment to host cell"
+        },
+        "altered virus maturation": {
+          "text": "altered virus maturation",
+          "meaning": "GENEPIO:0102012"
+        },
+        "increased virus maturation": {
+          "text": "increased virus maturation",
+          "meaning": "GENEPIO:0102013",
+          "is_a": "altered virus maturation"
+        },
+        "decreased virus maturation": {
+          "text": "decreased virus maturation",
+          "meaning": "GENEPIO:0102014",
+          "is_a": "altered virus maturation"
+        }
+      }
+    },
     "SARSCoV2OrganismMenu": {
       "name": "SARSCoV2OrganismMenu",
-      "description": "",
       "title": "SARS-CoV-2 organism menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -370,7 +920,6 @@
     },
     "SARSCoV2ReferenceAccessionMenu": {
       "name": "SARSCoV2ReferenceAccessionMenu",
-      "description": "",
       "title": "SARS-CoV-2 reference accession menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -381,7 +930,6 @@
     },
     "SARSCoV2GeneNameMenu": {
       "name": "SARSCoV2GeneNameMenu",
-      "description": "",
       "title": "SARS-CoV-2 gene name menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -437,7 +985,6 @@
     },
     "SARSCoV2GeneSymbolMenu": {
       "name": "SARSCoV2GeneSymbolMenu",
-      "description": "",
       "title": "SARS-CoV-2 gene symbol menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -493,7 +1040,6 @@
     },
     "SARSCoV2ProteinNameMenu": {
       "name": "SARSCoV2ProteinNameMenu",
-      "description": "",
       "title": "SARS-CoV-2 protein name menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -549,7 +1095,6 @@
     },
     "SARSCoV2ProteinSymbolMenu": {
       "name": "SARSCoV2ProteinSymbolMenu",
-      "description": "",
       "title": "SARS-CoV-2 protein symbol menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -605,7 +1150,6 @@
     },
     "MPOXOrganismMenu": {
       "name": "MPOXOrganismMenu",
-      "description": "",
       "title": "Mpox organism menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -617,7 +1161,6 @@
     },
     "MPOXReferenceAccessionMenu": {
       "name": "MPOXReferenceAccessionMenu",
-      "description": "",
       "title": "Mpox reference accession menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -628,7 +1171,6 @@
     },
     "MPOXGeneNameMenu": {
       "name": "MPOXGeneNameMenu",
-      "description": "",
       "title": "Mpox gene name menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -1324,7 +1866,6 @@
     },
     "MPOXGeneSymbolMenu": {
       "name": "MPOXGeneSymbolMenu",
-      "description": "",
       "title": "Mpox gene symbol menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -2020,7 +2561,6 @@
     },
     "MPOXProteinNameMenu": {
       "name": "MPOXProteinNameMenu",
-      "description": "",
       "title": "Mpox protein name menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -2656,7 +3196,6 @@
     },
     "MPOXProteinSymbolMenu": {
       "name": "MPOXProteinSymbolMenu",
-      "description": "",
       "title": "Mpox protein symbol menu",
       "from_schema": "https://example.com/VIRUSMVP",
       "permissible_values": {
@@ -3363,6 +3902,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "OBI:0100026",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "required": true
     },
     "reference_accession": {
@@ -3379,6 +3922,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "OBI:0002885",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "required": true
     },
     "reference_database_name": {
@@ -3395,6 +3942,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "OBI:0002883",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "ReferenceDatabaseMenu",
       "required": true
     },
@@ -3412,6 +3963,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101033",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "required": true,
       "minimum_value": 0
@@ -3430,6 +3985,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101030",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "required": true
     },
@@ -3447,6 +4006,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0100402",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "WhitespaceMinimizedString",
       "recommended": true
     },
@@ -3464,6 +4027,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0100406",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "WhitespaceMinimizedString",
       "required": true
     },
@@ -3481,6 +4048,9 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0100406",
+      "domain_of": [
+        "VirusMVPSARSCoV2"
+      ],
       "range": "WhitespaceMinimizedString"
     },
     "gene_name": {
@@ -3494,6 +4064,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101130",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "required": true
     },
     "gene_symbol": {
@@ -3507,6 +4081,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101131",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "required": true
     },
     "protein_name": {
@@ -3520,6 +4098,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101132",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "required": true
     },
     "protein_symbol": {
@@ -3533,6 +4115,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101133",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "required": true
     },
     "gene_orientation": {
@@ -3540,19 +4126,27 @@
       "title": "gene orientation",
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0700000",
-      "range": "GeneOrientationMenu"
+      "domain_of": [
+        "VirusMVPMpox"
+      ],
+      "range": "GeneOrientationMenu",
+      "required": true
     },
     "strand_orientation": {
       "name": "strand_orientation",
       "title": "strand orientation",
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0700001",
-      "range": "StrandOrientationMenu"
+      "domain_of": [
+        "VirusMVPMpox"
+      ],
+      "range": "StrandOrientationMenu",
+      "required": true
     },
-    "variant_functional_effect": {
-      "name": "variant_functional_effect",
+    "measured_variant_functional_effect": {
+      "name": "measured_variant_functional_effect",
       "description": "The functional category of the mutation impact.",
-      "title": "variant functional effect",
+      "title": "measured variant functional effect",
       "comments": [
         "Freetext; a future update will have a picklist here."
       ],
@@ -3563,13 +4157,53 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101127",
-      "range": "string",
-      "required": true
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
+      "range": "VariantFunctionalEffectMenu",
+      "required": true,
+      "multivalued": true
+    },
+    "inferred_variant_functional_effect": {
+      "name": "inferred_variant_functional_effect",
+      "description": "The functional category of the mutation impact.",
+      "title": "inferred variant functional effect",
+      "comments": [
+        "Freetext; a future update will have a picklist here."
+      ],
+      "examples": [
+        {
+          "value": "dimerization"
+        }
+      ],
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0101127",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
+      "range": "VariantFunctionalEffectMenu",
+      "recommended": true,
+      "multivalued": true
+    },
+    "measured_viral_life_cycle_functional_effect": {
+      "name": "measured_viral_life_cycle_functional_effect",
+      "title": "measured viral life cycle functional effect",
+      "from_schema": "https://example.com/VIRUSMVP",
+      "slot_uri": "GENEPIO:0101990",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
+      "range": "ViralLifeCycleMenu",
+      "recommended": true,
+      "multivalued": true
     },
     "variant_functional_effect_description": {
       "name": "variant_functional_effect_description",
       "description": "A freetext description of the functional effect of a mutation.",
-      "title": "variant functional effect description",
+      "title": "measured variant functional effect description",
       "examples": [
         {
           "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
@@ -3577,6 +4211,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101036",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "required": true
     },
@@ -3594,6 +4232,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dbXref",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string"
     },
     "drugbank_accession_number": {
@@ -3610,6 +4252,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dbXref",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string"
     },
     "antibody_registry_id": {
@@ -3626,6 +4272,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dbXref",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string"
     },
     "author": {
@@ -3642,6 +4292,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dcterms:creator",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "required": true
     },
@@ -3656,6 +4310,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dcterms:date",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "integer",
       "required": true
     },
@@ -3673,6 +4331,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dcterms:source",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "required": true
     },
@@ -3690,6 +4352,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dbXref",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "recommended": true
     },
@@ -3707,6 +4373,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dbXref",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "recommended": true
     },
@@ -3724,6 +4394,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "SIO:001035",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "boolean",
       "required": true
     },
@@ -3741,6 +4415,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dcterms:contributor",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string",
       "required": true
     },
@@ -3755,6 +4433,10 @@
       ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "dcterms:seeAlso",
+      "domain_of": [
+        "VirusMVPSARSCoV2",
+        "VirusMVPMpox"
+      ],
       "range": "string"
     }
   },
@@ -3836,69 +4518,79 @@
           "slot_group": "mutation location information",
           "range": "SARSCoV2ProteinSymbolMenu"
         },
-        "variant_functional_effect": {
-          "name": "variant_functional_effect",
+        "measured_variant_functional_effect": {
+          "name": "measured_variant_functional_effect",
           "rank": 13,
-          "slot_group": "functional effect information"
+          "slot_group": "variant functional effect information"
+        },
+        "inferred_variant_functional_effect": {
+          "name": "inferred_variant_functional_effect",
+          "rank": 14,
+          "slot_group": "variant functional effect information"
+        },
+        "measured_viral_life_cycle_functional_effect": {
+          "name": "measured_viral_life_cycle_functional_effect",
+          "rank": 15,
+          "slot_group": "variant functional effect information"
         },
         "variant_functional_effect_description": {
           "name": "variant_functional_effect_description",
-          "rank": 14,
+          "rank": 16,
           "slot_group": "variant functional effect information"
         },
         "cvx_code": {
           "name": "cvx_code",
-          "rank": 15,
+          "rank": 17,
           "slot_group": "variant functional effect information"
         },
         "drugbank_accession_number": {
           "name": "drugbank_accession_number",
-          "rank": 16,
+          "rank": 18,
           "slot_group": "variant functional effect information"
         },
         "antibody_registry_id": {
           "name": "antibody_registry_id",
-          "rank": 17,
+          "rank": 19,
           "slot_group": "variant functional effect information"
         },
         "author": {
           "name": "author",
-          "rank": 18,
+          "rank": 20,
           "slot_group": "literature citation"
         },
         "publication_year": {
           "name": "publication_year",
-          "rank": 19,
+          "rank": 21,
           "slot_group": "literature citation"
         },
         "url": {
           "name": "url",
-          "rank": 20,
+          "rank": 22,
           "slot_group": "literature citation"
         },
         "doi": {
           "name": "doi",
-          "rank": 21,
+          "rank": 23,
           "slot_group": "literature citation"
         },
         "pmid": {
           "name": "pmid",
-          "rank": 22,
+          "rank": 24,
           "slot_group": "literature citation"
         },
         "peer_review_status": {
           "name": "peer_review_status",
-          "rank": 23,
+          "rank": 25,
           "slot_group": "literature citation"
         },
         "curator": {
           "name": "curator",
-          "rank": 24,
+          "rank": 26,
           "slot_group": "contributor acknowledgement"
         },
         "mutation_functional_annotation_resource": {
           "name": "mutation_functional_annotation_resource",
-          "rank": 25,
+          "rank": 27,
           "slot_group": "contributor acknowledgement"
         }
       },
@@ -3907,6 +4599,11 @@
           "name": "organism",
           "description": "The virus being analyzed.",
           "title": "organism",
+          "examples": [
+            {
+              "value": "Severe acute respiratory syndrome coronavirus 2"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 1,
           "slot_uri": "OBI:0100026",
@@ -3924,6 +4621,14 @@
           "name": "reference_accession",
           "description": "An identifier that specifies an individual sequence record in a public sequence repository.",
           "title": "reference accession",
+          "comments": [
+            "Use the versioned accession number here."
+          ],
+          "examples": [
+            {
+              "value": "NC_045512.2"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 2,
           "slot_uri": "OBI:0002885",
@@ -3941,6 +4646,14 @@
           "name": "reference_database_name",
           "description": "An identifier of a biological or bioinformatics database.",
           "title": "reference database name",
+          "comments": [
+            "The name of the reference database may need to be entered manually if not automatically recorded as a parameter within the tool."
+          ],
+          "examples": [
+            {
+              "value": "RefSeq"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 3,
           "slot_uri": "OBI:0002883",
@@ -3958,6 +4671,14 @@
           "name": "nucleotide_position",
           "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
           "title": "nucleotide position",
+          "comments": [
+            "Separate multiple values with '|'."
+          ],
+          "examples": [
+            {
+              "value": "351"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 4,
           "slot_uri": "GENEPIO:0101033",
@@ -3976,6 +4697,14 @@
           "name": "original_mutation_description",
           "description": "A sequence datum which describes a mutation, written in the user's own notation.",
           "title": "original mutation description",
+          "comments": [
+            "Separate multiple values with '|'."
+          ],
+          "examples": [
+            {
+              "value": "D614G, 12-bp deletion in E at nucleotide position 54647, D to G substitution at amino acid 614"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 5,
           "slot_uri": "GENEPIO:0101030",
@@ -3993,6 +4722,14 @@
           "name": "nucleotide_mutation",
           "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "nucleotide mutation",
+          "comments": [
+            "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here. Separate multiple values with '|'."
+          ],
+          "examples": [
+            {
+              "value": "NC_045512.2:c.1850_1851insGT"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 6,
           "slot_uri": "GENEPIO:0100402",
@@ -4010,6 +4747,14 @@
           "name": "amino_acid_mutation",
           "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "amino acid mutation",
+          "comments": [
+            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. For multiple amino acids that are correlated with a functional impact as a group, input a pipe-separated list of mutations. It does not need to be known whether all mutations in the group are individually correlated with the functional impact."
+          ],
+          "examples": [
+            {
+              "value": "YP_009724390.1:p.Cys3563Ser, YP_009724390.1:p.Asp614Gly"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 7,
           "slot_uri": "GENEPIO:0100406",
@@ -4027,6 +4772,14 @@
           "name": "amino_acid_mutation_alias",
           "description": "For SARS-CoV-2. The alias is an amino acid name indexed from the start of each nsp in Orf1ab, as opposed to from the start of the gene as is the default.",
           "title": "amino acid mutation alias",
+          "comments": [
+            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. Separate multiple values with '|'."
+          ],
+          "examples": [
+            {
+              "value": "YP_009724390.1:p.Cys300Ser"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 8,
           "slot_uri": "GENEPIO:0100406",
@@ -4042,6 +4795,11 @@
           "name": "gene_name",
           "description": "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol.",
           "title": "gene name",
+          "examples": [
+            {
+              "value": "surface glycoprotein gene (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 9,
           "slot_uri": "GENEPIO:0101130",
@@ -4059,6 +4817,11 @@
           "name": "gene_symbol",
           "description": "The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name.",
           "title": "gene symbol",
+          "examples": [
+            {
+              "value": "s gene (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 10,
           "slot_uri": "GENEPIO:0101131",
@@ -4076,6 +4839,11 @@
           "name": "protein_name",
           "description": "The name of a protein, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a protein symbol. It (typically) may be used to identify similar proteins in different species and to derive a protein symbol.",
           "title": "protein name",
+          "examples": [
+            {
+              "value": "surface glycoprotein (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 11,
           "slot_uri": "GENEPIO:0101132",
@@ -4093,6 +4861,11 @@
           "name": "protein_symbol",
           "description": "The short name of a protein; a single word that does not contain white space characters. It is typically derived from the protein name.",
           "title": "protein symbol",
+          "examples": [
+            {
+              "value": "S protein (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 12,
           "slot_uri": "GENEPIO:0101133",
@@ -4106,29 +4879,86 @@
           "range": "SARSCoV2ProteinSymbolMenu",
           "required": true
         },
-        "variant_functional_effect": {
-          "name": "variant_functional_effect",
+        "measured_variant_functional_effect": {
+          "name": "measured_variant_functional_effect",
           "description": "The functional category of the mutation impact.",
-          "title": "variant functional effect",
+          "title": "measured variant functional effect",
+          "comments": [
+            "Freetext; a future update will have a picklist here."
+          ],
+          "examples": [
+            {
+              "value": "dimerization"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 13,
           "slot_uri": "GENEPIO:0101127",
-          "alias": "variant_functional_effect",
+          "alias": "measured_variant_functional_effect",
           "owner": "VirusMVPSARSCoV2",
           "domain_of": [
             "VirusMVPSARSCoV2",
             "VirusMVPMpox"
           ],
-          "slot_group": "functional effect information",
-          "range": "string",
-          "required": true
+          "slot_group": "variant functional effect information",
+          "range": "VariantFunctionalEffectMenu",
+          "required": true,
+          "multivalued": true
+        },
+        "inferred_variant_functional_effect": {
+          "name": "inferred_variant_functional_effect",
+          "description": "The functional category of the mutation impact.",
+          "title": "inferred variant functional effect",
+          "comments": [
+            "Freetext; a future update will have a picklist here."
+          ],
+          "examples": [
+            {
+              "value": "dimerization"
+            }
+          ],
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 14,
+          "slot_uri": "GENEPIO:0101127",
+          "alias": "inferred_variant_functional_effect",
+          "owner": "VirusMVPSARSCoV2",
+          "domain_of": [
+            "VirusMVPSARSCoV2",
+            "VirusMVPMpox"
+          ],
+          "slot_group": "variant functional effect information",
+          "range": "VariantFunctionalEffectMenu",
+          "recommended": true,
+          "multivalued": true
+        },
+        "measured_viral_life_cycle_functional_effect": {
+          "name": "measured_viral_life_cycle_functional_effect",
+          "title": "measured viral life cycle functional effect",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 15,
+          "slot_uri": "GENEPIO:0101990",
+          "alias": "measured_viral_life_cycle_functional_effect",
+          "owner": "VirusMVPSARSCoV2",
+          "domain_of": [
+            "VirusMVPSARSCoV2",
+            "VirusMVPMpox"
+          ],
+          "slot_group": "variant functional effect information",
+          "range": "ViralLifeCycleMenu",
+          "recommended": true,
+          "multivalued": true
         },
         "variant_functional_effect_description": {
           "name": "variant_functional_effect_description",
           "description": "A freetext description of the functional effect of a mutation.",
-          "title": "variant functional effect description",
+          "title": "measured variant functional effect description",
+          "examples": [
+            {
+              "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 14,
+          "rank": 16,
           "slot_uri": "GENEPIO:0101036",
           "alias": "variant_functional_effect_description",
           "owner": "VirusMVPSARSCoV2",
@@ -4144,8 +4974,16 @@
           "name": "cvx_code",
           "description": "For vaccine-related functional effects: the CVX code for the vaccine, found at https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx",
           "title": "CVX code",
+          "comments": [
+            "Begin with \"cvx:\"."
+          ],
+          "examples": [
+            {
+              "value": "cvx:519"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 15,
+          "rank": 17,
           "slot_uri": "dbXref",
           "alias": "cvx_code",
           "owner": "VirusMVPSARSCoV2",
@@ -4160,8 +4998,16 @@
           "name": "drugbank_accession_number",
           "description": "For drug-related functional effects: the DrugBank Accession Number, found at https://go.drugbank.com/",
           "title": "DrugBank Accession Number",
+          "comments": [
+            "Begin with \"drugbank:\"."
+          ],
+          "examples": [
+            {
+              "value": "drugbank:DB14761"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 16,
+          "rank": 18,
           "slot_uri": "dbXref",
           "alias": "drugbank_accession_number",
           "owner": "VirusMVPSARSCoV2",
@@ -4176,8 +5022,16 @@
           "name": "antibody_registry_id",
           "description": "For monoclonal antibody-related functional effects: the Antibody Registry, found at https://www.antibodyregistry.org/",
           "title": "Antibody Registry ID",
+          "comments": [
+            "Use only the numerical part of the ID: 2911453, rather than AB_2911453. Begin with \"antibodyregistry:\"."
+          ],
+          "examples": [
+            {
+              "value": "antibodyregistry:2911453"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 17,
+          "rank": 19,
           "slot_uri": "dbXref",
           "alias": "antibody_registry_id",
           "owner": "VirusMVPSARSCoV2",
@@ -4192,8 +5046,16 @@
           "name": "author",
           "description": "The last name of the first author of the paper or other resource containing the evidence for the mutation impact.",
           "title": "author",
+          "comments": [
+            "The surname of the publication's first author, without \"et al.\" added."
+          ],
+          "examples": [
+            {
+              "value": "Davis"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 18,
+          "rank": 20,
           "slot_uri": "dcterms:creator",
           "alias": "author",
           "owner": "VirusMVPSARSCoV2",
@@ -4209,8 +5071,13 @@
           "name": "publication_year",
           "description": "The publication year of the evidence source.",
           "title": "publication year",
+          "examples": [
+            {
+              "value": "2021"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 19,
+          "rank": 21,
           "slot_uri": "dcterms:date",
           "alias": "publication_year",
           "owner": "VirusMVPSARSCoV2",
@@ -4226,8 +5093,16 @@
           "name": "url",
           "description": "A link to the literature evidence source.",
           "title": "URL",
+          "comments": [
+            "If the evidence is found in supplemental material, still link to the paper itself."
+          ],
+          "examples": [
+            {
+              "value": "https://www.biorxiv.org/content/10.1101/2021.01.22.427749v1"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 20,
+          "rank": 22,
           "slot_uri": "dcterms:source",
           "alias": "url",
           "owner": "VirusMVPSARSCoV2",
@@ -4243,8 +5118,16 @@
           "name": "doi",
           "description": "The DOI of the literature evidence source.",
           "title": "DOI",
+          "comments": [
+            "Begin with \"doi:\"."
+          ],
+          "examples": [
+            {
+              "value": "doi:10.1101/2021.01.22.427749"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 21,
+          "rank": 23,
           "slot_uri": "dbXref",
           "alias": "doi",
           "owner": "VirusMVPSARSCoV2",
@@ -4260,8 +5143,16 @@
           "name": "pmid",
           "description": "The PMID of the literature evidence source.",
           "title": "PMID",
+          "comments": [
+            "Begin with \"pmid:\"."
+          ],
+          "examples": [
+            {
+              "value": "pmid:34755213"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 22,
+          "rank": 24,
           "slot_uri": "dbXref",
           "alias": "pmid",
           "owner": "VirusMVPSARSCoV2",
@@ -4277,8 +5168,16 @@
           "name": "peer_review_status",
           "description": "Peer review status for the literature evidence document: true or false.",
           "title": "peer review status",
+          "comments": [
+            "Must be all lowercase."
+          ],
+          "examples": [
+            {
+              "value": "true"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 23,
+          "rank": 25,
           "slot_uri": "SIO:001035",
           "alias": "peer_review_status",
           "owner": "VirusMVPSARSCoV2",
@@ -4294,8 +5193,16 @@
           "name": "curator",
           "description": "The ORCID of the curator who created the annotation record.",
           "title": "curator",
+          "comments": [
+            "If no ORCID is available, write the curator's full name here."
+          ],
+          "examples": [
+            {
+              "value": "0000-0002-0548-891X"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 24,
+          "rank": 26,
           "slot_uri": "dcterms:contributor",
           "alias": "curator",
           "owner": "VirusMVPSARSCoV2",
@@ -4311,8 +5218,13 @@
           "name": "mutation_functional_annotation_resource",
           "description": "The resource containing the functional annotation for the mutation.",
           "title": "mutation functional annotation resource",
+          "examples": [
+            {
+              "value": "Pokay, SARS-CoV-2 Harvest Variants"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 25,
+          "rank": 27,
           "slot_uri": "dcterms:seeAlso",
           "alias": "mutation_functional_annotation_resource",
           "owner": "VirusMVPSARSCoV2",
@@ -4402,69 +5314,79 @@
           "slot_group": "mutation location information",
           "range": "MPOXProteinSymbolMenu"
         },
-        "variant_functional_effect": {
-          "name": "variant_functional_effect",
+        "measured_variant_functional_effect": {
+          "name": "measured_variant_functional_effect",
           "rank": 14,
-          "slot_group": "functional effect information"
+          "slot_group": "variant functional effect information"
+        },
+        "inferred_variant_functional_effect": {
+          "name": "inferred_variant_functional_effect",
+          "rank": 15,
+          "slot_group": "variant functional effect information"
+        },
+        "measured_viral_life_cycle_functional_effect": {
+          "name": "measured_viral_life_cycle_functional_effect",
+          "rank": 16,
+          "slot_group": "variant functional effect information"
         },
         "variant_functional_effect_description": {
           "name": "variant_functional_effect_description",
-          "rank": 15,
+          "rank": 17,
           "slot_group": "variant functional effect information"
         },
         "cvx_code": {
           "name": "cvx_code",
-          "rank": 16,
+          "rank": 18,
           "slot_group": "variant functional effect information"
         },
         "drugbank_accession_number": {
           "name": "drugbank_accession_number",
-          "rank": 17,
+          "rank": 19,
           "slot_group": "variant functional effect information"
         },
         "antibody_registry_id": {
           "name": "antibody_registry_id",
-          "rank": 18,
+          "rank": 20,
           "slot_group": "variant functional effect information"
         },
         "author": {
           "name": "author",
-          "rank": 19,
+          "rank": 21,
           "slot_group": "literature citation"
         },
         "publication_year": {
           "name": "publication_year",
-          "rank": 20,
+          "rank": 22,
           "slot_group": "literature citation"
         },
         "url": {
           "name": "url",
-          "rank": 21,
+          "rank": 23,
           "slot_group": "literature citation"
         },
         "doi": {
           "name": "doi",
-          "rank": 22,
+          "rank": 24,
           "slot_group": "literature citation"
         },
         "pmid": {
           "name": "pmid",
-          "rank": 23,
+          "rank": 25,
           "slot_group": "literature citation"
         },
         "peer_review_status": {
           "name": "peer_review_status",
-          "rank": 24,
+          "rank": 26,
           "slot_group": "literature citation"
         },
         "curator": {
           "name": "curator",
-          "rank": 25,
+          "rank": 27,
           "slot_group": "contributor acknowledgement"
         },
         "mutation_functional_annotation_resource": {
           "name": "mutation_functional_annotation_resource",
-          "rank": 26,
+          "rank": 28,
           "slot_group": "contributor acknowledgement"
         }
       },
@@ -4473,6 +5395,11 @@
           "name": "organism",
           "description": "The virus being analyzed.",
           "title": "organism",
+          "examples": [
+            {
+              "value": "Severe acute respiratory syndrome coronavirus 2"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 1,
           "slot_uri": "OBI:0100026",
@@ -4490,6 +5417,14 @@
           "name": "reference_accession",
           "description": "An identifier that specifies an individual sequence record in a public sequence repository.",
           "title": "reference accession",
+          "comments": [
+            "Use the versioned accession number here."
+          ],
+          "examples": [
+            {
+              "value": "NC_045512.2"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 2,
           "slot_uri": "OBI:0002885",
@@ -4507,6 +5442,14 @@
           "name": "reference_database_name",
           "description": "An identifier of a biological or bioinformatics database.",
           "title": "reference database name",
+          "comments": [
+            "The name of the reference database may need to be entered manually if not automatically recorded as a parameter within the tool."
+          ],
+          "examples": [
+            {
+              "value": "RefSeq"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 3,
           "slot_uri": "OBI:0002883",
@@ -4524,6 +5467,14 @@
           "name": "nucleotide_position",
           "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
           "title": "nucleotide position",
+          "comments": [
+            "Separate multiple values with '|'."
+          ],
+          "examples": [
+            {
+              "value": "351"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 4,
           "slot_uri": "GENEPIO:0101033",
@@ -4542,6 +5493,14 @@
           "name": "original_mutation_description",
           "description": "A sequence datum which describes a mutation, written in the user's own notation.",
           "title": "original mutation description",
+          "comments": [
+            "Separate multiple values with '|'."
+          ],
+          "examples": [
+            {
+              "value": "D614G, 12-bp deletion in E at nucleotide position 54647, D to G substitution at amino acid 614"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 5,
           "slot_uri": "GENEPIO:0101030",
@@ -4559,6 +5518,14 @@
           "name": "nucleotide_mutation",
           "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "nucleotide mutation",
+          "comments": [
+            "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here. Separate multiple values with '|'."
+          ],
+          "examples": [
+            {
+              "value": "NC_045512.2:c.1850_1851insGT"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 6,
           "slot_uri": "GENEPIO:0100402",
@@ -4576,6 +5543,14 @@
           "name": "amino_acid_mutation",
           "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "amino acid mutation",
+          "comments": [
+            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. For multiple amino acids that are correlated with a functional impact as a group, input a pipe-separated list of mutations. It does not need to be known whether all mutations in the group are individually correlated with the functional impact."
+          ],
+          "examples": [
+            {
+              "value": "YP_009724390.1:p.Cys3563Ser, YP_009724390.1:p.Asp614Gly"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 7,
           "slot_uri": "GENEPIO:0100406",
@@ -4593,6 +5568,11 @@
           "name": "gene_name",
           "description": "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol.",
           "title": "gene name",
+          "examples": [
+            {
+              "value": "surface glycoprotein gene (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 8,
           "slot_uri": "GENEPIO:0101130",
@@ -4610,6 +5590,11 @@
           "name": "gene_symbol",
           "description": "The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name.",
           "title": "gene symbol",
+          "examples": [
+            {
+              "value": "s gene (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 9,
           "slot_uri": "GENEPIO:0101131",
@@ -4635,7 +5620,8 @@
             "VirusMVPMpox"
           ],
           "slot_group": "mutation location information",
-          "range": "GeneOrientationMenu"
+          "range": "GeneOrientationMenu",
+          "required": true
         },
         "strand_orientation": {
           "name": "strand_orientation",
@@ -4649,12 +5635,18 @@
             "VirusMVPMpox"
           ],
           "slot_group": "mutation location information",
-          "range": "StrandOrientationMenu"
+          "range": "StrandOrientationMenu",
+          "required": true
         },
         "protein_name": {
           "name": "protein_name",
           "description": "The name of a protein, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a protein symbol. It (typically) may be used to identify similar proteins in different species and to derive a protein symbol.",
           "title": "protein name",
+          "examples": [
+            {
+              "value": "surface glycoprotein (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 12,
           "slot_uri": "GENEPIO:0101132",
@@ -4672,6 +5664,11 @@
           "name": "protein_symbol",
           "description": "The short name of a protein; a single word that does not contain white space characters. It is typically derived from the protein name.",
           "title": "protein symbol",
+          "examples": [
+            {
+              "value": "S protein (SARS-CoV-2)"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 13,
           "slot_uri": "GENEPIO:0101133",
@@ -4685,29 +5682,86 @@
           "range": "MPOXProteinSymbolMenu",
           "required": true
         },
-        "variant_functional_effect": {
-          "name": "variant_functional_effect",
+        "measured_variant_functional_effect": {
+          "name": "measured_variant_functional_effect",
           "description": "The functional category of the mutation impact.",
-          "title": "variant functional effect",
+          "title": "measured variant functional effect",
+          "comments": [
+            "Freetext; a future update will have a picklist here."
+          ],
+          "examples": [
+            {
+              "value": "dimerization"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 14,
           "slot_uri": "GENEPIO:0101127",
-          "alias": "variant_functional_effect",
+          "alias": "measured_variant_functional_effect",
           "owner": "VirusMVPMpox",
           "domain_of": [
             "VirusMVPSARSCoV2",
             "VirusMVPMpox"
           ],
-          "slot_group": "functional effect information",
-          "range": "string",
-          "required": true
+          "slot_group": "variant functional effect information",
+          "range": "VariantFunctionalEffectMenu",
+          "required": true,
+          "multivalued": true
+        },
+        "inferred_variant_functional_effect": {
+          "name": "inferred_variant_functional_effect",
+          "description": "The functional category of the mutation impact.",
+          "title": "inferred variant functional effect",
+          "comments": [
+            "Freetext; a future update will have a picklist here."
+          ],
+          "examples": [
+            {
+              "value": "dimerization"
+            }
+          ],
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 15,
+          "slot_uri": "GENEPIO:0101127",
+          "alias": "inferred_variant_functional_effect",
+          "owner": "VirusMVPMpox",
+          "domain_of": [
+            "VirusMVPSARSCoV2",
+            "VirusMVPMpox"
+          ],
+          "slot_group": "variant functional effect information",
+          "range": "VariantFunctionalEffectMenu",
+          "recommended": true,
+          "multivalued": true
+        },
+        "measured_viral_life_cycle_functional_effect": {
+          "name": "measured_viral_life_cycle_functional_effect",
+          "title": "measured viral life cycle functional effect",
+          "from_schema": "https://example.com/VIRUSMVP",
+          "rank": 16,
+          "slot_uri": "GENEPIO:0101990",
+          "alias": "measured_viral_life_cycle_functional_effect",
+          "owner": "VirusMVPMpox",
+          "domain_of": [
+            "VirusMVPSARSCoV2",
+            "VirusMVPMpox"
+          ],
+          "slot_group": "variant functional effect information",
+          "range": "ViralLifeCycleMenu",
+          "recommended": true,
+          "multivalued": true
         },
         "variant_functional_effect_description": {
           "name": "variant_functional_effect_description",
           "description": "A freetext description of the functional effect of a mutation.",
-          "title": "variant functional effect description",
+          "title": "measured variant functional effect description",
+          "examples": [
+            {
+              "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 15,
+          "rank": 17,
           "slot_uri": "GENEPIO:0101036",
           "alias": "variant_functional_effect_description",
           "owner": "VirusMVPMpox",
@@ -4723,8 +5777,16 @@
           "name": "cvx_code",
           "description": "For vaccine-related functional effects: the CVX code for the vaccine, found at https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx",
           "title": "CVX code",
+          "comments": [
+            "Begin with \"cvx:\"."
+          ],
+          "examples": [
+            {
+              "value": "cvx:519"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 16,
+          "rank": 18,
           "slot_uri": "dbXref",
           "alias": "cvx_code",
           "owner": "VirusMVPMpox",
@@ -4739,8 +5801,16 @@
           "name": "drugbank_accession_number",
           "description": "For drug-related functional effects: the DrugBank Accession Number, found at https://go.drugbank.com/",
           "title": "DrugBank Accession Number",
+          "comments": [
+            "Begin with \"drugbank:\"."
+          ],
+          "examples": [
+            {
+              "value": "drugbank:DB14761"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 17,
+          "rank": 19,
           "slot_uri": "dbXref",
           "alias": "drugbank_accession_number",
           "owner": "VirusMVPMpox",
@@ -4755,8 +5825,16 @@
           "name": "antibody_registry_id",
           "description": "For monoclonal antibody-related functional effects: the Antibody Registry, found at https://www.antibodyregistry.org/",
           "title": "Antibody Registry ID",
+          "comments": [
+            "Use only the numerical part of the ID: 2911453, rather than AB_2911453. Begin with \"antibodyregistry:\"."
+          ],
+          "examples": [
+            {
+              "value": "antibodyregistry:2911453"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 18,
+          "rank": 20,
           "slot_uri": "dbXref",
           "alias": "antibody_registry_id",
           "owner": "VirusMVPMpox",
@@ -4771,8 +5849,16 @@
           "name": "author",
           "description": "The last name of the first author of the paper or other resource containing the evidence for the mutation impact.",
           "title": "author",
+          "comments": [
+            "The surname of the publication's first author, without \"et al.\" added."
+          ],
+          "examples": [
+            {
+              "value": "Davis"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 19,
+          "rank": 21,
           "slot_uri": "dcterms:creator",
           "alias": "author",
           "owner": "VirusMVPMpox",
@@ -4788,8 +5874,13 @@
           "name": "publication_year",
           "description": "The publication year of the evidence source.",
           "title": "publication year",
+          "examples": [
+            {
+              "value": "2021"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 20,
+          "rank": 22,
           "slot_uri": "dcterms:date",
           "alias": "publication_year",
           "owner": "VirusMVPMpox",
@@ -4805,8 +5896,16 @@
           "name": "url",
           "description": "A link to the literature evidence source.",
           "title": "URL",
+          "comments": [
+            "If the evidence is found in supplemental material, still link to the paper itself."
+          ],
+          "examples": [
+            {
+              "value": "https://www.biorxiv.org/content/10.1101/2021.01.22.427749v1"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 21,
+          "rank": 23,
           "slot_uri": "dcterms:source",
           "alias": "url",
           "owner": "VirusMVPMpox",
@@ -4822,8 +5921,16 @@
           "name": "doi",
           "description": "The DOI of the literature evidence source.",
           "title": "DOI",
+          "comments": [
+            "Begin with \"doi:\"."
+          ],
+          "examples": [
+            {
+              "value": "doi:10.1101/2021.01.22.427749"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 22,
+          "rank": 24,
           "slot_uri": "dbXref",
           "alias": "doi",
           "owner": "VirusMVPMpox",
@@ -4839,8 +5946,16 @@
           "name": "pmid",
           "description": "The PMID of the literature evidence source.",
           "title": "PMID",
+          "comments": [
+            "Begin with \"pmid:\"."
+          ],
+          "examples": [
+            {
+              "value": "pmid:34755213"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 23,
+          "rank": 25,
           "slot_uri": "dbXref",
           "alias": "pmid",
           "owner": "VirusMVPMpox",
@@ -4856,8 +5971,16 @@
           "name": "peer_review_status",
           "description": "Peer review status for the literature evidence document: true or false.",
           "title": "peer review status",
+          "comments": [
+            "Must be all lowercase."
+          ],
+          "examples": [
+            {
+              "value": "true"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 24,
+          "rank": 26,
           "slot_uri": "SIO:001035",
           "alias": "peer_review_status",
           "owner": "VirusMVPMpox",
@@ -4873,8 +5996,16 @@
           "name": "curator",
           "description": "The ORCID of the curator who created the annotation record.",
           "title": "curator",
+          "comments": [
+            "If no ORCID is available, write the curator's full name here."
+          ],
+          "examples": [
+            {
+              "value": "0000-0002-0548-891X"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 25,
+          "rank": 27,
           "slot_uri": "dcterms:contributor",
           "alias": "curator",
           "owner": "VirusMVPMpox",
@@ -4890,8 +6021,13 @@
           "name": "mutation_functional_annotation_resource",
           "description": "The resource containing the functional annotation for the mutation.",
           "title": "mutation functional annotation resource",
+          "examples": [
+            {
+              "value": "Pokay, SARS-CoV-2 Harvest Variants"
+            }
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
-          "rank": 26,
+          "rank": 28,
           "slot_uri": "dcterms:seeAlso",
           "alias": "mutation_functional_annotation_resource",
           "owner": "VirusMVPMpox",

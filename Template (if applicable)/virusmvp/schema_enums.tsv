@@ -8,6 +8,123 @@ StrandOrientationMenu	strand orientation menu	GENEPIO:0700003	antisense strand o
 GeneOrientationMenu	gene orientation menu	GENEPIO:0700004	forward gene orientation										
 		GENEPIO:0700005	reverse gene orientation										
 													
+VariantFunctionalEffectMenu	variant functional effect menu	GENEPIO:0101924	altered binding affinity										
+		GENEPIO:0101925		increased binding affinity									
+		GENEPIO:0101926		decreased binding affinity									
+		GENEPIO:0101893	altered posttranslational modification										
+		GENEPIO:0101927		increased posttranslational modification									
+		GENEPIO:0101928		decreased posttranslational modification									
+		GENEPIO:0101894	altered dimerization										
+		GENEPIO:0101929		increased dimerization									
+		GENEPIO:0101930		decreased dimerization									
+		GENEPIO:0101895	altered proteolysis										
+		GENEPIO:0101931		increased proteolysis									
+		GENEPIO:0101932		decreased proteolysis									
+		GENEPIO:0101896	protein conformation										
+		GENEPIO:0101897	altered host cell stress granule formation										
+		GENEPIO:0101933		increased host cell stress granule formation									
+		GENEPIO:0101934		decreased host cell stress granule formation									
+		GENEPIO:0101898	altered host cell syncytium formation										
+		GENEPIO:0101935		increased host cell syncytium formation									
+		GENEPIO:0101936		decreased host cell syncytium formation									
+		GENEPIO:0101899	detected in immunosuppressed host										
+		GENEPIO:0101900	detected in reinfected host										
+		GENEPIO:0101901	host symptomaticity										
+		GENEPIO:0101902	host clinical indicator										
+		GENEPIO:0101937	altered risk										
+		GENEPIO:0101938		increased risk									
+		GENEPIO:0101939		decreased risk									
+		GENEPIO:0101904	selective pressure										
+		GENEPIO:0101905	homoplasy										
+		GENEPIO:0101906	infectious agent host range										
+		GENEPIO:0101940	altered detectability of infectious agent										
+		GENEPIO:0101941		increased detectability of infectious agent									
+		GENEPIO:0101942		decreased detectability of infectious agent									
+		GENEPIO:0101943	altered susceptibility of infectious agent to environmental condition										
+		GENEPIO:0101944		increased susceptibility of infectious agent to environmental condition									
+		GENEPIO:0101945		decreased susceptibility of infectious agent to environmental condition									
+		GENEPIO:0101946	resistance of infectious agent to environmental condition										
+		GENEPIO:0101947		altered susceptibility of infectious agent to temperature condition									
+		GENEPIO:0101948			increased susceptibility of infectious agent to temperature condition								
+		GENEPIO:0101949			decreased susceptibility of infectious agent to temperature condition								
+		GENEPIO:0101950		resistance of infectious agent to temperature condition									
+		GENEPIO:0101951	altered antipathogenic agent susceptibility of infectious agent										
+		GENEPIO:0101952		increased antipathogenic agent susceptibility of infectious agent									
+		GENEPIO:0101953		decreased antipathogenic agent susceptibility of infectious agent									
+		GENEPIO:0101954	antipathogenic agent resistance of infectious agent										
+		GENEPIO:0101955		altered therapeutic agent susceptibility of infectious agent									
+		GENEPIO:0101956			increased therapeutic agent susceptibility of infectious agent								
+		GENEPIO:0101957			decreased therapeutic agent susceptibility of infectious agent								
+		GENEPIO:0101958		therapeutic agent resistance of infectious agent									
+		GENEPIO:0101959		altered monoclonal antibody susceptibility of infectious agent									
+		GENEPIO:0101960			increased monoclonal antibody susceptibility of infectious agent								
+		GENEPIO:0101961			decreased monoclonal antibody susceptibility of infectious agent								
+		GENEPIO:0101962		monoclonal antibody resistance of infectious agent									
+		GENEPIO:0101963		altered convalescent plasma susceptibility of infectious agent									
+		GENEPIO:0101964			increased convalescent plasma susceptibility of infectious agent								
+		GENEPIO:0101965			decreased convalescent plasma susceptibility of infectious agent								
+		GENEPIO:0101966		convalescent plasma resistance of infectious agent									
+		GENEPIO:0101967	altered host immune response susceptibility of infectious agent										
+		GENEPIO:0101968		increased host immune response susceptibility of infectious agent									
+		GENEPIO:0101969		decreased host immune response susceptibility of infectious agent									
+		GENEPIO:0101970	host immune response resistance of infectious agent										
+		GENEPIO:0101971		altered host adaptive immune response susceptibility of infectious agent									
+		GENEPIO:0101972			increased host adaptive immune response susceptibility of infectious agent								
+		GENEPIO:0101973			decreased host adaptive immune response susceptibility of infectious agent								
+		GENEPIO:0101983			altered cytotoxic T cell neutralization response susceptibility of infectious agent								
+		GENEPIO:0101984				increased cytotoxic T cell neutralization response susceptibility of infectious agent							
+		GENEPIO:0101985				decreased cytotoxic T cell neutralization response susceptibility of infectious agent							
+		GENEPIO:0101986			cytotoxic T cell neutralization response resistance of infectious agent								
+		GENEPIO:0101974		host adaptive immune response resistance of infectious agent									
+		GENEPIO:0101975		altered host innate immune response susceptibility of infectious agent									
+		GENEPIO:0101976			increased host innate immune response susceptibility of infectious agent								
+		GENEPIO:0101977			decreased host innate immune response susceptibility of infectious agent								
+		GENEPIO:0101978		host innate immune response resistance of infectious agent									
+		GENEPIO:0101979			altered Type I interferon activation response susceptibility of infectious agent								
+		GENEPIO:0101980				increased Type I interferon activation response susceptibility of infectious agent							
+		GENEPIO:0101981				decreased Type I interferon activation response susceptibility of infectious agent							
+		GENEPIO:0101982			Type I interferon activation response resistance of infectious agent								
+		GENEPIO:0101987	altered viral load										
+		GENEPIO:0101988		increased viral load									
+		GENEPIO:0101989		decreased viral load									
+		GENEPIO:0102015	altered infectious agent transmissibility										
+		GENEPIO:0102016		increased infectious agent transmissibility									
+		GENEPIO:0102017		decreased infectious agent transmissibility									
+		GENEPIO:0102018	altered drug susceptibility of infectious agent										
+		GENEPIO:0102019		increased drug susceptibility of infectious agent									
+		GENEPIO:0102020		decreased drug susceptibility of infectious agent									
+		GENEPIO:0102021	altered infectivity										
+		GENEPIO:0102022		increased infectivity									
+		GENEPIO:0102023		decreased infectivity									
+		GENEPIO:0102024	altered macromolecular stability										
+		GENEPIO:0102025		increased macromolecular stability									
+		GENEPIO:0102026		decreased macromolecular stability									
+													
+ViralLifeCycleMenu		GENEPIO:0101991	altered intracellular transport of virus										
+		GENEPIO:0101992		increased intracellular transport of virus									
+		GENEPIO:0101993		decreased intracellular transport of virus									
+		GENEPIO:0101994	altered symbiont entry into host cell										
+		GENEPIO:0101995		increased symbiont entry into host cell									
+		GENEPIO:0101996		decreased symbiont entry into host cell									
+		GENEPIO:0101997	altered viral genome integration into host DNA										
+		GENEPIO:0101998		increased viral genome integration into host DNA									
+		GENEPIO:0101999		decreased viral genome integration into host DNA									
+		GENEPIO:0102000	altered viral genome replication										
+		GENEPIO:0102001		increased viral genome replication									
+		GENEPIO:0102002		decreased viral genome replication									
+		GENEPIO:0102003	altered viral release from host cell										
+		GENEPIO:0102004		increased viral release from host cell									
+		GENEPIO:0102005		decreased viral release from host cell									
+		GENEPIO:0102006	altered virion assembly										
+		GENEPIO:0102007		increased virion assembly									
+		GENEPIO:0102008		decreased virion assembly									
+		GENEPIO:0102009	altered virion attachment to host cell										
+		GENEPIO:0102010		increased virion attachment to host cell									
+		GENEPIO:0102011		decreased virion attachment to host cell									
+		GENEPIO:0102012	altered virus maturation										
+		GENEPIO:0102013		increased virus maturation									
+		GENEPIO:0102014		decreased virus maturation									
+													
 SARSCoV2OrganismMenu	SARS-CoV-2 organism menu	NCBITaxon:2697049	Severe acute respiratory syndrome coronavirus 2										
 													
 SARSCoV2ReferenceAccessionMenu	SARS-CoV-2 reference accession menu		NC_045512.2										
