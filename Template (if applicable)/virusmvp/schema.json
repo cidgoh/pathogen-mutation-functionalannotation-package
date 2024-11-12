@@ -3953,9 +3953,6 @@
       "name": "nucleotide_position",
       "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
       "title": "nucleotide position",
-      "comments": [
-        "Separate multiple values with '|'."
-      ],
       "examples": [
         {
           "value": "351"
@@ -3969,15 +3966,12 @@
       ],
       "range": "string",
       "required": true,
-      "minimum_value": 0
+      "minimum_value": 1
     },
     "original_mutation_description": {
       "name": "original_mutation_description",
       "description": "A sequence datum which describes a mutation, written in the user's own notation.",
       "title": "original mutation description",
-      "comments": [
-        "Separate multiple values with '|'."
-      ],
       "examples": [
         {
           "value": "D614G, 12-bp deletion in E at nucleotide position 54647, D to G substitution at amino acid 614"
@@ -3997,7 +3991,7 @@
       "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
       "title": "nucleotide mutation",
       "comments": [
-        "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here. Separate multiple values with '|'."
+        "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here."
       ],
       "examples": [
         {
@@ -4018,7 +4012,7 @@
       "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
       "title": "amino acid mutation",
       "comments": [
-        "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. For multiple amino acids that are correlated with a functional impact as a group, input a pipe-separated list of mutations. It does not need to be known whether all mutations in the group are individually correlated with the functional impact."
+        "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids."
       ],
       "examples": [
         {
@@ -4039,7 +4033,7 @@
       "description": "For SARS-CoV-2. The alias is an amino acid name indexed from the start of each nsp in Orf1ab, as opposed to from the start of the gene as is the default.",
       "title": "amino acid mutation alias",
       "comments": [
-        "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. Separate multiple values with '|'."
+        "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids."
       ],
       "examples": [
         {
@@ -4123,6 +4117,7 @@
     },
     "gene_orientation": {
       "name": "gene_orientation",
+      "description": "A genomic orientation which is the orientation of a gene on a stranded molecule.",
       "title": "gene orientation",
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0700000",
@@ -4134,6 +4129,7 @@
     },
     "strand_orientation": {
       "name": "strand_orientation",
+      "description": "A genomic orientation which is the orientation of a strand on a stranded molecule.",
       "title": "strand orientation",
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0700001",
@@ -4145,10 +4141,10 @@
     },
     "measured_variant_functional_effect": {
       "name": "measured_variant_functional_effect",
-      "description": "The functional category of the mutation impact.",
+      "description": "The functional category of the mutation impact that is directly measured in a research study.",
       "title": "measured variant functional effect",
       "comments": [
-        "Freetext; a future update will have a picklist here."
+        "Select all functional impacts that relate to the functional description."
       ],
       "examples": [
         {
@@ -4167,10 +4163,10 @@
     },
     "inferred_variant_functional_effect": {
       "name": "inferred_variant_functional_effect",
-      "description": "The functional category of the mutation impact.",
+      "description": "The functional category of the mutation impact that is inferred from a direct measurement in a research study.",
       "title": "inferred variant functional effect",
       "comments": [
-        "Freetext; a future update will have a picklist here."
+        "Select all functional impacts that relate to the functional description."
       ],
       "examples": [
         {
@@ -4187,9 +4183,13 @@
       "recommended": true,
       "multivalued": true
     },
-    "measured_viral_life_cycle_functional_effect": {
-      "name": "measured_viral_life_cycle_functional_effect",
-      "title": "measured viral life cycle functional effect",
+    "viral_life_cycle_functional_effect": {
+      "name": "viral_life_cycle_functional_effect",
+      "description": "The viral life cycle impact correlated with the mutation.",
+      "title": "viral life cycle functional effect",
+      "comments": [
+        "Select all functional impacts that relate to the functional description."
+      ],
       "from_schema": "https://example.com/VIRUSMVP",
       "slot_uri": "GENEPIO:0101990",
       "domain_of": [
@@ -4203,7 +4203,7 @@
     "variant_functional_effect_description": {
       "name": "variant_functional_effect_description",
       "description": "A freetext description of the functional effect of a mutation.",
-      "title": "measured variant functional effect description",
+      "title": "variant functional effect description",
       "examples": [
         {
           "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
@@ -4528,8 +4528,8 @@
           "rank": 14,
           "slot_group": "variant functional effect information"
         },
-        "measured_viral_life_cycle_functional_effect": {
-          "name": "measured_viral_life_cycle_functional_effect",
+        "viral_life_cycle_functional_effect": {
+          "name": "viral_life_cycle_functional_effect",
           "rank": 15,
           "slot_group": "variant functional effect information"
         },
@@ -4671,9 +4671,6 @@
           "name": "nucleotide_position",
           "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
           "title": "nucleotide position",
-          "comments": [
-            "Separate multiple values with '|'."
-          ],
           "examples": [
             {
               "value": "351"
@@ -4691,15 +4688,12 @@
           "slot_group": "mutation location information",
           "range": "string",
           "required": true,
-          "minimum_value": 0
+          "minimum_value": 1
         },
         "original_mutation_description": {
           "name": "original_mutation_description",
           "description": "A sequence datum which describes a mutation, written in the user's own notation.",
           "title": "original mutation description",
-          "comments": [
-            "Separate multiple values with '|'."
-          ],
           "examples": [
             {
               "value": "D614G, 12-bp deletion in E at nucleotide position 54647, D to G substitution at amino acid 614"
@@ -4723,7 +4717,7 @@
           "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "nucleotide mutation",
           "comments": [
-            "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here. Separate multiple values with '|'."
+            "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here."
           ],
           "examples": [
             {
@@ -4748,7 +4742,7 @@
           "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "amino acid mutation",
           "comments": [
-            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. For multiple amino acids that are correlated with a functional impact as a group, input a pipe-separated list of mutations. It does not need to be known whether all mutations in the group are individually correlated with the functional impact."
+            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids."
           ],
           "examples": [
             {
@@ -4773,7 +4767,7 @@
           "description": "For SARS-CoV-2. The alias is an amino acid name indexed from the start of each nsp in Orf1ab, as opposed to from the start of the gene as is the default.",
           "title": "amino acid mutation alias",
           "comments": [
-            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. Separate multiple values with '|'."
+            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids."
           ],
           "examples": [
             {
@@ -4881,10 +4875,10 @@
         },
         "measured_variant_functional_effect": {
           "name": "measured_variant_functional_effect",
-          "description": "The functional category of the mutation impact.",
+          "description": "The functional category of the mutation impact that is directly measured in a research study.",
           "title": "measured variant functional effect",
           "comments": [
-            "Freetext; a future update will have a picklist here."
+            "Select all functional impacts that relate to the functional description."
           ],
           "examples": [
             {
@@ -4907,10 +4901,10 @@
         },
         "inferred_variant_functional_effect": {
           "name": "inferred_variant_functional_effect",
-          "description": "The functional category of the mutation impact.",
+          "description": "The functional category of the mutation impact that is inferred from a direct measurement in a research study.",
           "title": "inferred variant functional effect",
           "comments": [
-            "Freetext; a future update will have a picklist here."
+            "Select all functional impacts that relate to the functional description."
           ],
           "examples": [
             {
@@ -4931,13 +4925,17 @@
           "recommended": true,
           "multivalued": true
         },
-        "measured_viral_life_cycle_functional_effect": {
-          "name": "measured_viral_life_cycle_functional_effect",
-          "title": "measured viral life cycle functional effect",
+        "viral_life_cycle_functional_effect": {
+          "name": "viral_life_cycle_functional_effect",
+          "description": "The viral life cycle impact correlated with the mutation.",
+          "title": "viral life cycle functional effect",
+          "comments": [
+            "Select all functional impacts that relate to the functional description."
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 15,
           "slot_uri": "GENEPIO:0101990",
-          "alias": "measured_viral_life_cycle_functional_effect",
+          "alias": "viral_life_cycle_functional_effect",
           "owner": "VirusMVPSARSCoV2",
           "domain_of": [
             "VirusMVPSARSCoV2",
@@ -4951,7 +4949,7 @@
         "variant_functional_effect_description": {
           "name": "variant_functional_effect_description",
           "description": "A freetext description of the functional effect of a mutation.",
-          "title": "measured variant functional effect description",
+          "title": "variant functional effect description",
           "examples": [
             {
               "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
@@ -5253,7 +5251,14 @@
           "name": "reference_accession",
           "rank": 2,
           "slot_group": "reference sequence information",
-          "range": "MPOXReferenceAccessionMenu"
+          "any_of": [
+            {
+              "range": "MPOXReferenceAccessionMenu"
+            },
+            {
+              "range": "NullValueMenu"
+            }
+          ]
         },
         "reference_database_name": {
           "name": "reference_database_name",
@@ -5324,8 +5329,8 @@
           "rank": 15,
           "slot_group": "variant functional effect information"
         },
-        "measured_viral_life_cycle_functional_effect": {
-          "name": "measured_viral_life_cycle_functional_effect",
+        "viral_life_cycle_functional_effect": {
+          "name": "viral_life_cycle_functional_effect",
           "rank": 16,
           "slot_group": "variant functional effect information"
         },
@@ -5435,8 +5440,15 @@
             "VirusMVPMpox"
           ],
           "slot_group": "reference sequence information",
-          "range": "MPOXReferenceAccessionMenu",
-          "required": true
+          "required": true,
+          "any_of": [
+            {
+              "range": "MPOXReferenceAccessionMenu"
+            },
+            {
+              "range": "NullValueMenu"
+            }
+          ]
         },
         "reference_database_name": {
           "name": "reference_database_name",
@@ -5467,9 +5479,6 @@
           "name": "nucleotide_position",
           "description": "A sequence datum which is the 1-based start position of a sequence feature for a given nucleotide sequence.",
           "title": "nucleotide position",
-          "comments": [
-            "Separate multiple values with '|'."
-          ],
           "examples": [
             {
               "value": "351"
@@ -5487,15 +5496,12 @@
           "slot_group": "mutation location information",
           "range": "string",
           "required": true,
-          "minimum_value": 0
+          "minimum_value": 1
         },
         "original_mutation_description": {
           "name": "original_mutation_description",
           "description": "A sequence datum which describes a mutation, written in the user's own notation.",
           "title": "original mutation description",
-          "comments": [
-            "Separate multiple values with '|'."
-          ],
           "examples": [
             {
               "value": "D614G, 12-bp deletion in E at nucleotide position 54647, D to G substitution at amino acid 614"
@@ -5519,7 +5525,7 @@
           "description": "A sequence datum which describes a nucleotide sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "nucleotide mutation",
           "comments": [
-            "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here. Separate multiple values with '|'."
+            "Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations should be included here."
           ],
           "examples": [
             {
@@ -5544,7 +5550,7 @@
           "description": "A sequence datum which describes an amino acid sequence change as compared to a reference sequence, represented by a specified notation system.",
           "title": "amino acid mutation",
           "comments": [
-            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids. For multiple amino acids that are correlated with a functional impact as a group, input a pipe-separated list of mutations. It does not need to be known whether all mutations in the group are individually correlated with the functional impact."
+            "Use HGVS syntax; p. (protein) mutations should be included here; use 3 letter code preferred for amino acids."
           ],
           "examples": [
             {
@@ -5610,6 +5616,7 @@
         },
         "gene_orientation": {
           "name": "gene_orientation",
+          "description": "A genomic orientation which is the orientation of a gene on a stranded molecule.",
           "title": "gene orientation",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 10,
@@ -5625,6 +5632,7 @@
         },
         "strand_orientation": {
           "name": "strand_orientation",
+          "description": "A genomic orientation which is the orientation of a strand on a stranded molecule.",
           "title": "strand orientation",
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 11,
@@ -5684,10 +5692,10 @@
         },
         "measured_variant_functional_effect": {
           "name": "measured_variant_functional_effect",
-          "description": "The functional category of the mutation impact.",
+          "description": "The functional category of the mutation impact that is directly measured in a research study.",
           "title": "measured variant functional effect",
           "comments": [
-            "Freetext; a future update will have a picklist here."
+            "Select all functional impacts that relate to the functional description."
           ],
           "examples": [
             {
@@ -5710,10 +5718,10 @@
         },
         "inferred_variant_functional_effect": {
           "name": "inferred_variant_functional_effect",
-          "description": "The functional category of the mutation impact.",
+          "description": "The functional category of the mutation impact that is inferred from a direct measurement in a research study.",
           "title": "inferred variant functional effect",
           "comments": [
-            "Freetext; a future update will have a picklist here."
+            "Select all functional impacts that relate to the functional description."
           ],
           "examples": [
             {
@@ -5734,13 +5742,17 @@
           "recommended": true,
           "multivalued": true
         },
-        "measured_viral_life_cycle_functional_effect": {
-          "name": "measured_viral_life_cycle_functional_effect",
-          "title": "measured viral life cycle functional effect",
+        "viral_life_cycle_functional_effect": {
+          "name": "viral_life_cycle_functional_effect",
+          "description": "The viral life cycle impact correlated with the mutation.",
+          "title": "viral life cycle functional effect",
+          "comments": [
+            "Select all functional impacts that relate to the functional description."
+          ],
           "from_schema": "https://example.com/VIRUSMVP",
           "rank": 16,
           "slot_uri": "GENEPIO:0101990",
-          "alias": "measured_viral_life_cycle_functional_effect",
+          "alias": "viral_life_cycle_functional_effect",
           "owner": "VirusMVPMpox",
           "domain_of": [
             "VirusMVPSARSCoV2",
@@ -5754,7 +5766,7 @@
         "variant_functional_effect_description": {
           "name": "variant_functional_effect_description",
           "description": "A freetext description of the functional effect of a mutation.",
-          "title": "measured variant functional effect description",
+          "title": "variant functional effect description",
           "examples": [
             {
               "value": "This mutation demonstrates that glutathionylation (in vivo oxidative post-translational modification of cysteine) of Mpro/NSP5 residue C300 is responsible for controlling the dimerization of the protein, where the monomer's protease activity is hampered by the collapsing  of the active site pocket."
@@ -6041,6 +6053,7 @@
       }
     }
   },
+  "source_file": "schema.yaml",
   "settings": {
     "Title_Case": {
       "setting_key": "Title_Case",

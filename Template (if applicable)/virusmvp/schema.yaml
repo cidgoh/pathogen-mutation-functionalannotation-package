@@ -37,7 +37,7 @@ classes:
     - protein_symbol
     - measured_variant_functional_effect
     - inferred_variant_functional_effect
-    - measured_viral_life_cycle_functional_effect
+    - viral_life_cycle_functional_effect
     - variant_functional_effect_description
     - cvx_code
     - drugbank_accession_number
@@ -99,7 +99,7 @@ classes:
       inferred_variant_functional_effect:
         rank: 14
         slot_group: variant functional effect information
-      measured_viral_life_cycle_functional_effect:
+      viral_life_cycle_functional_effect:
         rank: 15
         slot_group: variant functional effect information
       variant_functional_effect_description:
@@ -159,7 +159,7 @@ classes:
     - protein_symbol
     - measured_variant_functional_effect
     - inferred_variant_functional_effect
-    - measured_viral_life_cycle_functional_effect
+    - viral_life_cycle_functional_effect
     - variant_functional_effect_description
     - cvx_code
     - drugbank_accession_number
@@ -180,7 +180,9 @@ classes:
       reference_accession:
         rank: 2
         slot_group: reference sequence information
-        range: MPOXReferenceAccessionMenu
+        any_of:
+        - range: MPOXReferenceAccessionMenu
+        - range: NullValueMenu
       reference_database_name:
         rank: 3
         slot_group: reference sequence information
@@ -224,7 +226,7 @@ classes:
       inferred_variant_functional_effect:
         rank: 15
         slot_group: variant functional effect information
-      measured_viral_life_cycle_functional_effect:
+      viral_life_cycle_functional_effect:
         rank: 16
         slot_group: variant functional effect information
       variant_functional_effect_description:
@@ -298,10 +300,9 @@ slots:
     title: nucleotide position
     description: A sequence datum which is the 1-based start position of a sequence
       feature for a given nucleotide sequence.
-    comments: Separate multiple values with '|'.
     slot_uri: GENEPIO:0101033
     range: string
-    minimum_value: 0
+    minimum_value: 1
     required: true
     examples:
     - value: '351'
@@ -310,7 +311,6 @@ slots:
     title: original mutation description
     description: A sequence datum which describes a mutation, written in the user's
       own notation.
-    comments: Separate multiple values with '|'.
     slot_uri: GENEPIO:0101030
     range: string
     required: true
@@ -323,7 +323,7 @@ slots:
     description: A sequence datum which describes a nucleotide sequence change as
       compared to a reference sequence, represented by a specified notation system.
     comments: Use HGVS syntax; c. (coding) g.(genomic), or r. (ribosomal) mutations
-      should be included here. Separate multiple values with '|'.
+      should be included here.
     slot_uri: GENEPIO:0100402
     range: WhitespaceMinimizedString
     recommended: true
@@ -335,10 +335,7 @@ slots:
     description: A sequence datum which describes an amino acid sequence change as
       compared to a reference sequence, represented by a specified notation system.
     comments: Use HGVS syntax; p. (protein) mutations should be included here; use
-      3 letter code preferred for amino acids. For multiple amino acids that are correlated
-      with a functional impact as a group, input a pipe-separated list of mutations.
-      It does not need to be known whether all mutations in the group are individually
-      correlated with the functional impact.
+      3 letter code preferred for amino acids.
     slot_uri: GENEPIO:0100406
     range: WhitespaceMinimizedString
     required: true
@@ -351,7 +348,7 @@ slots:
       start of each nsp in Orf1ab, as opposed to from the start of the gene as is
       the default.
     comments: Use HGVS syntax; p. (protein) mutations should be included here; use
-      3 letter code preferred for amino acids. Separate multiple values with '|'.
+      3 letter code preferred for amino acids.
     slot_uri: GENEPIO:0100406
     range: WhitespaceMinimizedString
     examples:
@@ -399,20 +396,25 @@ slots:
   gene_orientation:
     name: gene_orientation
     title: gene orientation
+    description: A genomic orientation which is the orientation of a gene on a stranded
+      molecule.
     slot_uri: GENEPIO:0700000
     range: GeneOrientationMenu
     required: true
   strand_orientation:
     name: strand_orientation
     title: strand orientation
+    description: A genomic orientation which is the orientation of a strand on a stranded
+      molecule.
     slot_uri: GENEPIO:0700001
     range: StrandOrientationMenu
     required: true
   measured_variant_functional_effect:
     name: measured_variant_functional_effect
     title: measured variant functional effect
-    description: The functional category of the mutation impact.
-    comments: Freetext; a future update will have a picklist here.
+    description: The functional category of the mutation impact that is directly measured
+      in a research study.
+    comments: Select all functional impacts that relate to the functional description.
     slot_uri: GENEPIO:0101127
     range: VariantFunctionalEffectMenu
     multivalued: true
@@ -422,24 +424,27 @@ slots:
   inferred_variant_functional_effect:
     name: inferred_variant_functional_effect
     title: inferred variant functional effect
-    description: The functional category of the mutation impact.
-    comments: Freetext; a future update will have a picklist here.
+    description: The functional category of the mutation impact that is inferred from
+      a direct measurement in a research study.
+    comments: Select all functional impacts that relate to the functional description.
     slot_uri: GENEPIO:0101127
     range: VariantFunctionalEffectMenu
     multivalued: true
     recommended: true
     examples:
     - value: dimerization
-  measured_viral_life_cycle_functional_effect:
-    name: measured_viral_life_cycle_functional_effect
-    title: measured viral life cycle functional effect
+  viral_life_cycle_functional_effect:
+    name: viral_life_cycle_functional_effect
+    title: viral life cycle functional effect
+    description: The viral life cycle impact correlated with the mutation.
+    comments: Select all functional impacts that relate to the functional description.
     slot_uri: GENEPIO:0101990
     range: ViralLifeCycleMenu
     multivalued: true
     recommended: true
   variant_functional_effect_description:
     name: variant_functional_effect_description
-    title: measured variant functional effect description
+    title: variant functional effect description
     description: A freetext description of the functional effect of a mutation.
     slot_uri: GENEPIO:0101036
     range: string
